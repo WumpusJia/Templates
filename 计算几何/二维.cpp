@@ -2,6 +2,7 @@
 #include<cstring>
 #include<vector>
 #include<algorithm>
+#include<cmath>
 using namespace std;
 const double eps = 1e-10;
 const double PI = acos(-1.0);
