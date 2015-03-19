@@ -31,7 +31,7 @@ double Dist(Point A,Point B)
     return sqrt((A.x-B.x)*(A.x-B.x) + (A.y-B.y)*(A.y-B.y));
 }
 double Dot(Vector A,Vector B) { return A.x*B.x + A.y*B.y; }
-double Cross(Vector A,Vector B) { return A.x*B.y + A.y*B.x; }
+double Cross(Vector A,Vector B) { return A.x*B.y - A.y*B.x; }
 double Length(Vector A) { return sqrt(Dot(A,A)); }
 double Angle(Vector A,Vector B) { return acos(Dot(A,B) / Length(A) / Length(B)); } //A,B所成角
 double Angle(Vector A) { return atan2(A.y,A.x); } //向量与x轴正方向所成角
