@@ -1,11 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define F(i,a,b) for(int i=(a);i<=(b);++i)
-#define Fd(i,a,b) for(int i=(a);i>=(b);--i)
 
-const int maxn=7+3;
-int n,cur,G[maxn][maxn],degree[maxn];
+const int maxn = 100;
+int n,G[maxn][maxn],degree[maxn];
 
 void init()
 {
@@ -13,75 +11,55 @@ void init()
     memset(G,0,sizeof(G));
 }
 
-struct edge{
-    int a,b;
-}e[110],ans[110];
+struct Edge
+{
+    int from,to;
+    Edge(int from = 0,int to = 0):from(from),to(to) {}
+};
 
+vector<Edge> res;
+
+int back_judge;
 void dfs(int u){
-    F(i,0,6)
-        if(G[u][i]){
+    for(int i = 0;i < n;++i)
+        if(G[u][i])
+        {
             G[u][i]--,G[i][u]--;
             dfs(i);
-            cur++;
-            ans[cur].a=u,ans[cur].b=i;
+            back_judge++;
+            res.push_back(Edge(u,i));
         }
 }
 
-void solve()
+bool solve()
 {
-    int cnt=0,u=-1;
-    F(i,0,6){
-        //cerr<<i<<" "<<degree[i]<<endl;
+    int cnt = 0,u = -1;
+    for(int i = 0;i < n;++i)
+    {
         if(degree[i] & 1){
             cnt++;
             u=i;
         }
         else if(degree[i] && u==-1) u=i;
     }
-    if(cnt>2){
+    if(cnt>2) //如果是欧拉回路的问题，只需要改成cnt != 0
+    {
         printf("No solution\n");
-        return;
+        return false;
     }
-    cur=0;
-    //cerr<<u<<endl;
+    back_judge = 0;
     dfs(u);
-    //cerr<<cur<<endl;
-    if(cur<n){
+    if(back_judge < n)
+    {
         printf("No solution\n");
-        return;
+        return false;
     }
-    bool vis[110];
-    memset(vis,0,sizeof(vis));
-    Fd(i,n,1)
-        F(j,1,n)
-        if(!vis[j] && ans[i].a==e[j].a && ans[i].b==e[j].b){
-            vis[j]=1;
-            printf("%d +\n",j);
-            break;
-        }
-        else if(!vis[j] && ans[i].a==e[j].b && ans[i].b==e[j].a){
-            vis[j]=1;
-            printf("%d -\n",j);
-            break;
-        }
+    return true;
 
 }
 
 int main()
 {
     //freopen("test","r",stdin);
-    init();
-    cin>>n;
-    F(i,1,n){
-        int a,b;
-        cin>>a>>b;
-        e[i].a=a;
-        e[i].b=b;
-        G[a][b]++;
-        G[b][a]++;
-        degree[a]++;
-        degree[b]++;
-    }
-    solve();
-    return 0;
+
 }
