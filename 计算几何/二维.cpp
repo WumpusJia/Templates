@@ -75,7 +75,7 @@ bool IsSegmentProperIntersection(Point a1,Point a2,Point b1,Point b2) //判断�
         c3 = Cross(b2-b1,a1-b1),c4 = Cross(b2-b1,a2-b1);
     return dcmp(c1)*dcmp(c2) < 0 && dcmp(c3)*dcmp(c4) < 0;
 }
-bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在直线上，
+bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在线段上
 {
     return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0;
 }
