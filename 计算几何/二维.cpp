@@ -74,10 +74,10 @@ bool IsSegmentProperIntersection(Point a1,Point a2,Point b1,Point b2) //判断�
     double c1 = Cross(a2-a1,b1-a1),c2 = Cross(a2-a1,b2-a1),
         c3 = Cross(b2-b1,a1-b1),c4 = Cross(b2-b1,a2-b1);
     return dcmp(c1)*dcmp(c2) < 0 && dcmp(c3)*dcmp(c4) < 0;
-}
 bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在线段上
+}
 {
-    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0;
+    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0; //如果可以允许在端点上就改成 <=
 }
 
 bool IsSegmentInproperIntersection(Point a1,Point a2,Point b1,Point b2) //判断２线段是否相交(非规范）
