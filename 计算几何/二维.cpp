@@ -20,10 +20,10 @@ struct Point
     Point(double x = 0,double y = 0):x(x),y(y) {}
 };
 typedef Point Vector;
-Point operator + (Vector A,Vector B) { return Vector(A.x+B.x,A.y+B.y); }
-Point operator - (Point A,Point B) { return Vector(A.x-B.x,A.y-B.y); }
-Point operator * (Vector A,double p) { return Vector(A.x*p,A.y*p); }
-Point operator / (Vector A,double p) { return Vector(A.x/p,A.y/p); }
+Vector operator + (Vector A,Vector B) { return Vector(A.x+B.x,A.y+B.y); }
+Vector operator - (Point A,Point B) { return Vector(A.x-B.x,A.y-B.y); }
+Vector operator * (Vector A,double p) { return Vector(A.x*p,A.y*p); }
+Vector operator / (Vector A,double p) { return Vector(A.x/p,A.y/p); }
 bool operator == (const Point& A,const Point& B) { return dcmp(A.x-B.x) == 0 && dcmp(A.y-B.y) == 0; }
 bool operator < (const Point& A,const Point& B) { return A.x < B.x || (A.x == B.x && A.y < B.y); }
 double Dist(Point A,Point B)
@@ -75,9 +75,9 @@ bool IsSegmentProperIntersection(Point a1,Point a2,Point b1,Point b2) //判断�
         c3 = Cross(b2-b1,a1-b1),c4 = Cross(b2-b1,a2-b1);
     return dcmp(c1)*dcmp(c2) < 0 && dcmp(c3)*dcmp(c4) < 0;
 }
-bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在直线上，
+bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在线段上
 {
-    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0;
+    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0; //如果可以允许在端点上就改成 <=
 }
 
 bool IsSegmentInproperIntersection(Point a1,Point a2,Point b1,Point b2) //判断２线段是否相交(非规范）
@@ -234,22 +234,25 @@ int IsPointInPolygon(Point p,vector<Point>& poly) //判断点p是否在多边形
 //输入点顺序不会被破坏
 //如果不希望在凸包的边上有点，把２个<=改成<
 //精度较高时候使用dcmp比较
-int ConvexHull(vector<Point> p,vector<Point>& res)
+vector<Point> p;
+Point res[maxn];
+
+int ConvexHull() //最后res中的凸包点 按逆时针顺序(好像是的)..
 {
-    res.erase(unique(p.begin(),p.end()));
+    p.erase(unique(p.begin(),p.end()),p.end());
     sort(p.begin(),p.end());
     int n = p.size();
     int m = 0;
-    for(int i = 0; i < n; i++)
+    for(int i = 0;i < n;++i)
     {
-        while(m > 1 && Cross(res[m-1]-res[m-2], p[i]-res[m-2]) <= 0) m--;
-        res.push_back(p[i]);m++;
+        while(m > 1 && Cross(res[m-1]-res[m-2],p[i]-res[m-2]) <= 0) m--;
+        res[m++] = p[i];
     }
-    int k=m;
-    for(int i = n-2; i >= 0; i--)
+    int k = m;
+    for(int i = n-2;i >= 0;--i)
     {
-        while(m > k && Cross(res[m-1]-res[m-2], p[i]-res[m-2]) <= 0) m--;
-        res.push_back(p[i]);m++;
+        while(m > k && Cross(res[m-1]-res[m-2],p[i]-res[m-2]) <= 0) m--;
+        res[m++] = p[i];
     }
     if(n > 1) m--;
     return m;

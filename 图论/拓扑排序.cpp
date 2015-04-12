@@ -1,27 +1,62 @@
-//拓扑排序
-bool dfs(int u)
-{
-    c[u] = -1;
-    for(int v = 0;v <= n;++v) if(G[u][v]) {
-        if(c[v] < 0) return false; //错误，无法拓扑
-        else if(!c[v])  dfs(v);
-    }
-    c[u] = 1;
-    topo.push_back(u);
-    return true;
-}
+#include<cstdio>
+#include<cstring>
+#include<vector>
+#include<algorithm>
+using namespace std;
 
+const int maxn = 1000;
+
+bool G[maxn][maxn];
+int indegree[maxn];
+int n,m;
+vector<int> res;
 
 bool toposort()
 {
-    topo.clear();
-    memset(c,0,sizeof(c));
-    for(int u = 0;u <= n;++u)
-        if(!c[u])
+    res.clear();
+    bool unfinish = true;;
+    while(unfinish)
+    {
+        unfinish = false;
+        for(int i = 1;i <= n;++i)
+            if(indegree[i] == 0)
+            {
+                unfinish = true;
+                indegree[i]--;
+                res.push_back(i);
+                for(int j = 1;j <= n;++j) if(i != j && G[i][j]) indegree[j]--;
+                break;
+            }
+    }
+    return res.size() == n;
+}
+
+
+
+int main()
+{
+  //  freopen("./test.txt","r",stdin);
+    while(scanf("%d%d",&n,&m) == 2)
+    {
+        memset(G,0,sizeof(G));
+        memset(indegree,0,sizeof(indegree));
+        for(int i = 0;i < m;++i)
         {
-            if(!dfs(u))
-                return false; //此时结束为从大到小排序
+            int a,b;
+            scanf("%d%d",&a,&b);
+            if(!G[a][b])
+            {
+                G[a][b] = 1;
+                indegree[b]++;
+            }
         }
-    reverse(topo.begin(),topo.end()); //为了得到从小到大的顺序，逆转
-    return true;
+        if(!toposort())
+        {
+            puts("NO");
+            break;
+        }
+        for(int i = 0;i < n;++i)
+            printf("%d%c",res[i],(i == n-1)?'\n':' ');
+    }
+    return 0;
 }
