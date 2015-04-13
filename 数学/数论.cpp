@@ -186,7 +186,7 @@ bool line_mod(int a,int b,int m,int& x,int& m0)
 }
 
 //中国剩余定理解线性模方程组x = a[i](mod m[i])
-LL china(LL n, LL a[], LL m[])
+LL china(LL n, LL a[], LL m[]) //m都互质
 {
     LL M = 1, d, y, x = 0;
     for(int i = 0; i < n; i++) M *= m[i];
@@ -198,6 +198,39 @@ LL china(LL n, LL a[], LL m[])
     }
     return (x+M) % M;
 }
+
+/*我们先可以先找两个同余方程 设通解为N,N=r1(mod(m1)),N=r2(mod(m2)),
+显然可以化为k1*m1+r1=k2*m2+r2;--->k1*m1+(-k2*m2)=r2-r1;
+设a=m1,b=m2,x=k1,y=(-k2),c=r2-r1方程可写为ax+by=c;
+由欧几里得解得x即可,那么将x化为原方程的最小正整数解，(x*(c/d)%(b/d)+(b/d))%(b/d);
+这里看不懂的去看解模线性方程。那么这个x就是原方程的最小整数解。
+所以N=a*（x+n*（b/d））+r1====N=(a*b/d)*n+(a*x+r1),
+这里只有n为未知数所以又是一个N=(a*x+r1)(mod(a*b/d))的式子，
+然后只要不断的将两个式变成一个式子，最后就能解出这个方程组的解。 */
+LL china(LL n,LL A[],LL M[]) //m不互质的情况，求最小x
+{
+    LL a = M[0],c1 = A[0];
+    for(int i = 1;i < n;++i)
+    {
+        LL b = M[i],c2 = A[i];
+        LL x,y,d;
+        exgcd(a,b,d,x,y);
+        LL c = c2-c1;
+        if(c % d) return -1;
+        LL b1 = b/d;
+        x = ( (c/d*x)%b1 + b1)%b1;
+        c1 = a*x+c1;
+        a = a*b1;
+    }
+    if(c1 == 0) //当余数都为0,那么取最小公倍数
+    {
+        c1 = 1;
+        for(int i = 0;i < n;++i)
+            c1 = c1*M[i]/gcd(c1,M[i]);
+    }
+    return c1;
+}
+
 
 //解模方程a^x = b mod(n) 无解返回-1
 int log_mod(int a, int b, int n)
