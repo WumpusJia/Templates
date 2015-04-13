@@ -63,7 +63,7 @@ void GetPrm(int n) //获取素数表
         if(!isprm[i])
         {
             prm[pn++] = i;
-            for(int j = i;j <= n;j += i) isprm[j] = 1;
+            for(int j = i*i;j <= n;j += i) isprm[j] = 1;
         }
 }
 

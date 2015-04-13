@@ -35,7 +35,7 @@ double Cross(Vector A,Vector B) { return A.x*B.y - A.y*B.x; }
 double Length(Vector A) { return sqrt(Dot(A,A)); }
 double Angle(Vector A,Vector B) { return acos(Dot(A,B) / Length(A) / Length(B)); } //A,B所成角
 double Angle(Vector A) { return atan2(A.y,A.x); } //向量与x轴正方向所成角
-double Area2(Point A,Point C,Point B)  { return Cross(B-A,C-A); } //求AB,AC向量所成平行四边形面积
+double Area2(Point A,Point B,Point C)  { return Cross(B-A,C-A); } //求AB,AC向量所成平行四边形面积
 Vector Normal(Vector A) //求A向量单位法相量　向左侧
 {
     double L = Length(A);
@@ -237,33 +237,39 @@ int IsPointInPolygon(Point p,vector<Point>& poly) //判断点p是否在多边形
 vector<Point> p;
 Point res[maxn];
 
-int ConvexHull() //最后res中的凸包点 按逆时针顺序(好像是的)..
+
+vector<Point> ConvexHull(vector<Point>& p) //最后res中的凸包点 按逆时针顺序(好像是的)..
 {
-    p.erase(unique(p.begin(),p.end()),p.end());
-    sort(p.begin(),p.end());
-    int n = p.size();
-    int m = 0;
-    for(int i = 0;i < n;++i)
+  // 预处理，删除重复点
+  sort(p.begin(), p.end());
+  p.erase(unique(p.begin(), p.end()), p.end());
+
+  int n = p.size();
+  int m = 0;
+  vector<Point> ch(n+1);
+  for(int i = 0;i < n;++i)
     {
-        while(m > 1 && Cross(res[m-1]-res[m-2],p[i]-res[m-2]) <= 0) m--;
-        res[m++] = p[i];
+        while(m > 1 && dcmp(Cross(ch[m-1]-ch[m-2],p[i]-ch[m-2])) <= 0) m--;
+        ch[m++] = p[i];
     }
     int k = m;
     for(int i = n-2;i >= 0;--i)
     {
-        while(m > k && Cross(res[m-1]-res[m-2],p[i]-res[m-2]) <= 0) m--;
-        res[m++] = p[i];
+        while(m > k && dcmp(Cross(ch[m-1]-ch[m-2],p[i]-ch[m-2])) <= 0) m--;
+        ch[m++] = p[i];
     }
-    if(n > 1) m--;
-    return m;
+  if(n > 1) m--;
+  ch.resize(m);
+  return ch;
 }
 
 
 
 //旋转卡壳求最大２点距离
-double RotatingCalipers(vector<Point>& points) {
-  vector<Point> p;
-  ConvexHull(points,p);
+double RotatingCalipers(vector<Point>& p)
+{
+ // vector<Point> p(points);
+  ConvexHull(p);
   int n = p.size();
   if(n == 1) return 0;
   if(n == 2) return Dist(p[0], p[1]);
@@ -271,16 +277,19 @@ double RotatingCalipers(vector<Point>& points) {
   double ans = 0;
   for(int u = 0, v = 1; u < n; u++) {
     // 一条直线贴住边p[u]-p[u+1]
-    for(;;) {
+    for(;;)
+    {
       // 当Area(p[u], p[u+1], p[v+1]) <= Area(p[u], p[u+1], p[v])时停止旋转
       // 即Cross(p[u+1]-p[u], p[v+1]-p[u]) - Cross(p[u+1]-p[u], p[v]-p[u]) <= 0
       // 根据Cross(A,B) - Cross(A,C) = Cross(A,B-C)
       // 化简得Cross(p[u+1]-p[u], p[v+1]-p[v]) <= 0
-      int diff = Cross(p[u+1]-p[u], p[v+1]-p[v]);
-      if(diff <= 0) {
-        ans = max(ans, Dist(p[u], p[v])); // u和v是对踵点
-        if(diff == 0) ans = max(ans, Dist(p[u], p[v+1])); // diff == 0时u和v+1也是对踵点
-        break;
+        double diff = Cross(p[u+1]-p[u],p[v+1]-p[v]);
+        if(dcmp(diff) <= 0)
+        {
+            ans = max(ans,Dist(p[u],p[v]));
+            if(dcmp(diff) == 0) ans = max(ans,Dist(p[u],p[v+1]));
+            break;
+        }
       }
       v = (v + 1) % n;
     }
