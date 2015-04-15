@@ -232,7 +232,7 @@ int IsPointInPolygon(Point p,vector<Point>& poly) //判断点p是否在多边形
 
 //计算凸包
 //输入点顺序不会被破坏
-//如果不希望在凸包的边上有点，把２个<=改成<
+//如果希望在凸包的边上有点，把２个<=改成< ?
 //精度较高时候使用dcmp比较
 vector<Point> p;
 Point res[maxn];
