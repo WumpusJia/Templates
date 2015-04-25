@@ -176,7 +176,7 @@ int PointCircleTangents(Point p,Circle C,vector<Line>& res) //过顶点球圆的
     }
 }
 
-int TwoCircleTangents(Circle A,Circle B,vector<Point>& a,vector<Point>& b)
+int TwoCircleTangents(Circle A,Circle B,vector<Point>& a,vector<Point>& b) //返回切线条数，-1表示无穷条切线，a,b表示i条切线咋A，B上的切点
 {
     int cnt = 0;
     if(A.r < B.r) { swap(A,B); swap(a,b); }
