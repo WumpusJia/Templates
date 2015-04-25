@@ -13,6 +13,22 @@ int query(int x)
     return res;
 }
 
+//二维
+int sum(int x,int y)
+{
+    int sum = 0;
+    for(int i = x;i > 0;i -= lowbit(i))
+        for(int j = y;j > 0;j -= lowbit(j))
+            sum += C[i][j];
+    return sum;
+}
+void add(int x,int y,int val)
+{
+    for(int i = x;i < maxn;i += lowbit(i))
+        for(int j = y;j < maxn; j += lowbit(j))
+            C[i][j] += val;
+}
+
 /*使用时先给a１－aｎ调用add,查询用sum*/
 
 
