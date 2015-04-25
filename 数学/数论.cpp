@@ -12,7 +12,7 @@ const int maxn = 10000;
 
 
 //V + F-2 = E 顶点数＋面数-2 = 边数
-//斐波那且O(1) = ( ( (1+sqrt(5))/2 ) - ( (1-sqrt(5))/2 ) ) / sqrt(5)
+//斐波那且O(1) = ( ( (1+sqrt(5))/2 )^n - ( (1-sqrt(5))/2 )^n ) / sqrt(5)
 
 LL gcd(LL a,LL b)
 {
@@ -426,6 +426,16 @@ void matrix_pow(Matrix A,LL n,Matrix res)
 
 //求逆矩阵．．．．．will done
 
+//计算a^1+a^2+a^3...a^n; 注意这里Matrix需要写成结构体形式
+Matrix sum(Matrix a,LL n)
+{
+    if(n == 1)
+        return a;
+    if(n&1)
+        return (a^n) + sum(a,n-1);
+    else
+        return sum(a,n/2) * ((a^(n/2))+1);
+}
 
 ////////////////////////////博弈论///////////////////////////////////
 int SG[maxn];
