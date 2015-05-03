@@ -39,7 +39,6 @@ class Main{
 		//InputStream f=new FileInputStream("/home/alex/Desktop/test.txt");
 		//Reader.init(f);
 		Reader.init(System.in);
-		//Scanner in= new Scanner(System.in);
 		BigDecimal R;
 		int n;
 		while(true){
@@ -47,7 +46,6 @@ class Main{
 			if(s==null) break;
 			R=new BigDecimal(s);
 			R=R.stripTrailingZeros();
-			//System.out.println(R.toString());
 			n=Reader.nextInt();
 			R=R.pow(n);
 			String S=R.toPlainString();
