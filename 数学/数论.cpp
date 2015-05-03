@@ -12,7 +12,7 @@ const int maxn = 10000;
 
 
 //V + F-2 = E 顶点数＋面数-2 = 边数
-//斐波那且O(1) = ( ( (1+sqrt(5))/2 ) - ( (1-sqrt(5))/2 ) ) / sqrt(5)
+//斐波那且O(1) = ( ( (1+sqrt(5))/2 )^n - ( (1-sqrt(5))/2 )^n ) / sqrt(5)
 
 LL gcd(LL a,LL b)
 {
@@ -38,16 +38,15 @@ void GetAllC(int n) //计算所有C
     }
 }
 
-LL GetC(int n,int m)//计算C(n,m)
+LL GetC(LL n,LL m)
 {
+    m = m < (n-m)? m : (n-m);
     LL res = 1;
-    for(int i = 1; i <= n-m ; i++)
-    {
-        res *= (m + i);
-        res /= i;
-    }
+    for(int i = 1;i <= m;++i)
+        res = res*(n-i+1)/i;
     return res;
 }
+
 
 
 ////////////////////////////////素数//////////////////////////////////////////
@@ -59,11 +58,11 @@ void GetPrm(int n) //获取素数表
 {
     memset(isprm,0,sizeof(isprm));
     pn = 0;
-    for(int i = 2;i <= n;++i)
+    for(LL i = 2;i <= n;++i)
         if(!isprm[i])
         {
             prm[pn++] = i;
-            for(int j = i*i;j <= n;j += i) isprm[j] = 1;
+            for(LL j = i*i;j <= n;j += i) isprm[j] = 1;
         }
 }
 
@@ -82,6 +81,15 @@ void factorize(int num) //唯一分解定理分解num
             break;
     }
 }
+
+int cal(int pr,int n) //计算N!中分解到pr的幂
+{
+    int res = 0;
+    while(n)
+        n /= pr,res += n;
+    return res;
+}
+
 
 LL phi[maxn];
 
@@ -112,6 +120,27 @@ LL GetPhi(int n)
 }
 
 /////////////////////////////模////////////////////////////////////////
+//long long 的乘法
+LL Mod(LL x)
+{
+    if(x >= mod) return x-mod;
+    return x;
+}
+
+LL mul(LL a,LL b)
+{
+    LL res = 0;
+    while(b)
+    {
+        if(b & 1) res = MOD(res+a);
+        a = MOD(a+a);
+        b >>= 1;
+    }
+    return res;
+}
+
+////////////////
+
 
 LL mul_mod(LL a,LL b,LL m)
 {
@@ -396,6 +425,71 @@ void matrix_pow(Matrix A,LL n,Matrix res)
 
 
 //求逆矩阵．．．．．will done
+
+//计算a^1+a^2+a^3...a^n; 注意这里Matrix需要写成结构体形式
+Matrix sum(Matrix a,LL n)
+{
+    if(n == 1)
+        return a;
+    if(n&1)
+        return (a^n) + sum(a,n-1);
+    else
+        return sum(a,n/2) * ((a^(n/2))+1);
+}
+
+////////////////////////////博弈论///////////////////////////////////
+int SG[maxn];
+
+int mex(int x)
+{
+    int& ans = SG[x];
+    if(ans != -1) return ans;
+    bool vis[maxn]; //注意这里必须是局部数组，否则会被下一状态更改
+    memset(vis,0,sizeof(vis));
+    for(int i = 0;i < 10 && save[i] <= x;++i) //save[i]记录可以改变的数量
+    {
+        int t = x-save[i];
+        SG[t] = mex(t);
+        vis[SG[t]] = 1;
+    }
+    for(int i = 0;;i++)
+        if(!vis[i])
+            return ans = i;
+}
+
+
+///////////////////////////奇奇怪怪的东西////////////////////////////
+
+//母函数
+memset(c1,0,sizeof(c1));
+memset(c2,0,sizeof(c2));
+memset(num,0,sizeof(num));
+int sum = 0;
+for(int i = 0;i < n;++i)
+{
+    scanf("%d",&A[i]);
+    sum += A[i];
+    num[i] = 1;
+}
+
+for(int i = 0;i <= num[0]*A[0];i += A[0])
+    c1[i] = 1;
+for(int i = 1;i < n;++i)
+{
+    for(int j = 0;j <= sum;++j)
+        for(int k = 0;k <= num[i]*A[i] && j + k <= sum; k += A[i])
+        {
+            c2[j+k] += c1[j];
+            c2[abs(j-k)] += c1[j];
+        }
+    for(int j = 0;j <= sum;++j)
+    {
+        c1[j] = c2[j];
+        c2[j] = 0;
+    }
+}
+
+
 
 int main()
 {
