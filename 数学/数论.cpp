@@ -49,8 +49,30 @@ LL GetC(LL n,LL m)
 
 
 
+//利用计算C(n,m) % p,p是素数的
+LL GetC(LL n,LL m)
+{
+    if(n < m) return 0;
+    if(m > n-m) m = n-m;
+    LL s1 = 1,s2 = 1;
+    for(LL i = 0;i < m;++i)
+    {
+        s1 = (s1*(n-i))%mod;
+        s2 = (s2*(i+1))%mod;
+    }
+    return s1*pow_mod(s2,mod-2)%mod;　//b在p为素数下的逆为b^(p-2)%p
+}
+
+//当C(n,m)非常大时候，需要利用lucas计算C(n,m)%p
+LL lucas(LL n,LL m)
+{
+    if(m == 0) return 1;
+    return GetC(n%mod,m%mod)*lucas(n/mod,m/mod)%mod;
+}
+
 ////////////////////////////////素数//////////////////////////////////////////
 bool isprm[maxn+10]; //0表示是prm
+int mu[maxn];  //莫比乌斯反演系数
 int prm[maxn];
 int pn;
 
@@ -117,6 +139,47 @@ LL GetPhi(int n)
         }
     if(n > 1) ans = ans / n * (n-1);
     return ans;
+}
+//莫比乌斯
+int sum[maxn];
+
+void GetMobius(int n)
+{
+    pn = 0;
+    memset(isprm,0,sizeof(isprm));
+    mu[1] = 1;
+    for(LL i = 2;i <= n;++i)
+    {
+        if(!isprm[i])
+        {
+            prm[pn++] = i;
+            mu[i] = -1;
+        }
+        for(LL j = 0;j < pn && i*prm[j] <= n;++j)
+        {
+            isprm[i*prm[j]] = 1;
+            if(i%prm[j]) mu[i*prm[j]] = -mu[i];
+            else
+            {
+                mu[i*prm[j]] = 0;
+                break;
+            }
+        }
+    }
+    for(int i = 1;i <= n;++i)
+        sum[i] = sum[i-1] + mu[i];
+}
+
+LL solve(int n,int m) //求1 <= x <= n,1 <= y <= m中 gcd(x,y) == 1的个数
+{
+    LL res = 0;
+    if(n > m) swap(n,m);
+    for(int i = 1,last = 0;i <= n;i = last+1)
+    {
+        last = min(n/(n/i),m/(m/i));
+        res += (LL)(n/i)*(m/i)*(sum[last]-sum[i-1]);
+    }
+    return res;
 }
 
 /////////////////////////////模////////////////////////////////////////

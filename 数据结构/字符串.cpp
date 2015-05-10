@@ -2,7 +2,7 @@
 void getFail(char *P,int f[]) //失配函数: 如果P[j] 能匹配到P[i],那么f[j] = i+1
 {
     int m = strlen(P);
-    f[0] = 1,f[1] = 0;
+    f[0] = 0,f[1] = 0;
     for(int i = 1;i < m;++i)
     {
         int j = f[i];
