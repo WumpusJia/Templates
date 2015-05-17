@@ -115,7 +115,7 @@ int cal(int pr,int n) //计算N!中分解到pr的幂
 
 LL phi[maxn];
 
-LL GetAllPhi(int n)
+void GetAllPhi(int n)
 {
     for(int i = 2; i <= n; i++) phi[i] = 0;
     phi[1] = 1;
@@ -270,17 +270,19 @@ bool exgcd_res(LL& a,LL& b,LL c,LL& x0,LL& y0)
 }
 
 //求解线性模方程ax = b(mod n),解为x,x+m0,x+2*m0......
-bool line_mod(int a,int b,int m,int& x,int& m0)
+bool line_mod(LL a,LL b,LL m,LL& x,LL& m0)
 {
-    int d = gcd(a,m);
+    LL d,y;
+    exgcd(a,m,d,x,y);
     if(b % d) return false;
     else
     {
-        int a0 = a/d,b0 = b/d;
-        m0 = m/d;
-        x = inv(a0,m)*b0;
+       x = x*b/d;
+       m0 = m/d;
+       x = ((x%m0)+m0)%m0;//x 为最小正数解
         return true;
     }
+} }
 }
 
 //中国剩余定理解线性模方程组x = a[i](mod m[i])
@@ -551,6 +553,7 @@ for(int i = 1;i < n;++i)
         c2[j] = 0;
     }
 }
+
 
 
 
