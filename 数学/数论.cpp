@@ -265,6 +265,7 @@ bool exgcd_res(LL& a,LL& b,LL c,LL& x0,LL& y0)
         b=b%d;
         x0=x0/d*c;
         y0=y0/d*c;
+        x0 = (x0%b+b)%b;
          return true;
     }
 }

@@ -77,7 +77,7 @@ bool IsSegmentProperIntersection(Point a1,Point a2,Point b1,Point b2) //判断�
 }
 bool IsPointOnSegment(Point P,Point A,Point B) //判断点是否在线段上
 {
-    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) < 0; //如果可以允许在端点上就改成 <=
+    return dcmp(Cross(A-P,B-P)) == 0 && dcmp(Dot(A-P,B-P)) <= 0; //如果可以允许在端点上就改成 <=
 }
 
 bool IsSegmentInproperIntersection(Point a1,Point a2,Point b1,Point b2) //判断２线段是否相交(非规范）
@@ -217,6 +217,7 @@ int IsPointInPolygon(Point p,vector<Point>& poly) //判断点p是否在多边形
     for(int i = 0; i < n; i++)
     {
         if(IsPointOnSegment(p, poly[i], poly[(i+1)%n])) return -1;
+        //这里注意!，需要将IsPointInSegment中的小于改成小于等于，表示允许在端点上
         int k = dcmp(Cross(poly[(i+1)%n]-poly[i], p-poly[i]));
         int d1 = dcmp(poly[i].y-p.y);
         int d2 = dcmp(poly[(i+1)%n].y-p.y);
@@ -234,9 +235,6 @@ int IsPointInPolygon(Point p,vector<Point>& poly) //判断点p是否在多边形
 //输入点顺序不会被破坏
 //如果希望在凸包的边上有点，把２个<=改成< ?
 //精度较高时候使用dcmp比较
-vector<Point> p;
-Point res[maxn];
-
 
 vector<Point> ConvexHull(vector<Point>& p) //最后res中的凸包点 按逆时针顺序(好像是的)..
 {
@@ -268,32 +266,31 @@ vector<Point> ConvexHull(vector<Point>& p) //最后res中的凸包点 按逆时�
 //旋转卡壳求最大２点距离
 double RotatingCalipers(vector<Point>& p)
 {
- // vector<Point> p(points);
-  ConvexHull(p);
-  int n = p.size();
-  if(n == 1) return 0;
-  if(n == 2) return Dist(p[0], p[1]);
-  p.push_back(p[0]); // 免得取模
-  double ans = 0;
-  for(int u = 0, v = 1; u < n; u++) {
-    // 一条直线贴住边p[u]-p[u+1]
-    for(;;)
+    vector<Point> p = ConvexHull(p);
+    int n = p.size();
+    if(n == 1) return 0;
+    if(n == 2) return Dist(p[0], p[1]);
+    p.push_back(p[0]); // 免得取模
+    double ans = 0;
+    for(int u = 0, v = 1; u < n; u++)
     {
-      // 当Area(p[u], p[u+1], p[v+1]) <= Area(p[u], p[u+1], p[v])时停止旋转
-      // 即Cross(p[u+1]-p[u], p[v+1]-p[u]) - Cross(p[u+1]-p[u], p[v]-p[u]) <= 0
-      // 根据Cross(A,B) - Cross(A,C) = Cross(A,B-C)
-      // 化简得Cross(p[u+1]-p[u], p[v+1]-p[v]) <= 0
-        double diff = Cross(p[u+1]-p[u],p[v+1]-p[v]);
-        if(dcmp(diff) <= 0)
+        // 一条直线贴住边p[u]-p[u+1]
+        for(;;)
         {
-            ans = max(ans,Dist(p[u],p[v]));
-            if(dcmp(diff) == 0) ans = max(ans,Dist(p[u],p[v+1]));
-            break;
+          // 当Area(p[u], p[u+1], p[v+1]) <= Area(p[u], p[u+1], p[v])时停止旋转
+          // 即Cross(p[u+1]-p[u], p[v+1]-p[u]) - Cross(p[u+1]-p[u], p[v]-p[u]) <= 0
+          // 根据Cross(A,B) - Cross(A,C) = Cross(A,B-C)
+          // 化简得Cross(p[u+1]-p[u], p[v+1]-p[v]) <= 0
+            double diff = Cross(p[u+1]-p[u],p[v+1]-p[v]);
+            if(dcmp(diff) <= 0)
+            {
+                ans = max(ans,Dist(p[u],p[v]));
+                if(dcmp(diff) == 0) ans = max(ans,Dist(p[u],p[v+1]));
+                break;
+            }
+            v = (v + 1) % n;
         }
-      }
-      v = (v + 1) % n;
     }
-  }
   return ans;
 }
 
