@@ -45,7 +45,7 @@ Vector Rotate(Vector A,double rad)
 {
     return Vector(A.x*cos(rad)-A.y*sin(rad),A.x*sin(rad)+A.y*cos(rad));
 }
-Point TwoLinePoint(Point P,Vector v,Point Q,Vector w) //求P+tv和Q+tw的交点
+Point TwoLinePoint(Point P,Vector v,Point Q,Vector w) //求P+tv和Q+tw的交点  ,使用前需要判断是否存在唯一交点(Cross(v,w) != 0)
 {
     Vector u = P-Q;
     double t = Cross(w,u)/Cross(v,w);

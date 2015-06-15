@@ -1,5 +1,5 @@
 //KMP
-void getFail(char *P,int f[]) //失配函数: 如果P[j] 能匹配到P[i],那么f[j] = i+1
+void getFail(char *P,int f[]) //失配函数(从1--->n): 如果P[j] 能匹配到P[i],那么f[j] = i
 {
     int m = strlen(P);
     f[0] = 0,f[1] = 0;

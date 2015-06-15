@@ -503,6 +503,13 @@ Matrix sum(Matrix a,LL n)
         return sum(a,n/2) * ((a^(n/2))+1);
 }
 
+LL sum(LL p,LL n)
+{
+	if(n==0) return 1;
+	if(n&1) return (1+pow_mod(p,(n>>1)+1))*sum(p,n>>1)%mod;
+	else return ((1+pow_mod(p,(n>>1)+1))*sum(p,(n-1)>>1)%mod+pow_mod(p,n>>1))%mod;
+}
+
 ////////////////////////////博弈论///////////////////////////////////
 int SG[maxn];
 
