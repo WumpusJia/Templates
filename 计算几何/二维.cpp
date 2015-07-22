@@ -294,7 +294,75 @@ double RotatingCalipers(vector<Point>& p)
   return ans;
 }
 
-// 半平面交主过程
+// 半平面交最小过程
+struct Point
+{
+    double x,y;
+    Point(double x = 0,double y = 0):x(x),y(y) {}
+};
+typedef Point Vector;
+
+Vector operator + (Vector A,Vector B) { return Vector(A.x+B.x,A.y+B.y); }
+Vector operator - (Point A,Point B) { return Vector(A.x-B.x,A.y-B.y); }
+Vector operator * (Vector A,double p) { return Vector(A.x*p,A.y*p); }
+Vector operator / (Vector A,double p) { return Vector(A.x/p,A.y/p); }
+
+
+double Dot(Vector A,Vector B) { return A.x*B.x+A.y*B.y; }
+double Cross(Vector A,Vector B) { return A.x*B.y-A.y*B.x; }
+
+struct Line
+{
+    Point P;
+    Vector v;
+    double ang;
+    Line() {}
+    Line(Point P,Vector v):P(P),v(v) { ang = atan2(v.y,v.x); }
+    bool operator < (const Line& rhs) const {
+        return ang < rhs.ang;
+    }
+};
+
+bool IsOnLeft(Line L,Point p) //判断点p是否在L的左侧
+{
+    return Cross(L.v,p-L.P) > 0; //如果半平面交算边线上的话，就改成 >=
+}
+
+Point TwoLinePoint(Line a,Line b)
+{
+    Vector u = a.P-b.P;
+    double t = Cross(b.v,u) / Cross(a.v,b.v);
+    return a.P + a.v*t;
+}
+
+int HalfPlaneIntersection(Line L[],int n,Point poly[])
+{
+    sort(L,L+n);
+    int first = 0,last = 0;
+    Point *p = new Point[n];
+    Line *q = new Line[n];
+    q[first] = L[0];
+    for(int i = 1;i < n;++i)
+    {
+        while(first < last && !IsOnLeft(L[i],p[last-1])) last--;
+        while(first < last && !IsOnLeft(L[i],p[first])) first++;
+        q[++last] = L[i];
+        if(fabs(Cross(q[last].v,q[last-1].v)) < eps)
+        {
+            last--;
+            if(IsOnLeft(q[last],L[i].P)) q[last] = L[i];
+        }
+        if(first < last) p[last-1] = TwoLinePoint(q[last-1],q[last]);
+    }
+    while(first < last && !IsOnLeft(q[first],p[last-1])) last--;
+    if(last-first <= 1)  return 0;
+    p[last] = TwoLinePoint(q[last],q[first]);
+
+    int m = 0;
+    for(int i = first;i <= last;++i) poly[m++] = p[i];
+    return m;
+}
+
 
 
 

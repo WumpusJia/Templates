@@ -1,3 +1,4 @@
+/************离线*****************/
 #include<cstdio>
 #include<vector>
 #include<cstring>
@@ -98,4 +99,46 @@ int main()
     return 0;
 }
 
+/**********************在线**************/
+int cur;
+int deep[maxn];
+int p[maxn][M];
 
+
+
+void dfs(int u,int fa,int d,int dist)
+{
+    p[u][0] = fa;
+    deep[u] = d;
+
+    for(int i = 1;i < M;++i)
+       p[u][i] = p[p[u][i-1]][i-1];
+
+    for(int i = 0;i < G[u].size();++i)
+    {
+        int v = G[u][i];
+        if(v != fa)
+        {
+            dfs(v,u,d+1,dist+W[u][i]);
+        }
+    }
+}
+
+int LCA(int a,int b)
+{
+    if(deep[a] < deep[b]) swap(a,b);
+    for(int i = M-1;i >= 0;--i)
+    {
+        if(deep[p[a][i]] >= deep[b])
+            a = p[a][i];
+        if(a == b)
+            return a;
+    }
+    for(int i = M-1;i >= 0;--i)
+        if(p[a][i] != p[b][i])
+        {
+            a = p[a][i];
+            b = p[b][i];
+        }
+    return p[a][0];
+}
