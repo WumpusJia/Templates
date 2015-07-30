@@ -52,3 +52,5 @@ int query(int cL,int cR,int L,int R,int u)
         return res;
     }
 }
+
+

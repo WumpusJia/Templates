@@ -1,0 +1,235 @@
+colo desert
+syntax on
+set nu
+set history=1000000
+set tabstop=4 
+set shiftwidth=4
+set smarttab
+set cindent
+set nobackup
+set noswapfile
+set mouse=a
+set incsearch
+set hlsearch 
+let &termencoding=&encoding 
+set fileencodings=utf-8,gbk 
+filetype on 
+filetype plugin on 
+filetype indent on
+
+"字体
+set guifont=courier_new:h12  
+set shortmess=atI   " 关闭启动提示 
+winpos 400 400      " 设定窗口位置  
+set lines=60 columns=100    " 设定窗口大小  
+set guioptions-=T           " 隐藏工具栏
+set guioptions-=m           " 隐藏菜单栏
+set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set statusline=[%n]%<%f%y%h%m%r%=\ %l\ of\ %L,%c 
+" 设置在状态行显示的信息
+
+imap <c-]> {<cr>}<c-o>O<left><right>
+ 
+map <C-A> ggVG"+y
+
+"imap <c-]> {<cr>}<c-o>O<left><right>
+"inoremap (()<LEFT>
+"inoremap [[]<LEFT>
+"inoremap {{}<LEFT>
+"inoremap """<LEFT>
+"inoremap '''<LEFT>
+
+
+map<F9> :call CompileRun()<CR>
+func CompileRun()
+exec "w"
+if &filetype == 'c'
+exec "!gcc -Wl,-enable-auto-import % -g -o %<.exe"
+elseif &filetype == 'cpp'
+exec "!g++ -Wl,-enable-auto-import % -g -o %<.exe"
+endif
+if &filetype == 'c' || &filetype == 'cpp'
+exec "!%<.exe"
+endif
+endfunc
+
+
+map<F5> :call Debug()<CR>
+func Debug()
+exec "w"
+if &filetype == 'c'
+exec "!gcc % -g -o %<.exe"
+exec "!gdb %<.exe"
+elseif &filetype == 'cpp'
+exec "!g++ % -g -o %<.exe"
+exec "!gdb %<.exe"
+endif
+endfunc
+
+set diffexpr=MyDiff()
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+"F2插入模板
+map <F2> :call SetTitle()<CR>
+func SetTitle()
+let l = 0
+let l = l + 1 | call setline(l, '/*')
+let l = l + 1 | call setline(l, ' & Created Time:  '.strftime('%c'))
+let l = l + 1 | call setline(l, ' & File Name: '.expand('%'))
+let l = l + 1 | call setline(l, ' & Author: NoBystander')
+let l = l + 1 | call setline(l, '*/')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '//#pragma comment(linker, "/STACK:1024000000,1024000000")')
+let l = l + 1 | call setline(l, '//#include <bits/stdc++.h>')
+let l = l + 1 | call setline(l, '#include <iostream>')
+let l = l + 1 | call setline(l, '#include <stdio.h>')
+let l = l + 1 | call setline(l, '#include <string.h>')
+let l = l + 1 | call setline(l, '#include <ctype.h>')
+let l = l + 1 | call setline(l, '#include <math.h>')
+let l = l + 1 | call setline(l, '#include <stdlib.h>')
+let l = l + 1 | call setline(l, '#include <time.h>')
+let l = l + 1 | call setline(l, '#include <algorithm>')
+let l = l + 1 | call setline(l, '#include <vector>')
+let l = l + 1 | call setline(l, '#include <set>')
+let l = l + 1 | call setline(l, '#include <map>')
+let l = l + 1 | call setline(l, '#include <string>')
+let l = l + 1 | call setline(l, '#include <queue>')
+let l = l + 1 | call setline(l, '#include <stack>') 
+let l = l + 1 | call setline(l, '#include <list>')
+let l = l + 1 | call setline(l, '#include <utility>')
+let l = l + 1 | call setline(l, 'using namespace std;')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '#define LEN(n) (int)log10(n)+1')
+let l = l + 1 | call setline(l, '#define REP(i,n) for(int i=0;i<n;++i)')
+let l = l + 1 | call setline(l, '#define F(i,a,b) for(int i=a;(i)<b;++i)')
+let l = l + 1 | call setline(l, '#define Fd(i,b,a) for(int i=b-1;i>=a;--i)')
+let l = l + 1 | call setline(l, '#define EACH(i,a) for(__typeof((a).begin()) i=a.begin(); i!=a.end(); ++i)')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '#define FILL(a,t) memset((a),(t),sizeof(a))')
+let l = l + 1 | call setline(l, '#define CLEAR(ST) while(!ST.empty()) ST.pop();')
+let l = l + 1 | call setline(l, '#define SZ(a) ((a).size())')
+let l = l + 1 | call setline(l, '#define AL(a) a.begin(),a.end()')
+let l = l + 1 | call setline(l, '#define lowbd(a,x) lower_bound(all(a),x) - a.begin()')
+let l = l + 1 | call setline(l, '#define upbd(a,x) upper_bound(all(a),x) - a.begin()')
+let l = l + 1 | call setline(l, '#define pb push_back')
+let l = l + 1 | call setline(l, '#define mp(A,B) make_pair(A,B)')
+let l = l + 1 | call setline(l, '#define fi first')
+let l = l + 1 | call setline(l, '#define se second')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'typedef long long LL;')
+let l = l + 1 | call setline(l, 'typedef unsigned long long ULL;')
+let l = l + 1 | call setline(l, 'typedef double DB;')
+let l = l + 1 | call setline(l, 'typedef long double LDB;')
+let l = l + 1 | call setline(l, 'typedef vector<int> VI;')
+let l = l + 1 | call setline(l, 'typedef set<int> SI;')
+let l = l + 1 | call setline(l, 'typedef map<string,int> MSI;') 
+let l = l + 1 | call setline(l, 'typedef map<int,int> MII;')
+let l = l + 1 | call setline(l, 'typedef pair<int,int> PII;')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '//#define DEBUG')
+let l = l + 1 | call setline(l, '#ifdef DEBUG')
+let l = l + 1 | call setline(l, '	#define debug(args...) do{cerr<<#args<<":"; dbg,args; cerr<<endl;}while(0) ')
+let l = l + 1 | call setline(l, '	#define OK puts("OK")')
+let l = l + 1 | call setline(l, '	#define C(a) cout<<"~~"<<a<<"~~"<<endl')
+let l = l + 1 | call setline(l, '	#define PM(a,x,y) F(i,0,x){F(j,0,y) cout<<a[i][j]<<" ";cout<<endl;} ')
+let l = l + 1 | call setline(l, 'struct debugger{')
+let l = l + 1 | call setline(l, '	template<typename T> debugger& operator , (const T& v){')
+let l = l + 1 | call setline(l, '		cerr<<v<<" ";')
+let l = l + 1 | call setline(l, '		return *this;')
+let l = l + 1 | call setline(l, '	}')
+let l = l + 1 | call setline(l, '} dbg;')
+let l = l + 1 | call setline(l, '#else')
+let l = l + 1 | call setline(l, '	#define debug(args...)')
+let l = l + 1 | call setline(l, '	#define OK')
+let l = l + 1 | call setline(l, '	#define C(a)')
+let l = l + 1 | call setline(l, '	#define PM(a,x,y)')
+let l = l + 1 | call setline(l, '#endif')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'const int INF = 0x3f3f3f3f;')
+let l = l + 1 | call setline(l, 'const LL  LINF = 0x3f3f3f3f3f3f3f3fLL;')
+let l = l + 1 | call setline(l, 'const DB EPS = 1e-9;')
+let l = l + 1 | call setline(l, 'const DB PI = acos(-1.0);')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'const int dx[] = {-1, 0, 1, 0};')
+let l = l + 1 | call setline(l, 'const int dy[] = {0, 1, 0, -1};')
+let l = l + 1 | call setline(l, 'const int mv[8][2] = {{0,1}, {0,-1}, {1,0}, {-1,0}, {1,1}, {1,-1}, {-1,1}, {-1,-1}};')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'LL nextInt(){')
+let l = l + 1 | call setline(l, '	char ch=getchar();')
+let l = l + 1 | call setline(l, '	while(!isdigit(ch)) ch=getchar();')
+let l = l + 1 | call setline(l, '	LL res=0;')
+let l = l + 1 | call setline(l, '	while(isdigit(ch)){')
+let l = l + 1 | call setline(l, '		res=res*10+ch-48;')
+let l = l + 1 | call setline(l, '		ch=getchar();')
+let l = l + 1 | call setline(l, '	}')
+let l = l + 1 | call setline(l, '	return res;')
+let l = l + 1 | call setline(l, '}')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '/*-----  on ne voit bien qu avec le coeur.l essentiel est invisible pour les yeux  -----*/')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'void init()')
+let l = l + 1 | call setline(l, '{')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '}')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'void solve()')
+let l = l + 1 | call setline(l, '{')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '}')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'int main()')
+let l = l + 1 | call setline(l, '{')
+let l = l + 1 | call setline(l, '	//freopen("test.txt","r",stdin);')
+let l = l + 1 | call setline(l, '	//freopen("out.txt","r",stdout);')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '	//printf("\nTIME WASTED  %.2f s\n",(double)clock()/CLOCKS_PER_SEC);')
+let l = l + 1 | call setline(l, '    return 0;')
+let l = l + 1 | call setline(l, '}')
+let l = l + 1 | call setline(l, '')
+endfunc
+map <F3> :call Maker()<CR>
+func Maker()
+let l = 0
+let l = l + 1 | call setline(l, '#include <iostream>')
+let l = l + 1 | call setline(l, '#include <cstdio>')
+let l = l + 1 | call setline(l, '#include <ctime>')
+let l = l + 1 | call setline(l, '#include <cstdlib>')
+let l = l + 1 | call setline(l, '#include <string>')
+let l = l + 1 | call setline(l, 'using namespace std;')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, 'int main()')
+let l = l + 1 | call setline(l, '{')
+let l = l + 1 | call setline(l, '	srand(time(0));')
+let l = l + 1 | call setline(l, '	freopen("test","w",stdout);')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '')
+let l = l + 1 | call setline(l, '	return 0;')
+let l = l + 1 | call setline(l, '}')
+endfunc
