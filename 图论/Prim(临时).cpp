@@ -1,5 +1,5 @@
 memset(vis,0,sizeof(vis));
-memset(d,0,sizeof(d));
+memset(d,INF,sizeof(d));
 vis[0] = 1;
 for(int i = 0;i < n;++i)
     d[i] = cal(0,i);
