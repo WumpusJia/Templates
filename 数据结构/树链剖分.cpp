@@ -165,7 +165,7 @@ void add(int u,int v,int val)
         update(id[fu],id[u],val,1,n,1);
         u = fa[fu],fu = top[u];
     }
-   // if(u == v) return;
+   // if(u == v) return;   //注意如果是求链上的点，不能加这句话
     if(deep[u] > deep[v]) swap(u,v);
     update(id[u],id[v],val,1,n,1);
 }
@@ -178,7 +178,7 @@ int get(int u)
 
 void init()
 {
-   // dfs1(1,0,0);
+   // dfs1(1,0,1);
     idx = 1;
     bfs(1);
  //   dfs2(1,0,1);

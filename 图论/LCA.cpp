@@ -100,13 +100,12 @@ int main()
 }
 
 /**********************在线**************/
-int cur;
 int deep[maxn];
 int p[maxn][M];
 
 
 
-void dfs(int u,int fa,int d,int dist)
+void dfs(int u,int fa,int d)  //注意root的deeo必须为1
 {
     p[u][0] = fa;
     deep[u] = d;
@@ -119,7 +118,7 @@ void dfs(int u,int fa,int d,int dist)
         int v = G[u][i];
         if(v != fa)
         {
-            dfs(v,u,d+1,dist+W[u][i]);
+            dfs(v,u,d+1);
         }
     }
 }
