@@ -24,6 +24,56 @@ void find(char* T,char *P,int f[])
     }
 }
 
+//EKMP
+int Next[maxn];
+int ret[maxn]; //S的每个后缀与T的前缀的最长匹配××长度××
+
+void EKMP(char T[],char S[])
+{
+    int lenT = strlen(T);
+    int lenS = strlen(S);
+
+    int j = 0;
+    while(1 + j < lenT && T[j] == T[1+j]) ++j;
+    Next[0] = lenT;
+    Next[1] = j;
+    int k = 1;
+    for(int i = 2;i < lenT;++i)
+    {
+        int Len = k+Next[k],L = Next[i-k];
+        if(L < Len-i)
+            Next[i] = L;
+        else
+        {
+            j = max(0,Len-i);
+            while(i+j < lenT && T[j] == T[i+j]) ++j;
+            Next[i] = j;
+            k = i;
+        }
+    }
+
+    j = 0;
+    while(j < lenS && j < lenT && T[j] == S[j]) j++;
+    ret[0] = j;
+    k = 0;
+    for(int i = 1;i < lenS;++i)
+    {
+        int Len = k+ret[k],L = Next[i-k];
+        if(L < Len-i)
+            ret[i] = L;
+        else
+        {
+
+            j = max(0,Len-i);
+            while(j < lenT && i+j < lenS && T[j] == S[i+j]) ++j;
+            ret[i] = j;
+            k = i;
+        }
+    }
+}
+
+
+
 
 //Trie
 const int maxnode = 4000*100+10;
@@ -122,6 +172,116 @@ void getHeight()
         s[n++] = 0;
         build_sa(27);
         getHeight();
+
+
+
+//AC自动机
+struct ACAutomata
+{
+  int ch[MAXNODE][SIGMA_SIZE];
+  int f[MAXNODE];    // fail函数
+  int val[MAXNODE];  // 每个字符串的结尾结点都有一个非0的val
+  int last[MAXNODE]; // 输出链表的下一个结点
+  int sz;
+
+  void init()
+  {
+    sz = 1;
+    memset(ch[0], 0, sizeof(ch[0]));
+  }
+
+  // 字符c的编号
+  int idx(char c)
+  {
+    return c-'a';
+  }
+
+  // 插入字符串。v必须非0
+  void insert(char *s, int v)
+  {
+    int u = 0, n = strlen(s);
+    for(int i = 0; i < n; i++) {
+      int c = idx(s[i]);
+      if(!ch[u][c]) {
+        memset(ch[sz], 0, sizeof(ch[sz]));
+        val[sz] = 0;
+        ch[u][c] = sz++;
+      }
+      u = ch[u][c];
+    }
+    val[u] = v;
+  }
+
+  // 递归打印以结点j结尾的所有字符串
+  void report(int pos, int j) {
+    if(j) {
+      process_match(pos, val[j]);
+      report(pos, last[j]);
+    }
+  }
+
+  // 在T中找模板
+  int find(char* T)
+  {
+    int n = strlen(T);
+    int j = 0; // 当前结点编号，初始为根结点
+    for(int i = 0; i < n; i++) { // 文本串当前指针
+      int c = idx(T[i]);
+      while(j && !ch[j][c]) j = f[j]; // 顺着细边走，直到可以匹配
+      j = ch[j][c];
+      if(val[j]) report(i, j);
+      else if(last[j]) report(i, last[j]); // 找到了！
+    }
+  }
+
+  // 计算fail函数
+  void getFail()
+  {
+    queue<int> q;
+    f[0] = 0;
+    // 初始化队列
+    for(int c = 0; c < SIGMA_SIZE; c++) {
+      int u = ch[0][c];
+      if(u) { f[u] = 0; q.push(u); last[u] = 0; }
+    }
+    // 按BFS顺序计算fail
+    while(!q.empty()) {
+      int r = q.front(); q.pop();
+      for(int c = 0; c < SIGMA_SIZE; c++) {
+        int u = ch[r][c];
+        if(!u) continue;
+        q.push(u);
+        int v = f[r];
+        while(v && !ch[v][c]) v = f[v];
+        f[u] = ch[v][c];
+        last[u] = val[f[u]] ? f[u] : last[f[u]];
+      }
+    }
+  }
+
+};
+
+//manacher
+char s[maxn*2];
+int p[maxn*2]; //p[i]为改造后的回文半径,例如y#a#b#a#x的回文半径为4,原串回文长度为p[i]-1
+
+int len=strlen(s);
+int id = 0,maxlen = 0;
+for(int i=len;i>=0;--i)
+{//插入'#'
+    s[i+i+2]=s[i];
+    s[i+i+1]='#';
+}
+//插入了len+1个'#',最终的s长度是1~len+len+1即2*len+1,首尾s[0]和s[2*len+2]要插入不同的字符
+s[0]='*';//s[0]='*',s[len+len+2]='\0',防止在while时p[i]越界
+for(int i=2;i<2*len+1;++i)
+{
+    if(p[id]+id>i)p[i]=min(p[2*id-i],p[id]+id-i);
+    else p[i]=1;
+    while(s[i-p[i]] == s[i+p[i]])++p[i];
+    if(id+p[id]<i+p[i])id=i;
+    if(maxlen<p[i])maxlen=p[i]-1;
+}
 
 
 
