@@ -27,6 +27,21 @@ LL lcm(LL a,LL b)
 
 /////////////////////////////////////组合数//////////////////////////////////
 
+
+void GetBell(int n) //贝尔数----n个数非空划分的方法数
+{
+    B[0] = B[1] = 1;
+    for(int i = 2;i <= n;++i)
+    {
+        B[i] = 0;
+        for(int j = 0;j <= i-1;++j)
+        {
+            B[i] = (B[i] + C[i-1][j]*B[j]%mod)%mod;
+        }
+    }
+}
+
+
 LL C[maxn+10][maxn+10];
 
 void GetAllC(int n) //计算所有C
