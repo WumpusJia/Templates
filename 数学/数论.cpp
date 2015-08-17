@@ -103,19 +103,24 @@ void GetPrm(int n) //获取素数表
         }
 }
 
-void GetPrm_On(int n) 	//线性筛
+void GetPrm(int n)  //线性筛
 {
-	int tot=0;
-	for(int i=2;i<=n;++i){
-		if(!vis[i]) primes[tot++]=i;
-		for(int j=0;j<tot;++j){
-			int t=i*primes[j];
-			if(t>maxn) break;
-			vis[t]=1;
-			if(i%primes[j]==0) break;
-		}
-	}
+    memset(isprm,0,sizeof(isprm));
+    pn = 0;
+    for(int i = 2;i <=n;++i)
+    {
+        if(!isprm[i])
+            prm[pn++] = i;
+        for(int j = 0;j < pn;++j)
+        {
+            LL t = (LL)i*prm[j];
+            if(t > n) break;
+            isprm[t]=1;
+            if(i%prm[j] == 0) break;
+        }
+    }
 }
+
 
 int fac_cnt[maxn];
 void factorize(int num) //唯一分解定理分解num
