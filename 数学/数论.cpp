@@ -103,7 +103,6 @@ void GetPrm(int n) //获取素数表
         }
 }
 
-
 void GetPrm(int n)  //线性筛
 {
     memset(isprm,0,sizeof(isprm));

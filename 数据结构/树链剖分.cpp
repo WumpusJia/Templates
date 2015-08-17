@@ -90,6 +90,7 @@ void bfs(int root)
     top[root] = root;
     id[root] = idx;
     prev = 0,rear = 1;
+
     while(prev < rear)
     {
         int u = seq[prev++];
@@ -183,3 +184,4 @@ void init()
  //   dfs2(1,0,1);
     memset(num,0,sizeof(num));
 }
+
