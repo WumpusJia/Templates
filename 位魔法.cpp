@@ -125,3 +125,6 @@ uint nextComb(uint x)　//获得当前x(x中有k个１)的字典序下一位
     return y | (((x^y) / l) >> 2);
 }
 
+
+
+for(int i = S;i;i = (i-1)&S)  //枚举S的子集
