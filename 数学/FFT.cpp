@@ -122,7 +122,7 @@ int main()
         len = lena+lenb-1;
         while(res[len] <= 0 && len > 0) len--;
         for(int i = len;i >= 0;--i) printf("%c",res[i]+'0');
-        putchar('\n');
+        printf("\n");
     }
     return 0;
 }
@@ -253,7 +253,38 @@ int main()
         len = lena+lenb-1;
         while(res[len] <= 0 && len > 0) len--;
         for(int i = len;i >= 0;--i) printf("%c",res[i]+'0');
-        putchar('\n');
+        printf("\n");
     }
     return 0;
 }
+
+
+////////////////母函数//////////////////////////
+memset(c1,0,sizeof(c1));
+memset(c2,0,sizeof(c2));
+memset(num,0,sizeof(num));
+int sum = 0;
+for(int i = 0;i < n;++i)
+{
+    scanf("%d",&A[i]);
+    sum += A[i];
+    num[i] = 1;
+}
+
+for(int i = 0;i <= num[0]*A[0];i += A[0])
+    c1[i] = 1;
+for(int i = 1;i < n;++i)
+{
+    for(int j = 0;j <= sum;++j)
+        for(int k = 0;k <= num[i]*A[i] && j + k <= sum; k += A[i])
+        {
+            c2[j+k] += c1[j];
+            c2[abs(j-k)] += c1[j];
+        }
+    for(int j = 0;j <= sum;++j)
+    {
+        c1[j] = c2[j];
+        c2[j] = 0;
+    }
+}
+
