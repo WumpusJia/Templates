@@ -18,7 +18,8 @@ Rat operator + (const Rat& A,const Rat& B)
     LL x = lcm(A.b,B.b);
     return Rat(A.a*(x/A.b) + B.a*(x/B.b),x);
 }
-Rat operator - (const Rat& A,const Rat& B) { return A + Rat(-B.a,B.b); }
+Rat operator - (const Rat& A,const Rat& B)
+    { return A + Rat(-B.a,B.b); }
 Rat operator * (const Rat& A,const Rat& B)
 {
     LL t1 = gcd(A.a,B.b),t2 = gcd(A.b,B.a);

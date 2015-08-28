@@ -119,8 +119,10 @@ BigInteger operator * (const BigInteger& a,const BigInteger& b)
         for(int j = 0;j < MAX_LEN/2;++j)
         {
             int t = a.A[MAX_LEN-1-i]*b.A[MAX_LEN-1-j];
-            res.A[MAX_LEN-1-(i+j+1)] += (res.A[MAX_LEN-1-(i+j)] + t)/BASE;
-            res.A[MAX_LEN-1-(i+j)] = (res.A[MAX_LEN-1-(i+j)] + t)%BASE;
+            res.A[MAX_LEN-1-(i+j+1)] +=
+             (res.A[MAX_LEN-1-(i+j)] + t)/BASE;
+            res.A[MAX_LEN-1-(i+j)] =
+                (res.A[MAX_LEN-1-(i+j)] + t)%BASE;
         }
     return res;
 }

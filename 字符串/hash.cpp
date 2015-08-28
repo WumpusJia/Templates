@@ -60,9 +60,12 @@ int main()
             for(int c = 'a';c <= 'c' && !ok;++c)
             {
                 if(c == s[j]) continue;
-                LL nh1 = ((h1 + pw1[len - 1 - j] * (c - s[j])) % MOD + MOD) % MOD; //替换s[j]后的hash
-                LL nh2 = ((h2 + pw2[len - 1 - j] * (c - s[j])) % MOD + MOD) % MOD;
-                if(was[len].find(make_pair(nh1,nh2)) != was[len].end())
+                LL nh1 = ((h1 + pw1[len - 1 - j] *
+                    (c - s[j])) % MOD + MOD) % MOD; //替换s[j]后的hash
+                LL nh2 = ((h2 + pw2[len - 1 - j] *
+                    (c - s[j])) % MOD + MOD) % MOD;
+                if(was[len].find(make_pair(nh1,nh2))
+                    != was[len].end())
                     ok = true;
             }
         if(ok)

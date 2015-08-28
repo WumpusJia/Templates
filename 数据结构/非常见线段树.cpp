@@ -12,7 +12,8 @@ void pushdown(int u)
 void pushup(int u,int L,int R)
 {
     int m = (L+R)/2;
-    p[u].sum = p[u<<1].cnt*(m-L+1)+p[u<<1].sum + p[u<<1|1].cnt*(R-m)+p[u<<1|1].sum;
+    p[u].sum = p[u<<1].cnt*(m-L+1)+p[u<<1].sum +
+        p[u<<1|1].cnt*(R-m)+p[u<<1|1].sum;
 }
 
 void update(int cL,int cR,int val,int L,int R,int u)
@@ -193,7 +194,8 @@ Node query(int cL,int cR,int L,int R,int u)
         int m = (L+R)/2;
         if(cR <= m) return query(cL,cR,L,m,u<<1);
         else if(cL > m) return query(cL,cR,m+1,R,u<<1|1);
-        else return cal(query(cL,cR,L,m,u<<1),query(cL,cR,m+1,R,u<<1|1));
+        else return cal(query(cL,cR,L,m,u<<1),
+                    query(cL,cR,m+1,R,u<<1|1));
     }
 }
 
@@ -267,7 +269,8 @@ Node query(int cL,int cR,int L,int R,int u)
         if(cL > m)
             return gao(query(cL,cR,m+1,R,u<<1|1),p[u].tag);
         else
-            return merge(query(cL,cR,L,m,u<<1),query(cL,cR,m+1,R,u<<1|1),p[u].tag);
+            return merge(query(cL,cR,L,m,u<<1),
+                        query(cL,cR,m+1,R,u<<1|1),p[u].tag);
     }
 }
 

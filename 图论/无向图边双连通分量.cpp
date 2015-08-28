@@ -1,5 +1,6 @@
 vector<int> G[maxn],ebcc[maxn];
-int pre[maxn],iscut[maxn],isbridge[maxn][maxn],ebccno[maxn],dfs_clock,ebcc_cnt;
+int pre[maxn],iscut[maxn],isbridge[maxn][maxn];
+int ebccno[maxn],dfs_clock,ebcc_cnt;
 
 
 int dfs(int u,int fa)

@@ -1,7 +1,9 @@
 //后缀数组
 int s[maxn];
-int sa[maxn],t[maxn],t2[maxn],c[maxn]; //sa[i]是排序后第i个在原字符串中开始的下标
-int srank[maxn],height[maxn]; //srank[i]是原字符串下标i所对应的排序后的名次
+int sa[maxn],t[maxn],t2[maxn],c[maxn];
+ //sa[i]是排序后第i个在原字符串中开始的下标
+int srank[maxn],height[maxn];
+//srank[i]是原字符串下标i所对应的排序后的名次
 int n;
 int ans;
 
@@ -25,7 +27,8 @@ void build_sa(int m)
         swap(x,y);
         p = 1,x[sa[0]] = 0;
         for(int i = 1;i < n;++i)
-            x[sa[i]] = y[sa[i-1]] == y[sa[i]] && y[sa[i-1]+k] == y[sa[i]+k] ? p-1:p++;
+            x[sa[i]] = y[sa[i-1]] == y[sa[i]]
+                && y[sa[i-1]+k] == y[sa[i]+k] ? p-1:p++;
         if(p >= n) break;
         m = p;
     }
@@ -47,7 +50,8 @@ void getHeight()
         scanf("%s",buf);
         n = strlen(save);
      //   memset(height,0,sizeof(height));
-        for(int i = 0;i < n;++i) s[i] = save[i]-'a'+1; //原始字符数组（最后一个字符应必须是0，而前面的字符必须非0）
+     //原始字符数组（最后一个字符应必须是0，而前面的字符必须非0）
+        for(int i = 0;i < n;++i) s[i] = save[i]-'a'+1;
         s[n++] = 0;
         build_sa(27);
         getHeight();

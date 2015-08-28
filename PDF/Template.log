@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.4.16)  28 AUG 2015 17:00
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.4.16)  28 AUG 2015 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,26 +1019,26 @@ Package: xeCJK-listings 2013/12/08 v3.2.9 xeCJK patch file for listings
 (./Template.aux)
 \openout1 = `Template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 20.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 21.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 21.
  (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    ... okay on input line 21.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1046,61 +1046,61 @@ LaTeX Font Info:    ... okay on input line 20.
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 20.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 20.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 20.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 20.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 20.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 20.
-LaTeX Font Info:    Redeclaring math accent \check on input line 20.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 20.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 20.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 20.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 20.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 20.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 21.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 21.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 21.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 21.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 21.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 21.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 21.
+LaTeX Font Info:    Redeclaring math accent \check on input line 21.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 21.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 21.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 21.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 21.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 20.
+(Font)              `operators' in the math version `normal' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 20.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 21.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 20.
+(Font)              `operators' in the math version `bold' on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 20.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 20.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 20.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 20.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 20.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 20.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 21.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 20.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 20.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 20.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 20.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 21.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 20.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 20.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 21.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 21.
 \c@lstlisting=\count155
 
 *geometry* driver: auto-detecting
@@ -1146,6 +1146,166 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+\g_fontspec_family_UnPilgi_int=\count156
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font UnPilgi/I (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"UnPilgi/ICU:"
+. 
+. * 'bold' with NFSS spec.:
+. <->"UnPilgi/B/ICU:"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"UnPilgi/BI/ICU:"
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+.................................................
+. fontspec info: "no-scripts"
+. 
+. Font UnPilgi does not contain any OpenType `Script' information.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'UnPilgi(0)' created for font 'UnPilgi' with options [].
+. 
+. This font family consists of the following shapes:
+.................................................
+
 *************************************************
 * xeCJK warning: "CJKfamily-Unknown"
 * 
@@ -1153,7 +1313,7 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 * 
 * Try to use `\setCJKmonofont[...]{...}' to define it.
 *************************************************
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 47.
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 48.
 
 (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1171,12 +1331,7 @@ LaTeX Font Warning: Font shape `EU1/STKaiti(0)/bx/n' undefined
  [3] (../数学/基础.cpp
 LaTeX Font Info:    Font shape `EU1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `EU1/lmtt/b/n' tried instead on input line 3.
- [4]
-Overfull \hbox (99.5231pt too wide) in paragraph at lines 51--52
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) (../数学/组合数.cpp
+ [4]) (../数学/组合数.cpp
 Overfull \hbox (15.52225pt too wide) in paragraph at lines 22--23
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][] 
@@ -1205,22 +1360,9 @@ Overfull \hbox (21.52231pt too wide) in paragraph at lines 11--12
  []
 
 
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 20--21
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (9.52219pt too wide) in paragraph at lines 28--30
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 29--31
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (249.52463pt too wide) in paragraph at lines 40--41
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][] 
  []
 
 [9] [10]) (../数学/博弈.cpp
@@ -1240,18 +1382,12 @@ Overfull \hbox (39.52249pt too wide) in paragraph at lines 106--107
  []
 
 
-Overfull \hbox (99.5231pt too wide) in paragraph at lines 117--118
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (3.52213pt too wide) in paragraph at lines 120--121
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 121--122
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [13]
-Overfull \hbox (3.52213pt too wide) in paragraph at lines 145--146
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 146--147
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1273,99 +1409,60 @@ Overfull \hbox (9.52219pt too wide) in paragraph at lines 58--59
  []
 
 
-Overfull \hbox (93.52304pt too wide) in paragraph at lines 61--62
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][] 
- []
-
-
-Overfull \hbox (9.52219pt too wide) in paragraph at lines 65--66
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 66--67
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [23]
-Overfull \hbox (339.52554pt too wide) in paragraph at lines 117--118
+Overfull \hbox (33.52243pt too wide) in paragraph at lines 118--119
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][] 
+[][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (363.52579pt too wide) in paragraph at lines 119--120
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 121--122
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][] 
  []
 
 
-Overfull \hbox (315.5253pt too wide) in paragraph at lines 120--121
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 126--127
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][] 
+[][][] 
  []
 
 
-Overfull \hbox (177.5239pt too wide) in paragraph at lines 122--123
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (261.52475pt too wide) in paragraph at lines 123--124
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (393.5261pt too wide) in paragraph at lines 124--125
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+Overfull \hbox (51.52261pt too wide) in paragraph at lines 128--129
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][] 
  []
 
 
-Overfull \hbox (579.52798pt too wide) in paragraph at lines 125--126
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 130--131
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 132--133
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (51.52261pt too wide) in paragraph at lines 133--134
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][] 
  []
 
-[24]) (../数据结构/RMQ_树状数组.cpp [25] [26]
-Overfull \hbox (135.52347pt too wide) in paragraph at lines 71--72
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (135.52347pt too wide) in paragraph at lines 73--74
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-) (../数据结构/分块暴力.cpp) (../数据结构/莫队.cpp [27]
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 17--18
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][] 
- []
-
-[28] [29] [30]) (../数据结构/CDQ.cpp
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 13--14
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[31] [32] [33]) (../数据结构/树的重心.cpp [34]) (../数据结构/树上最远路径.cpp [35]
+[24]) (../数据结构/RMQ_树状数组.cpp [25] [26]) (../数据结构/分块暴力.cpp [27]) (../数据结构/莫队.cpp
+[28] [29] [30]) (../数据结构/CDQ.cpp [31] [32] [33] [34]) (../数据结构/树的重心.cpp)
+[35] (../数据结构/树上最远路径.cpp [36]
 Overfull \hbox (21.52231pt too wide) in paragraph at lines 54--55
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
@@ -1378,381 +1475,149 @@ Overfull \hbox (27.52237pt too wide) in paragraph at lines 66--67
 ][][][][][][][][][][][][][][][][][] 
  []
 
-) [36] (../数据结构/树链剖分.cpp
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 5--7
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
-
- []
-
-[37] [38] [39]) (../数据结构/treap.cpp [40] [41] [42]) (../数据结构/sbt.cpp [43]
-[44] [45] [46] [47]) (../数据结构/splay.cpp [48]) (../数据结构/LCT.cpp [49] [50]
-[51] [52] [53] [54] [55] [56] [57]) (../数据结构/非常见线段树.cpp [58]
-Overfull \hbox (105.52316pt too wide) in paragraph at lines 15--16
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-[59] [60] [61]
-Overfull \hbox (45.52255pt too wide) in paragraph at lines 196--197
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[62]
-Overfull \hbox (105.52316pt too wide) in paragraph at lines 270--271
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-[63]) [64] (../图论/拓扑排序.cpp
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 27--28
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][] 
- []
-
-[65]) (../图论/欧拉回路.cpp [66]) (../图论/哈密顿.cpp [67]
+) (../数据结构/树链剖分.cpp [37] [38] [39]) [40] (../数据结构/treap.cpp [41] [42])
+(../数据结构/sbt.cpp [43] [44] [45] [46] [47]) (../数据结构/splay.cpp [48])
+(../数据结构/LCT.cpp [49] [50] [51] [52] [53] [54] [55] [56] [57] [58])
+(../数据结构/非常见线段树.cpp [59] [60] [61] [62] [63] [64]) (../图论/拓扑排序.cpp [65])
+(../图论/欧拉回路.cpp [66] [67]) (../图论/哈密顿.cpp [68]
 Overfull \hbox (9.52219pt too wide) in paragraph at lines 52--53
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[68]) (../图论/Prim(临时).cpp [69]) (../图论/二分图.cpp [70] [71] [72] [73] [74])
-(../图论/2SAT.cpp [75]) (../图论/LCA.cpp [76] [77] [78]) (../图论/割点与桥.cpp [79])
+) (../图论/Prim(临时).cpp [69] [70]) (../图论/二分图.cpp [71] [72] [73] [74] [75])
+(../图论/2SAT.cpp [76]) (../图论/LCA.cpp [77] [78]) (../图论/割点与桥.cpp [79])
 (../图论/有向图强连通分量.cpp [80]) (../图论/无向图点双连通分量.cpp
-Overfull \hbox (225.52438pt too wide) in paragraph at lines 5--6
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (207.5242pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-
-Overfull \hbox (207.5242pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
- []
-
-[81]) (../图论/无向图边双连通分量.cpp
-Overfull \hbox (81.52292pt too wide) in paragraph at lines 2--5
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[82]) (../图论/网络流.cpp [83] [84] [85]
-Overfull \hbox (69.5228pt too wide) in paragraph at lines 129--130
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-[86]
-Overfull \hbox (15.52225pt too wide) in paragraph at lines 181--182
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[87]
-Overfull \hbox (27.52237pt too wide) in paragraph at lines 239--240
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 6--7
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (81.52292pt too wide) in paragraph at lines 259--260
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][] 
+[81]) [82] (../图论/无向图边双连通分量.cpp [83]) (../图论/网络流.cpp [84] [85] [86]
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 183--184
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[88] [89]) (../图论/最小树形图.cpp
+[87] [88]
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 249--250
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[89]) (../图论/最小树形图.cpp [90]
 Overfull \hbox (3.52213pt too wide) in paragraph at lines 37--38
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ] 
  []
 
-[90]
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 79--80
+[91] [92]
+Overfull \hbox (15.52225pt too wide) in paragraph at lines 145--146
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[93]) (../计算几何/二维.cpp [94]
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
- []
-
-[91]
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 132--133
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (303.52518pt too wide) in paragraph at lines 143--144
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-[92]) (../计算几何/二维.cpp
-Overfull \hbox (87.52298pt too wide) in paragraph at lines 16--17
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (45.52255pt too wide) in paragraph at lines 23--24
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
- []
-
-[93]
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 24--25
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 25--26
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 26--27
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (213.52426pt too wide) in paragraph at lines 27--28
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (195.52408pt too wide) in paragraph at lines 28--29
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (171.52383pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (45.52255pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (189.52402pt too wide) in paragraph at lines 38--39
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 46--47
+Overfull \hbox (33.52243pt too wide) in paragraph at lines 55--56
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
  []
 
 
-Overfull \hbox (63.52274pt too wide) in paragraph at lines 48--49
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][]
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 67--68
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (411.52628pt too wide) in paragraph at lines 72--73
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
- []
-
-[94]
-Overfull \hbox (9.52219pt too wide) in paragraph at lines 78--79
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (183.52396pt too wide) in paragraph at lines 80--81
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (213.52426pt too wide) in paragraph at lines 83--84
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (9.52219pt too wide) in paragraph at lines 85--86
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (123.52335pt too wide) in paragraph at lines 101--103
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (69.5228pt too wide) in paragraph at lines 109--110
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (123.52335pt too wide) in paragraph at lines 121--122
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[95]
-Overfull \hbox (327.52542pt too wide) in paragraph at lines 140--141
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (159.52371pt too wide) in paragraph at lines 160--161
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[96]
-Overfull \hbox (429.52646pt too wide) in paragraph at lines 179--180
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 57--58
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 183--184
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 77--78
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[95]
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 83--84
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (69.5228pt too wide) in paragraph at lines 192--193
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (87.52298pt too wide) in paragraph at lines 196--197
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (87.52298pt too wide) in paragraph at lines 197--198
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (81.52292pt too wide) in paragraph at lines 200--201
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 205--206
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 206--207
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (27.52237pt too wide) in paragraph at lines 211--213
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (255.52469pt too wide) in paragraph at lines 213--214
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (3.52213pt too wide) in paragraph at lines 219--220
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (93.52304pt too wide) in paragraph at lines 220--221
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 89--90
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[97]
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 239--240
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
 
-
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 250--251
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 256--257
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (81.52292pt too wide) in paragraph at lines 280--281
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-
-Overfull \hbox (105.52316pt too wide) in paragraph at lines 281--282
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[98]
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 288--289
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 92--93
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (45.52255pt too wide) in paragraph at lines 305--306
+Overfull \hbox (33.52243pt too wide) in paragraph at lines 95--96
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 97--98
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[96] [97]
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 235--236
+[][][][][][][][][][][][][][][] 
+ []
+
+[98]
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 243--244
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.52255pt too wide) in paragraph at lines 244--245
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 277--278
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 284--285
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[99]
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 308--309
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 309--310
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
  []
 
 
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 306--307
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][] 
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 316--317
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 307--308
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 308--311
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (27.52237pt too wide) in paragraph at lines 328--329
+[100]
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 360--361
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
 
-[99]
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 355--356
+
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 387--388
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (../计算几何/三维.cpp [100]
+[101]) (../计算几何/三维.cpp
 Overfull \hbox (15.52225pt too wide) in paragraph at lines 14--15
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][] 
@@ -1764,202 +1629,64 @@ Overfull \hbox (9.52219pt too wide) in paragraph at lines 35--36
 ][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (111.52322pt too wide) in paragraph at lines 37--38
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 45--46
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (105.52316pt too wide) in paragraph at lines 48--49
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (117.52328pt too wide) in paragraph at lines 52--53
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (183.52396pt too wide) in paragraph at lines 56--57
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[101]
-Overfull \hbox (15.52225pt too wide) in paragraph at lines 65--66
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (285.525pt too wide) in paragraph at lines 71--72
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (375.52591pt too wide) in paragraph at lines 78--79
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 104--105
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 [102]
-Overfull \hbox (9.52219pt too wide) in paragraph at lines 139--140
+Overfull \hbox (21.52231pt too wide) in paragraph at lines 46--47
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (87.52298pt too wide) in paragraph at lines 153--154
+Overfull \hbox (15.52225pt too wide) in paragraph at lines 68--69
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][] 
+][][][][][][][][][][][][][][][][][][] 
  []
 
-) [103] (../字符串/KMP.cpp
-Overfull \hbox (123.52335pt too wide) in paragraph at lines 2--3
+[103]
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 147--148
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][][][][][] 
  []
 
-[104]) (../字符串/manacher.cpp
-Overfull \hbox (129.5234pt too wide) in paragraph at lines 3--5
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][] 
- []
-
-
-Overfull \hbox (153.52365pt too wide) in paragraph at lines 12--13
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][] 
- []
-
-) [105] (../字符串/Trie.cpp) (../字符串/hash.cpp [106] [107]
-Overfull \hbox (213.52426pt too wide) in paragraph at lines 63--64
+[104]) (../字符串/KMP.cpp [105]) [106] (../字符串/manacher.cpp
+Overfull \hbox (39.52249pt too wide) in paragraph at lines 4--6
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (99.5231pt too wide) in paragraph at lines 64--65
+) (../字符串/Trie.cpp [107]) (../字符串/hash.cpp [108]
+Overfull \hbox (27.52237pt too wide) in paragraph at lines 64--65
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
+][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 65--66
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) (../字符串/后缀数组.cpp [108]
-Overfull \hbox (93.52304pt too wide) in paragraph at lines 3--4
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 4--5
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-
-Overfull \hbox (123.52335pt too wide) in paragraph at lines 28--29
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (297.52512pt too wide) in paragraph at lines 50--51
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-) [109] (../字符串/AC自动机.cpp [110]) (../DP/LIS.cpp
-Overfull \hbox (321.52536pt too wide) in paragraph at lines 7--8
+[109]) (../字符串/后缀数组.cpp [110]) (../字符串/AC自动机.cpp [111] [112]) (../DP/LIS.cpp
+Overfull \hbox (9.52219pt too wide) in paragraph at lines 8--9
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
+[][][][][][][][][][][][][][] 
  []
 
-[111]) (../DP/LCS.cpp)
-Underfull \hbox (badness 10000) in paragraph at lines 197--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--207
+) (../DP/LCS.cpp [113])
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
 
  []
 
-(../DP/LCIS.cpp [112]) (../DP/SCS.cpp [113]
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 84--85
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--208
+
  []
 
-[114]
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 88--89
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 89--90
+(../DP/LCIS.cpp) [114] (../DP/SCS.cpp [115]
+Overfull \hbox (33.52243pt too wide) in paragraph at lines 91--92
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 90--91
+Overfull \hbox (33.52243pt too wide) in paragraph at lines 92--93
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (75.52286pt too wide) in paragraph at lines 96--97
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-
-Overfull \hbox (63.52274pt too wide) in paragraph at lines 113--114
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-
-Overfull \hbox (57.52267pt too wide) in paragraph at lines 137--138
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-[115]
-Overfull \hbox (81.52292pt too wide) in paragraph at lines 165--166
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-) [116] (../DP/基础背包.cpp) (../DP/多重背包.cpp [117]
+[116] [117]) (../DP/基础背包.cpp [118]) (../DP/多重背包.cpp [119]
 Overfull \hbox (45.52255pt too wide) in paragraph at lines 43--44
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -1970,82 +1697,40 @@ Overfull \hbox (9.52219pt too wide) in paragraph at lines 9--10
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [118] (../DP/四边形不等式.cpp) (../魔法/位魔法.cpp [119] [120] [121]) (../魔法/奇怪的.cpp
+) (../DP/四边形不等式.cpp [120]) (../魔法/位魔法.cpp [121] [122]) (../魔法/奇怪的.cpp [123]
 Overfull \hbox (21.52231pt too wide) in paragraph at lines 5--8
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
-[122]
-Overfull \hbox (99.5231pt too wide) in paragraph at lines 60--61
+[124]
+Overfull \hbox (3.52213pt too wide) in paragraph at lines 61--62
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[123]) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
+) [125]
 (../被遗弃的角落/FastIO.java
 Overfull \hbox (15.52225pt too wide) in paragraph at lines 12--13
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-[124]
+
 Overfull \hbox (57.52267pt too wide) in paragraph at lines 39--40
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (../被遗弃的角落/分数.cpp
-Overfull \hbox (39.52249pt too wide) in paragraph at lines 21--22
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] 
- []
-
-[125]) (../被遗弃的角落/日期.cpp
-Overfull \hbox (219.52432pt too wide) in paragraph at lines 6--8
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (39.52249pt too wide) in paragraph at lines 36--37
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-[126]
-Overfull \hbox (39.52249pt too wide) in paragraph at lines 68--69
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][] 
- []
-
-
-Overfull \hbox (27.52237pt too wide) in paragraph at lines 71--72
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][] 
- []
-
-
-Overfull \hbox (63.52274pt too wide) in paragraph at lines 82--83
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 88--89
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-] 
- []
-
-[127]) (../被遗弃的角落/DLX解数独.cpp [128] [129]
+[126]) (../被遗弃的角落/分数.cpp) (../被遗弃的角落/日期.cpp [127] [128] [129])
+(../被遗弃的角落/DLX解数独.cpp [130]
 Overfull \hbox (9.52219pt too wide) in paragraph at lines 90--91
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
 
-[130]
+[131] [132]
 Overfull \hbox (15.52225pt too wide) in paragraph at lines 150--151
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][] 
@@ -2056,234 +1741,224 @@ Overfull \hbox (21.52231pt too wide) in paragraph at lines 156--157
 [][][][][][][][][][][][][][][][][][] 
  []
 
-) (../被遗弃的角落/BigInteger.cpp [131] [132] [133]
+) (../被遗弃的角落/BigInteger.cpp [133] [134] [135]
 Overfull \hbox (9.52219pt too wide) in paragraph at lines 149--150
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
 
-[134] [135] [136] [137] [138]) (../被遗弃的角落/BigDecimal.cpp [139] [140])
-(../被遗弃的角落/简易大整数.cpp [141]
+[136] [137] [138] [139] [140]) (../被遗弃的角落/BigDecimal.cpp [141] [142])
+(../被遗弃的角落/简易大整数.cpp [143]
 Overfull \hbox (9.52219pt too wide) in paragraph at lines 54--55
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
  []
 
-[142]
-Overfull \hbox (51.52261pt too wide) in paragraph at lines 122--123
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (33.52243pt too wide) in paragraph at lines 123--124
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[143]) [144] [145]
+[144] [145]) [146]
 Missing character: There is no 为 in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no 素 in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no 数 in font [lmroman10-regular]:mapping=tex-text!
 Missing character: There is no ≤ in font [lmroman10-regular]:mapping=tex-text!
- [146]
-Underfull \hbox (badness 10000) in paragraph at lines 308--311
+ [147]
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
 
  []
 
-[147]
-Underfull \hbox (badness 10000) in paragraph at lines 322--325
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--331
+[148]
+Underfull \hbox (badness 10000) in paragraph at lines 323--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--337
+Underfull \hbox (badness 10000) in paragraph at lines 329--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
 
  []
 
 Missing character: There is no ≠ in font [lmroman10-regular]:mapping=tex-text!
-[148]
-Underfull \hbox (badness 10000) in paragraph at lines 423--428
-
- []
-
 [149]
-Underfull \hbox (badness 10000) in paragraph at lines 457--461
+Underfull \hbox (badness 10000) in paragraph at lines 424--429
 
  []
 
 [150]
-Underfull \hbox (badness 10000) in paragraph at lines 523--527
+Underfull \hbox (badness 10000) in paragraph at lines 458--462
 
  []
 
 [151]
-Underfull \hbox (badness 10000) in paragraph at lines 533--534
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 537--538
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 539--540
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 543--544
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 552--554
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 556--559
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 524--528
 
  []
 
 [152]
-Underfull \hbox (badness 10000) in paragraph at lines 584--588
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--599
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
 
  []
 
 
-Overfull \hbox (231.52444pt too wide) in paragraph at lines 601--602
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--543
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 553--555
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--560
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--573
+
+ []
+
+[153]
+Underfull \hbox (badness 10000) in paragraph at lines 585--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--600
+
+ []
+
+
+Overfull \hbox (231.52444pt too wide) in paragraph at lines 602--603
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
 [][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
-[153] [154] [155] [156]
+[154] [155] [156] [157]
 File: ./images/image-0001.jpg Graphic file (type QTm)
  <use  "./images/image-0001.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 699--700
-[][] 
- []
-
-[157]
-File: ./images/image-0002.jpg Graphic file (type QTm)
- <use  "./images/image-0002.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 701--702
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 700--701
 [][] 
  []
 
 [158]
-File: ./images/image-0003.jpg Graphic file (type QTm)
- <use  "./images/image-0003.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 703--704
+File: ./images/image-0002.jpg Graphic file (type QTm)
+ <use  "./images/image-0002.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 702--703
 [][] 
  []
 
 [159]
-File: ./images/image-0004.jpg Graphic file (type QTm)
- <use  "./images/image-0004.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 705--706
+File: ./images/image-0003.jpg Graphic file (type QTm)
+ <use  "./images/image-0003.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 704--705
 [][] 
  []
 
 [160]
-File: ./images/image-0005.jpg Graphic file (type QTm)
- <use  "./images/image-0005.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 707--708
+File: ./images/image-0004.jpg Graphic file (type QTm)
+ <use  "./images/image-0004.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 706--707
 [][] 
  []
 
 [161]
-File: ./images/image-0006.jpg Graphic file (type QTm)
- <use  "./images/image-0006.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 709--710
+File: ./images/image-0005.jpg Graphic file (type QTm)
+ <use  "./images/image-0005.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 708--709
 [][] 
  []
 
 [162]
-File: ./images/image-0007.jpg Graphic file (type QTm)
- <use  "./images/image-0007.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 711--712
+File: ./images/image-0006.jpg Graphic file (type QTm)
+ <use  "./images/image-0006.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 710--711
 [][] 
  []
 
 [163]
-File: ./images/image-0008.jpg Graphic file (type QTm)
- <use  "./images/image-0008.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 713--714
+File: ./images/image-0007.jpg Graphic file (type QTm)
+ <use  "./images/image-0007.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 712--713
 [][] 
  []
 
 [164]
-File: ./images/image-0009.jpg Graphic file (type QTm)
- <use  "./images/image-0009.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 715--716
+File: ./images/image-0008.jpg Graphic file (type QTm)
+ <use  "./images/image-0008.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 714--715
 [][] 
  []
 
 [165]
-File: ./images/image-0010.jpg Graphic file (type QTm)
- <use  "./images/image-0010.jpg" >
-Overfull \hbox (18.48752pt too wide) in paragraph at lines 717--718
+File: ./images/image-0009.jpg Graphic file (type QTm)
+ <use  "./images/image-0009.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 716--717
 [][] 
  []
 
-[166] (./Template.aux)
+[166]
+File: ./images/image-0010.jpg Graphic file (type QTm)
+ <use  "./images/image-0010.jpg" >
+Overfull \hbox (18.48752pt too wide) in paragraph at lines 718--719
+[][] 
+ []
+
+[167] (./Template.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 21495 strings out of 493918
- 413653 string characters out of 6150563
- 519360 words of memory out of 5000000
- 24414 multiletter control sequences out of 15000+600000
- 8818 words of font info for 54 fonts, out of 8000000 for 9000
+ 21545 strings out of 493918
+ 414500 string characters out of 6150563
+ 511876 words of memory out of 5000000
+ 24440 multiletter control sequences out of 15000+600000
+ 8930 words of font info for 68 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 52i,9n,58p,10431b,1567s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,10n,58p,10431b,1567s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Template.pdf (167 pages).
+Output written on Template.pdf (168 pages).

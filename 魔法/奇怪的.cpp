@@ -57,7 +57,8 @@ using namespace std;
 char *ch, *ch1, buf[40*1024000+5], buf1[40*1024000+5];
 
 bool read(int &x) {
-	for (++ch; (*ch) && !(((*ch) >= '0' && (*ch) <= '9') || (*ch) == '-' ); ++ch);
+	for (++ch; (*ch) &&
+        !(((*ch) >= '0' && (*ch) <= '9') || (*ch) == '-' ); ++ch);
 	if(!(*ch)) return false;
 	bool sign = 0;
 	if((*ch) == '-') { sign = 1; ++ch; }

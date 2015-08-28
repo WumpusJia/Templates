@@ -68,9 +68,11 @@ void RMQ_init()
                 for(int c = 1;c <= limitC;++c)
                 {
                     if(i == 0)
-                        d[r][c][i][j] = max(d[r][c][i][j-1],d[r][c+(1<<(j-1))][i][j-1]);
+                        d[r][c][i][j] = max(d[r][c][i][j-1],
+                            d[r][c+(1<<(j-1))][i][j-1]);
                     else
-                        d[r][c][i][j] = max(d[r][c][i-1][j],d[r+(1<<(i-1))][c][i-1][j]);
+                        d[r][c][i][j] = max(d[r][c][i-1][j],
+                            d[r+(1<<(i-1))][c][i-1][j]);
                 }
         }
 }

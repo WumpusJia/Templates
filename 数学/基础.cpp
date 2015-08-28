@@ -48,7 +48,8 @@ LL sum(LL p,LL n) //二分等比求和
 {
 	if(n==0) return 1;
 	if(n&1) return (1+pow_mod(p,(n>>1)+1))*sum(p,n>>1)%mod;
-	else return ((1+pow_mod(p,(n>>1)+1))*sum(p,(n-1)>>1)%mod+pow_mod(p,n>>1))%mod;
+	else return ((1+pow_mod(p,(n>>1)+1))*sum(p,(n-1)>>1)%mod
+            +pow_mod(p,n>>1))%mod;
 }
 
 

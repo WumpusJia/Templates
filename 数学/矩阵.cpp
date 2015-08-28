@@ -17,7 +17,8 @@ typedef LL Matrix[maxn][maxn];
 //    }
 //}
 
-int gauss_jordan(Matrix A,int n,int m)  //m行n列矩阵  typedef double Matrix
+//m行n列矩阵  typedef double Matrix
+int gauss_jordan(Matrix A,int n,int m)
 {
     for(int c = 0,k = 0;c < n;++c)
     {
@@ -37,7 +38,9 @@ int gauss_jordan(Matrix A,int n,int m)  //m行n列矩阵  typedef double Matrix
 
 LL x[maxn]; //解的结果
 //尤其注意如果mod不是素数，可能会导致无解
-int gauss_jordan(Matrix A,int n,int m)  //解同余矩阵(这里模7)  返回值-1(无解),0(多解),1(仅有1解) typedef LL
+//解同余矩阵(这里模7)  返回值-1(无解),0(多解),1(仅有1解)
+//typedef LL
+int gauss_jordan(Matrix A,int n,int m)
 {
     for(int c = 0,k = 0;c < n;++c)
     {

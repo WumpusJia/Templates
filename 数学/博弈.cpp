@@ -114,7 +114,8 @@ struct State
         if(hold[player] != 0)
         {
             for(int i = 0;i < 7;++i)
-                if(type[i] == FLOOR && type[i+1] == FLOOR && card[i] == card[i+1])
+                if(type[i] == FLOOR && type[i+1] == FLOOR
+                    && card[i] == card[i+1])
                 {
                     State s = child();
                     s.score += getScore(card[i],hold[player],cur);

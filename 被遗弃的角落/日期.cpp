@@ -3,7 +3,8 @@
 
 const int DAYS = 365;
 const int MON[] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
-const char WEEK[][10] = {"\0","monday","tuesday","wednesday","thursday","friday","saturday","sunday"};
+const char WEEK[][10] = {"\0","monday","tuesday"
+    ,"wednesday","thursday","friday","saturday","sunday"};
 
 inline bool Isleap(int y)
 {
@@ -33,7 +34,8 @@ struct Date{
 	{
 		if(y<1) return false;
 		if(m<1 || m>12) return false;
-		if(d<1 || d > (MON[m]+ ((Isleap(y) && m==2)?1:0))) return false;
+		if(d<1 || d > (MON[m]+ ((Isleap(y) && m==2)?1:0)))
+            return false;
 		return true;
 	}
 
@@ -65,10 +67,11 @@ struct Date{
 		Date temp = *(this);
 		int ans ;
 		if(m == 1 || m == 2) m+=12 , --y;
-		if((y < 1752 ) || (y ==1752 && m<9) || (y==1752 && m==9 && d<3))
-			ans = (d + 2*m + 3*(m+1)/5 + y + y/4 + 5) % 7;
+		if((y < 1752 ) || (y ==1752 && m<9) ||
+            (y==1752 && m==9 && d<3))
+			ans = (d + 2*m + 3*(m+1)/5 + y + y/4 + 5)%7;
 		else
-			ans = (d + 2*m + 3*(m+1)/5 + y + y/4 - y/100 + y/400) % 7;
+			ans = (d + 2*m + 3*(m+1)/5+y+y/4-y/100+y/400)%7;
 		*(this) = temp;
 		return ans+1;
 	}
@@ -79,13 +82,14 @@ Date toDate(int day)
 {
 	Date res(day/(DAYS+1)+1,0,0);
 	day -= res.toDay();
-	while((!Isleap(res.y) && day > DAYS) || (Isleap(res.y) && day > DAYS+1))
+	while((!Isleap(res.y) && day > DAYS) ||
+        (Isleap(res.y) && day > DAYS+1))
 	{
 		day -= DAYS + Isleap(res.y) ;
 		res.y++;
 	}
 	res.m = 1;
-	while(day - (MON[res.m] + ((Isleap(res.y) && res.m==2)?1:0)) > 0)
+	while(day - (MON[res.m]+((Isleap(res.y) && res.m==2)?1:0))>0)
 	{
 	   	day -= MON[res.m] + ((Isleap(res.y) && res.m==2)?1:0);
 		++res.m;

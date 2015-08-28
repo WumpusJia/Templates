@@ -81,23 +81,18 @@ inline void gao()
 	for(int i=0;i<n;++i)
 	{
 		if(!id[string(s[i])]==-1) continue;
-		if(!id[string(s[i])]) id[string(s[i])] = ++cnt, pos[cnt-1] = i;
+		if(!id[string(s[i])])
+		id[string(s[i])] = ++cnt, pos[cnt-1] = i;
 		for(int j=0;j<n;++j)
 		{
 			if(i==j || id[string(s[j])]==-1) continue;
-			if(!id[string(s[j])]) id[string(s[j])] = ++cnt, pos[cnt-1] = j;
+			if(!id[string(s[j])])
+                id[string(s[j])] = ++cnt, pos[cnt-1] = j;
 			G[id[string(s[i])]-1][id[string(s[j])]-1] = cal(s[i],s[j]);
 			G[id[string(s[j])]-1][id[string(s[i])]-1] = cal(s[j],s[i]);
 		}
 	}
 	n = cnt;
-//	printf("%d\n",n);
-//	int sum = 0;
-//	for(int i=0;i<n;++i) printf("%d %s\n",i,s[pos[i]]),sum+=strlen(s[pos[i]]);
-//	printf("%d\n",sum);
-//	for(int i=0;i<n;++i)
-//		for(int j=0;j<n;++j)
-//			printf("%d %d %d\n",i,j,G[i][j]);
 }
 
 void dfs(int u,int S,int ans)
@@ -110,10 +105,11 @@ void dfs(int u,int S,int ans)
 		if(ans - G[u][i] == d[i][S])
 		{
 			if(id==-1) id = i;
-			else if(strcmp(s[pos[i]]+G[u][i],s[pos[id]]+G[u][id])<0) id = i;
+			else
+			if(strcmp(s[pos[i]]+G[u][i],s[pos[id]]+G[u][id])<0)
+                id = i;
 		}
 	}
-	//printf("%d %d\n",ans,id);
 	if(id==-1) return;
 	rec.push_back(id);
 	dfs(id,S^(1<<id),ans - G[u][id]);
@@ -134,7 +130,8 @@ inline void dp()
 				if(i == j) continue;
 				if(!(S&(1<<j)))
 				{
-					d[j][S|(1<<j)] = max(d[j][S|(1<<j)],d[i][S] + G[j][i]);
+					d[j][S|(1<<j)] =
+					max(d[j][S|(1<<j)],d[i][S] + G[j][i]);
 				}
 			}
 		}
@@ -162,7 +159,8 @@ inline void dp()
 //		printf("%d -- ",rec[i]);
 		int t = G[rec[i]][rec[i+1]];
 //		printf("%d\n",t);
-		for(int j=0;j<strlen(s[pos[rec[i]]])-t;++j) putchar(s[pos[rec[i]]][j]);
+		for(int j=0;j<strlen(s[pos[rec[i]]])-t;++j)
+            putchar(s[pos[rec[i]]][j]);
 	}
 //	printf("%d\n",rec[rec.size()-1]);
 	printf("%s\n\n",s[pos[rec[rec.size()-1]]]);

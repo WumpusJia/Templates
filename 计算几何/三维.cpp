@@ -34,7 +34,8 @@ Vector3 operator / (Vector3 A,double p)
 
 double Dot(Vector3 A,Vector3 B) { return A.x*B.x+A.y*B.y+A.z*B.z; }
 double Length(Vector3 A) { return sqrt(Dot(A,A)); }
-double Angle(Vector3 A,Vector3 B) { return acos(Dot(A,B) / Length(A) / Length(B)); }
+double Angle(Vector3 A,Vector3 B)
+    { return acos(Dot(A,B) / Length(A) / Length(B)); }
 double dcmp(double x)
 {
     if(fabs(x) < eps) return 0;
@@ -44,16 +45,18 @@ bool operator == (const Point3& a,const Point3& b)
 {
     return dcmp(a.x-b.x) == 0 && dcmp(a.y-b.y) == 0 && dcmp(a.z-b.z);
 }
-
-double PointToPlane(Point3 p,Point3 p0,Vector3 n) //p到面(p0,n)的距离,n需为单位向量
+ //p到面(p0,n)的距离,n需为单位向量
+double PointToPlane(Point3 p,Point3 p0,Vector3 n)
 {
     return fabs(Dot(p-p0,n));
 }
-Point3 PlaneProjection(Point3 p,Point3 p0,Vector3 n) //p在(p0,n)的投影，n须为单位向量
+//p在(p0,n)的投影，n须为单位向量
+Point3 PlaneProjection(Point3 p,Point3 p0,Vector3 n)
 {
     return p-n*Dot(p-p0,n);
 }
-Point3 LinePlanePoint(Point3 p1,Point3 p2,Point3 p0,Vector3 n) //p1-p2和(p0,n)的交点（假定存在）
+//p1-p2和(p0,n)的交点（假定存在）
+Point3 LinePlanePoint(Point3 p1,Point3 p2,Point3 p0,Vector3 n)
 {
     Vector3 v = p2-p1;
     double t = (Dot(n,p0-p1) / Dot(n,p2-p1));
@@ -68,14 +71,18 @@ double Area2(Point3 A,Point3 B,Point3 C)
 {
     return Length(Cross(B-A,C-A));
 }
-bool IsPointInTriangle(Point3 P,Point3 P0,Point3 P1,Point3 P2) //判断P是否在三角形P0P1P2中(假设P在平面P0,P1,P2上)
+
+//判断P是否在三角形P0P1P2中(假设P在平面P0,P1,P2上)
+bool IsPointInTriangle(Point3 P,Point3 P0,Point3 P1,Point3 P2)
 {
     double area1 = Area2(P,P0,P1);
     double area2 = Area2(P,P1,P2);
     double area3 = Area2(P,P2,P0);
     return dcmp(area1+area2+area3 - Area2(P0,P1,P2)) == 0;
 }
-bool IsSegmentTriangleIntersection(Point3 P0,Point3 P1,Point3 P2,Point3 A,Point3 B,Point3& P) //判断三角形P0P1P2是否和线段AB相交
+ //判断三角形P0P1P2是否和线段AB相交
+bool IsSegmentTriangleIntersection(Point3 P0,Point3 P1,
+    Point3 P2,Point3 A,Point3 B,Point3& P)
 {
     Vector3 n = Cross(P1-P0,P2-P0);
     if(dcmp(Dot(n,B-A)) == 0) return false;
@@ -101,7 +108,8 @@ double PointToSegment(Point3 P,Point3 A,Point3 B)//P到线段AB距离
     else if(dcmp(Dot(v1,v3)) > 0) return Length(v3);
     else return Length(Cross(v1,v2)) / Length(v1);
 }
-double Volume6(Point3 A,Point3 B,Point3 C,Point3 D) //四面体ABCD有向面积的６倍
+ //四面体ABCD有向面积的６倍
+double Volume6(Point3 A,Point3 B,Point3 C,Point3 D)
 {
     return Dot(D-A,Cross(B-A,C-A));
 }
@@ -150,7 +158,8 @@ vector<Face> CH3D(const vector<Point3>& P) {
     for(int j = 0; j < cur.size(); j++)
       for(int k = 0; k < 3; k++) {
         int a = cur[j].v[k], b = cur[j].v[(k+1)%3];
-        if(vis[a][b] != vis[b][a] && vis[a][b]) // (a,b)是分界线，左边对P[i]可见
+        if(vis[a][b] != vis[b][a] && vis[a][b])
+        // (a,b)是分界线，左边对P[i]可见
           next.push_back(Face(a, b, i));
       }
     cur = next;
@@ -159,7 +168,4 @@ vector<Face> CH3D(const vector<Point3>& P) {
 }
 
 */
-int main()
-{
 
-}

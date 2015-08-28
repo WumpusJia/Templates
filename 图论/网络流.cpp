@@ -126,7 +126,8 @@ struct Dinic
         for(int& i = cur[x];i < G[x].size();++i)
         {
             Edge&e = edges[G[x][i]];
-            if(d[x] +1 == d[e.to] && (f = DFS(e.to,min(a,e.cap-e.flow))) > 0)
+            if(d[x] +1 == d[e.to] &&
+                (f = DFS(e.to,min(a,e.cap-e.flow))) > 0)
             {
                 e.flow += f;
                 edges[G[x][i]^1].flow -= f;
@@ -175,12 +176,15 @@ bool bfs()
     Q.push(sink);
     visited[sink] = 1;
     d[sink] = 0;
-    while (!Q.empty()) {
+    while (!Q.empty())
+    {
         int u = Q.front();
         Q.pop();
-        for (iterator_t ix = G[u].begin(); ix != G[u].end(); ++ix) {
+        for (iterator_t ix = G[u].begin(); ix != G[u].end(); ++ix)
+        {
             Edge &e = edges[(*ix)^1];
-            if (!visited[e.from] && e.capacity > e.flow) {
+            if (!visited[e.from] && e.capacity > e.flow)
+            {
                 visited[e.from] = true;
                 d[e.from] = d[u] + 1;
                 Q.push(e.from);
@@ -195,14 +199,16 @@ int augment()
 {
     int u = sink, df = __inf;
     // 从汇点到源点通过 p 追踪增广路径, df 为一路上最小的残量
-    while (u != source) {
+    while (u != source)
+    {
         Edge &e = edges[p[u]];
         df = min(df, e.capacity - e.flow);
         u = edges[p[u]].from;
     }
     u = sink;
     // 从汇点到源点更新流量
-    while (u != source) {
+    while (u != source)
+    {
         edges[p[u]].flow += df;
         edges[p[u]^1].flow -= df;
         u = edges[p[u]].from;
@@ -218,15 +224,18 @@ int max_flow()
     for (int i = 0; i < num_nodes; i++) num[d[i]]++;
     int u = source;
     memset(cur, 0, sizeof(cur));
-    while (d[source] < num_nodes) {
+    while (d[source] < num_nodes)
+    {
         if (u == sink) {
             flow += augment();
             u = source;
         }
         bool advanced = false;
-        for (int i = cur[u]; i < G[u].size(); i++) {
+        for (int i = cur[u]; i < G[u].size(); i++)
+        {
             Edge& e = edges[G[u][i]];
-            if (e.capacity > e.flow && d[u] == d[e.to] + 1) {
+            if (e.capacity > e.flow && d[u] == d[e.to] + 1)
+            {
                 advanced = true;
                 p[e.to] = G[u][i];
                 cur[u] = i;
@@ -234,7 +243,8 @@ int max_flow()
                 break;
             }
         }
-        if (!advanced) { // retreat
+        if (!advanced)
+        { // retreat
             int m = num_nodes - 1;
             for (iterator_t ix = G[u].begin(); ix != G[u].end(); ++ix)
                 if (edges[*ix].capacity > edges[*ix].flow)
@@ -256,7 +266,8 @@ int max_flow()
 struct Edge
 {
     int from,to,cap,flow,cost;
-    Edge(int u,int v,int c,int f,int w):from(u),to(v),cap(c),flow(f),cost(w) {}
+    Edge(int u,int v,int c,int f,int w):
+        from(u),to(v),cap(c),flow(f),cost(w) {}
 };
 
 struct MCMF
