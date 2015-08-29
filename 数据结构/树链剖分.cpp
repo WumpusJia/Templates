@@ -2,7 +2,7 @@ int fa[maxn],son[maxn],size[maxn],deep[maxn];
 int id[maxn],top[maxn];
 int idx;
 
-///////////////////////////DFS版本（极易爆栈，windows下n为几万就会爆...////////////////
+////////DFS版本（极易爆栈，windows下n为几万就会爆...////
 
 void dfs1(int u,int f,int d)
 {

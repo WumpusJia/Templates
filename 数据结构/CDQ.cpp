@@ -10,7 +10,8 @@ const int maxm = 45005;
 struct Node
 {
     int x,y,z,opr,id;
-    Node(int x = 0,int y = 0,int z = 0,int opr = 0,int id = 0):x(x),y(y),z(z),
+    Node(int x = 0,int y = 0,int z = 0,int opr = 0,int id = 0):
+        x(x),y(y),z(z),
         opr(opr),id(id) {}
 };
 

@@ -2,7 +2,8 @@ int pre[maxn], iscut[maxn], bccno[maxn], dfs_clock,bcc_cnt;
 vector<int> G[maxn], bcc[maxn];
 //bcc_nct 从1开始
 //vector bcc存储了每个连通分量中的所有点
-//bccno[u] 表示u所属的双连通分量号 (由于存在点处于多个双连通分量，所以每次使用bccno时,需要对bcc中所有点
+//bccno[u] 表示u所属的双连通分量号
+//(由于存在点处于多个双连通分量，所以每次使用bccno时,需要对bcc中所有点
 //更新其bbcno
 struct Edge
 {
@@ -33,8 +34,16 @@ int dfs(int u,int fa)
                 for(;;)
                 {
                     Edge x = S.top(); S.pop();
-                    if(bccno[x.u] != bcc_cnt) { bcc[bcc_cnt].push_back(x.u); bccno[x.u] = bcc_cnt; }
-                    if(bccno[x.v] != bcc_cnt) { bcc[bcc_cnt].push_back(x.v); bccno[x.v] = bcc_cnt; }
+                    if(bccno[x.u] != bcc_cnt)
+                    {
+                        bcc[bcc_cnt].push_back(x.u);
+                        bccno[x.u] = bcc_cnt;
+                    }
+                    if(bccno[x.v] != bcc_cnt)
+                    {
+                        bcc[bcc_cnt].push_back(x.v);
+                        bccno[x.v] = bcc_cnt;
+                    }
                     if(x.u == u && x.v == v) break;
                 }
             }

@@ -14,7 +14,8 @@ struct Node
     int L,R,id;
     Node(int L = 0,int R = 0,int id = 0):L(L),R(R),id(id) {}
     bool operator < (const Node& rhs) const {
-        return ppos[L] < ppos[rhs.L] || (ppos[L] == ppos[rhs.L] && R < rhs.R);
+        return ppos[L] < ppos[rhs.L] ||
+            (ppos[L] == ppos[rhs.L] && R < rhs.R);
     }
 };
 

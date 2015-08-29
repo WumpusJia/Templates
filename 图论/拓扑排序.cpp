@@ -24,7 +24,9 @@ bool toposort()
                 unfinish = true;
                 indegree[i]--;
                 res.push_back(i);
-                for(int j = 1;j <= n;++j) if(i != j && G[i][j]) indegree[j]--;
+                for(int j = 1;j <= n;++j)
+                    if(i != j && G[i][j])
+                        indegree[j]--;
                 break;
             }
     }

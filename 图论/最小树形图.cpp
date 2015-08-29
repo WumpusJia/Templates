@@ -76,7 +76,8 @@ struct MDST
                         for(int i = 1;i <= n;++i)
                             if(cid[i] != cid[u] && !removed[i])
                             {
-                                if(w[i][v] < INF) w[i][u] = min(w[i][u],w[i][v]-in[v]);
+                                if(w[i][v] < INF) w[i][u] =
+                                    min(w[i][u],w[i][v]-in[v]);
                                 w[u][i] = min(w[u][i],w[v][i]);
                                 if(pre[i] == v) pre[i] = u;
                             }
@@ -129,7 +130,8 @@ type Directed_MST(int root, int V, int E)
         for(int i = 0; i < V; i++)
         {
             if(i == root) continue;
-            if(in[i] == INF) return -1;//除了根以外有点没有入边,则根无法到达它
+            //除了根以外有点没有入边,则根无法到达它
+            if(in[i] == INF) return -1;
         }
         //2.找环
         int cnt = 0;
@@ -140,7 +142,8 @@ type Directed_MST(int root, int V, int E)
         {
             ret += in[i];
             int v = i;
-            while(vis[v] != i && id[v] == -1 && v != root)  //每个点寻找其前序点，要么最终寻找至根部，要么找到一个环
+            //每个点寻找其前序点，要么最终寻找至根部，要么找到一个环
+            while(vis[v] != i && id[v] == -1 && v != root)
             {
                 vis[v] = i;
                 v = pre[v];
