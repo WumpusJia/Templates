@@ -34,6 +34,16 @@ LL GetC(LL n,LL m)
 
 
 
+LL fac[200000+100];
+
+LL GetC(LL n,LL m) //预处理版本　fac[0] = 1;
+{
+    if(n < m) return 0;
+    if(m > n-m) m = n-m;
+    return fac[n]*pow_mod(fac[n-m]*fac[m]%mod,mod-2)%mod;
+}
+
+
 //利用计算C(n,m) % p,p是素数的
 LL GetC(LL n,LL m)
 {
