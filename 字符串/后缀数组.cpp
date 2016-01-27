@@ -1,4 +1,3 @@
-//后缀数组
 int s[maxn];
 int sa[maxn],t[maxn],t2[maxn],c[maxn];
  //sa[i]是排序后第i个在原字符串中开始的下标
@@ -34,6 +33,8 @@ void build_sa(int m)
     }
 }
 
+int d[maxn][17];
+
 void getHeight()
 {
     int k = 0;
@@ -46,7 +47,32 @@ void getHeight()
         while(s[i+k] == s[j+k]) k++;
         height[srank[i]] = k;
     }
+
+    for(int i = 0;i < n;++i)
+        d[i][0] = height[i];
+    for(int j = 1;(1 << j) <= n;++j)
+        for(int i = 0;i+(1<<j)-1 < n;++i)
+            d[i][j] = min(d[i][j-1],d[i+(1<<(j-1))][j-1]);
+
 }
+
+int query(int L,int R)
+{
+    int k = 0;
+    while((1<<(k+1)) <= R-L+1) k++;
+    return min(d[L][k],d[R-(1<<k)+1][k]);
+}
+
+int LCP(int a,int b)
+{
+    int L = srank[a],R = srank[b];
+    if(L > R)
+        swap(L,R);
+    L++;
+    return query(L,R);
+
+}
+
         scanf("%s",buf);
         n = strlen(save);
      //   memset(height,0,sizeof(height));
