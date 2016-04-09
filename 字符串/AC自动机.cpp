@@ -84,3 +84,151 @@ struct ACAutomata
 
 };
 
+/* 用主席树优化的AC自动机，适用于字符种类比较多的时候
+对失配加速*/
+#include<bits/stdc++.h>
+using namespace std;
+
+const int maxn = 200000+100;
+
+struct Node
+{
+    int ch[2];
+    int v;
+}tree[maxn*25];
+
+int sz;
+int root[maxn];
+
+void init()
+{
+    sz = 0;
+}
+
+int build(int L,int R)
+{
+    int u = sz++;
+    tree[u].v = 0;
+    if(L == R)  return u;
+    else
+    {
+        int m = (L+R)/2;
+        if(L <= m) tree[u].ch[0] = build(L,m);
+        if(R > m) tree[u].ch[1] = build(m+1,R);
+        return u;
+    }
+}
+
+int insert(int L,int R,int x,int c,int v)
+{
+    int u = sz++;
+    tree[u] = tree[x];
+    if(L == R)
+    {
+        tree[u].v = v;
+        return u;
+    }
+    else
+    {
+        int m = (L+R)/2;
+        if(c <= m) tree[u].ch[0]  = insert(L,m,tree[u].ch[0],c,v);
+        else tree[u].ch[1] = insert(m+1,R,tree[u].ch[1],c,v);
+        return u;
+    }
+}
+
+
+int find(int L,int R,int u,int k)
+{
+    if(L == R)
+    {
+        return tree[u].v;
+    }
+    else
+    {
+        int m = (L+R)/2;
+        if(k <= m) return find(L,m,tree[u].ch[0],k);
+        else return find(m+1,R,tree[u].ch[1],k);
+    }
+}
+
+
+
+
+vector<int> G[maxn];
+vector<int> ch[maxn];
+
+int n;
+int fa[maxn];
+
+int f[maxn];
+
+int update(int r,int u)
+{
+
+    for(int i = 0;i < G[u].size();++i)
+    {
+        int v = G[u][i];
+        int c = ch[u][i];
+        r = insert(1,n,r,c,v);
+    }
+    return r;
+}
+
+
+int main()
+{
+  //  freopen("./test.txt","r",stdin);
+    scanf("%d",&n);
+    for(int i = 1;i <= n;++i)
+    {
+        int t;
+        scanf("%d",&t);
+        fa[i] = t;
+        G[t].push_back(i);
+
+    }
+    for(int i = 1;i <= n;++i)
+    {
+        int t;
+        scanf("%d",&t);
+        ch[fa[i]].push_back(t);
+    }
+
+    root[0] = build(1,n);
+    root[0] = update(root[0],0);
+    f[0] = 0;
+    queue<int> Q;
+
+    for(int i = 0;i < G[0].size();++i)
+    {
+        int v = G[0][i];
+        f[v] = 0;
+        Q.push(v);
+    }
+
+    while(!Q.empty())
+    {
+        int u = Q.front(); Q.pop();
+
+        root[u] = update(root[f[u]],u);
+        for(int i = 0;i < G[u].size();++i)
+        {
+            int v = G[u][i];
+            int c = ch[u][i];
+            f[v] = find(1,n,root[f[u]],c);
+            Q.push(v);
+        }
+    }
+
+    for(int i = 1;i <= n;++i)
+        printf("%d%c",f[i]," \n"[i == n]);
+    return 0;
+}
+
+
+
+
+
+
+

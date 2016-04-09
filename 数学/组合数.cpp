@@ -55,7 +55,7 @@ LL GetC(LL n,LL m)
         s1 = (s1*(n-i))%mod;
         s2 = (s2*(i+1))%mod;
     }
-    return s1*pow_mod(s2,mod-2)%mod;　//b在p为素数下的逆为b^(p-2)%p
+    return s1*pow_mod(s2,mod-2)%mod;//b在p为素数下的逆为b^(p-2)%p
 }
 
 //当C(n,m)非常大时候，需要利用lucas计算C(n,m)%p

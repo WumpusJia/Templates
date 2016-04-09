@@ -128,7 +128,7 @@ struct Circle
     Circle(Point c,double r):c(c),r(r) {}
     Point getPoint(double rad) //获得圆上一点(rad为逆时针角)
     {
-        return Point(c.x+cos(rad)*r,c.y*sin(rad)*r);
+        return Point(c.x+cos(rad)*r,c.y+sin(rad)*r);
     }
 };
 //求直线与圆的交点，返回交点数
