@@ -53,22 +53,14 @@ LL sum(LL p,LL n) //二分等比求和
 }
 
 
-LL bimul(LL a,LL b,LL mod) //放防止爆LL 乘法
+//放防止爆LL 乘法
+LL mul( LL a, LL b )
 {
-    LL res = 0;
-    bool neg = false;
-    if(b < 0)
-    {
-        b = -b;
-        neg = true;
-    }
-    for(;b;b >>= 1)
-    {
-        if(b&1)
-            res = (res+a)%mod;
-    }
-    if(neg)
-        res = (mod-res)%mod;
-    return res;
+	LL k = (long double)a * b / mod;
+	LL r = a * b - mod * k;
+	while (r < 0) r += mod;
+	while (r >= mod) r -= mod;
+	return r;
 }
+
 

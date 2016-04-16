@@ -6,6 +6,7 @@ int pn;
 void GetPrm(int n) //获取素数表
 {
     memset(isprm,0,sizeof(isprm));
+    isprm[1] = 1;
     pn = 0;
     for(LL i = 2;i <= n;++i)
         if(!isprm[i])
@@ -19,6 +20,7 @@ void GetPrm(int n) //获取素数表
 void GetPrm(int n)  //线性筛
 {
     memset(isprm,0,sizeof(isprm));
+    isprm[1] = 1;
     pn = 0;
     for(int i = 2;i <=n;++i)
     {
