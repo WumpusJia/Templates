@@ -47,6 +47,21 @@ int query(int x)
     return sum;
 }
 
+/* 这里写的有点问题，正确做法:
+
+1.当递归到底时，直接处理答案，然后返回。
+
+2.弄出一个mid
+
+3.递归解决[l,mid]
+
+4.处理[l,mid]对[mid + 1,r]的影响（重要
+
+5.递归解决[mid + 1,r]
+
+6.将[l,mid]和[mid + 1,r]进行归并排序，为下一次处理区间之间的影响做准备。
+
+*/
 
 
 void CDQ2(int L,int R)
@@ -86,7 +101,7 @@ void CDQ1(int L,int R)
     {
         CDQ1(L,m);
         CDQ1(m+1,R);
-    };
+    }
     int id = 0;
     for(int i = L;i <= m;++i)  if(p[i].opr == 0) s[id++] = p[i];
     for(int i = m+1;i <= R;++i) if(p[i].opr) s[id++] = p[i];

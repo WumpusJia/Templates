@@ -12,6 +12,20 @@ void GetBell(int n) //贝尔数----n个数非空划分的方法数
 }
 
 
+void GetStirling2(int n)
+{
+    memset(S,0,sizeof(S));
+    S[0][0] = 1;
+    for(int i = 1;i <= n;++i)
+    {
+        S[i][0] = 0;
+        for(int j = 1;j <= i;++j)
+            S[i][j] = (j*S[i-1][j]%mod + S[i-1][j-1])%mod;
+    }
+
+}
+
+
 LL C[maxn+10][maxn+10];
 
 void GetAllC(int n) //计算所有C
@@ -43,6 +57,7 @@ LL GetC(LL n,LL m) //预处理版本　fac[0] = 1;
     return fac[n]*pow_mod(fac[n-m]*fac[m]%mod,mod-2)%mod;
 }
 
+//！！！同理，当m较小时，也可以预处理出inv(m!)加速
 
 //利用计算C(n,m) % p,p是素数的
 LL GetC(LL n,LL m)

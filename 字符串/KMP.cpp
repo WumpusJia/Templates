@@ -25,6 +25,24 @@ void find(char* T,char *P,int f[])
     }
 }
 
+
+//获得字符串循环节所有长度
+    for(int i = 1;i <= m;++i)
+    {
+        int now = i;
+        while(now)
+        {
+            now = f[now];
+            if(i % (i-now) == 0)
+            {
+                int t = i/(i-now);
+                res[t] = max(res[t],i);
+            }
+        }
+
+    }
+
+
 //EKMP
 int Next[maxn];
 int ret[maxn]; //S的每个后缀与T的前缀的最长匹配××长度××
