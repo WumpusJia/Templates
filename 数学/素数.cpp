@@ -38,7 +38,7 @@ void GetPrm(int n)  //线性筛
 
 
 int fac_cnt[maxn];
-void factorize(int num) //唯一分解定理分解num
+void factorize(int num) //唯一分解定理分解num,注意如果是素数处理到sqrt(n)的话，还得在最后加上num
 {
     memset(fac_cnt,0,sizeof(fac_cnt));
     for(int i = 0;i < pn;++i)
