@@ -7,10 +7,10 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 
-\geometry{papersize={182mm , 257mm}} 
+\geometry{papersize={182mm , 257mm}}
 \geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=2.0cm}
 
-\setCJKmainfont{STKaiti}
+\setCJKmainfont{方正楷体_GBK}
 \XeTeXinputencoding "UTF-8"
 
 
@@ -24,8 +24,9 @@
 \lstset{
 numbers=left,
 showspaces=false,
+showstringspaces=false,
 basicstyle=\ttfamily,
-keywordstyle=\bfseries\color{purple!80}, 
+keywordstyle=\bfseries\color{purple!80},
 commentstyle=\color{red!50!green!50!blue!50},
 rulesepcolor=\color{red!20!green!20!blue!20},
 stringstyle=\color{orange},
@@ -37,7 +38,7 @@ xrightmargin=2em,
 aboveskip=1em
 }
 
-% % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % %
 %Face
 \begin{titlepage}
 
@@ -133,15 +134,22 @@ aboveskip=1em
 \lstinputlisting{../数据结构/sbt.cpp}
 \subsubsection{Splay}
 \lstinputlisting{../数据结构/splay.cpp}
+\subsubsection{主席树}
+\lstinputlisting{../数据结构/主席树.cpp}
 \subsection{LCT}
 \lstinputlisting{../数据结构/LCT.cpp}
-\subsection{非常见线段树}
+\subsection{线段树}
+\subsubsection{区间Add}
+\lstinputlisting{../数据结构/线段树_区间add.cpp}
+\subsubsection{非常见线段树}
 \lstinputlisting{../数据结构/非常见线段树.cpp}
 
 % % % % % % % % % % % % % % % % % % % % % %
 \section{图论}
 \subsection{拓扑排序}
 \lstinputlisting{../图论/拓扑排序.cpp}
+\subsection{最短路}
+\lstinputlisting{../图论/最短路.cpp}
 \subsection{欧拉回路}
 \lstinputlisting{../图论/欧拉回路.cpp}
 \subsection{哈密顿}
@@ -166,6 +174,8 @@ aboveskip=1em
 \lstinputlisting{../图论/网络流.cpp}
 \subsection{最小树形图}
 \lstinputlisting{../图论/最小树形图.cpp}
+\subsection{无向图全局最小割}
+\lstinputlisting{../图论/无向图全局最小割.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
 \section{计算几何}
 \subsection{二维}
@@ -186,6 +196,9 @@ aboveskip=1em
 \lstinputlisting{../字符串/后缀数组.cpp}
 \subsection{AC自动机}
 \lstinputlisting{../字符串/AC自动机.cpp}
+\subsection{SAM}
+\lstinputlisting{../字符串/后缀自动机.cpp}
+
 
 % % % % % % % % % % % % % % % % % % % % % %
 \section{DP}
@@ -199,7 +212,7 @@ $O(mlogn)$	\\
 将LCS转化为LIS问题，应用O(nlogn)的LIS算法即可	\\
 假设两个序列 s1 = “abcabc” 和 s2 = “acbdcab”\\
 记录s1中每个元素在s2中出现的位置，然后降序排列	\\
-pos(a) = {5,0}								\\	
+pos(a) = {5,0}								\\
 pos(b) = {6,2}								\\
 pos(c) = {4,1}								\\
 \\
@@ -217,23 +230,21 @@ n个
 \subsubsection{回文子序列}
 最长
 $$
-d(i,j)= \begin{cases} 
-d_{i+1,j-1} + 2  &s[i]=s[j] \\ 
-Max(d_{i+1,j},d_{i,j-1}) &s[i] \ne s[j] 
+d(i,j)= \begin{cases}
+d_{i+1,j-1} + 2  &s[i]=s[j] \\
+Max(d_{i+1,j},d_{i,j-1}) &s[i] \ne s[j]
 \end{cases}
 $$
 统计
 $$
-d_{i,j}= 
+d_{i,j}=
 \begin{cases}
 d_{i+1,j} + d_{i,j-1}   &s[i]=s[j] \\
-d_{i+1,j} + d+{i,j-1} - d_{i+1,j-1}  &s[i] \ne s[j] 
+d_{i+1,j} + d+{i,j-1} - d_{i+1,j-1}  &s[i] \ne s[j]
 \end{cases}
 $$
 
 \subsection{背包DP}
-\subsubsection{01背包\&完全背包}
-\lstinputlisting{../DP/基础背包.cpp}
 \subsubsection{多重背包}
 \lstinputlisting{../DP/多重背包.cpp}
 \subsubsection{混合背包}
@@ -241,10 +252,14 @@ $$
 
 \subsection{数位DP}
 \lstinputlisting{../DP/数位DP.cpp}
+\subsection{集合DP}
+\lstinputlisting{../DP/SCS.cpp}
 
 \subsection{DP优化}
 \subsubsection{四边形不等式}
 \lstinputlisting{../DP/四边形不等式.cpp}
+\subsubsection{决策单调性}
+\lstinputlisting{../DP/决策单调.cpp}
 
 % % % % % % % % % % % % % % % % % % % % % %
 \section{魔法}
@@ -257,6 +272,8 @@ $$
 \section{被遗弃的角落}
 \subsection{Java}
 \lstinputlisting[language = java]{../被遗弃的角落/FastIO.java}
+\subsection{Bitset}
+\lstinputlisting{../被遗弃的角落/bitset.cpp}
 \subsection{分数类}
 \lstinputlisting{../被遗弃的角落/分数.cpp}
 \subsection{日期类}
@@ -271,6 +288,32 @@ $$
 \subsubsection{简易大整数}
 \lstinputlisting{../被遗弃的角落/简易大整数.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
+
+
+\section{记不住的}
+\subsection{数学结论}
+\lstinputlisting{../记不住的/数学结论.cpp}
+\subsection{cout精度}
+\lstinputlisting{../记不住的/cout精度.cpp}
+\subsection{放颜色不同的球}
+\lstinputlisting{../记不住的/放颜色不同的球.cpp}
+\subsection{暴力枚举n节点树}
+\lstinputlisting{../记不住的/枚举树.cpp}
+\subsection{每个点最大/小值区间}
+\lstinputlisting{../记不住的/求每个数为最大值的范围.cpp}
+
+% % % % % % % % % % % % % % % % % % % % % %
+
+\section{套路}
+\subsection{平面点哈曼顿距离}
+\lstinputlisting{../套路/一群点的哈曼顿距离.cpp}
+\subsection{求和的乘积最小}
+\lstinputlisting{../套路/和的乘积最小.cpp}
+
+% % % % % % % % % % % % % % % % % % % % % %
+
+
+
 \section{箴言}
 
 \subsection{定理}
@@ -281,14 +324,14 @@ $$
 
 \newpage
 \subsection{数论}
-1. 因子个数 
+1. 因子个数
 $$sum=(e1+1)(e2+1)…(em+1)$$
 2. 因子和(等比数列二分求和)
 $$sum_n=\prod_1^k \sum_0^{e_i}p_i^j$$\\
 筛法预处理
-$$\begin{cases} 
-sum_n = n+1  &n为素数    \\ 
-sum_n = (1 + p + p^2 + … + p^e)*sum_m  & n = p^e*m 
+$$\begin{cases}
+sum_n = n+1  &n为素数    \\
+sum_n = (1 + p + p^2 + … + p^e)*sum_m  & n = p^e*m
 \end{cases}
 $$
 3.LCM(1..n)
@@ -296,7 +339,7 @@ $$
 
 $$lcm(1..n) = 2^{e_1} * 3^{e_2} * 5^{e_3} … \;\; e_i \text{为最大的满足} p_i^{e_i} \le n \text{的值}$$
 
-于是我们从小到大枚举k，然后二分求出前i个素数满足pei≤n，可以提前处理出前i个数的前缀积，然后答案乘上这个前缀积。 
+于是我们从小到大枚举k，然后二分求出前i个素数满足pei≤n，可以提前处理出前i个数的前缀积，然后答案乘上这个前缀积。
 
 $$LCM(C_k^0,C_k^1,…,C_k^k) = \frac{LCM(1,2,…,k,k+1)}{k+1}$$
 \newpage
@@ -329,9 +372,9 @@ n\%(m+1)==0 则先手必败，否则先手必胜	\\
 2堆棋子，每次从一堆或两堆取相同数目，最后不能取的人失败。	\\
 奇异局势先手必败，否则先手必胜							 \\
 判断(ak,bk)是否为奇异局势:							 \\
-$$\begin{aligned} 
-&ak = [\frac{k(1+\sqrt{5})}{2}] &  k \in N \\ 
-&bk = ak + k                    &  k \in N 
+$$\begin{aligned}
+&ak = [\frac{k(1+\sqrt{5})}{2}] &  k \in N \\
+&bk = ak + k                    &  k \in N
 \end{aligned}
 $$
 根据(x,y),y-x=k,判断。	\\
@@ -427,10 +470,10 @@ Every-SG游戏规则如下:
 对于SG不为0的点，我们需要直到最慢几步进入终止状态。	\\
 设当前状态为u，后继状态为v，定义函数step(u)为到终止状态的步数		\\
 $$
-step(u) = \begin{cases} 
-0              & u \text{为终止状态} \\ 
-max(step(v))+1 & SG(u)>0 \text{且} SG(v)=0 \\ 
-min(step(v))+1 & SG(u)=0 
+step(u) = \begin{cases}
+0              & u \text{为终止状态} \\
+max(step(v))+1 & SG(u)>0 \text{且} SG(v)=0 \\
+min(step(v))+1 & SG(u)=0
 \end{cases}
 $$
 则先手必胜当且仅当:
@@ -476,7 +519,7 @@ int main()
     {
         scanf("%d",&n);
         int ans = 0;
-        for(int i=1;i<=n;++i) scanf("%d",save+i); 
+        for(int i=1;i<=n;++i) scanf("%d",save+i);
         for(int i=n;i>1;i-=2) ans ^= (save[i] - save[i-1]);
         if(n&1) ans ^= save[1];
         puts(ans?"TAK":"NIE");
@@ -500,7 +543,7 @@ int main()
 我们理解为位，正面为1，反面为0
 
  $$SG(011001) = SG(01) \text{\^{}} SG(001) \text{\^{}} SG(000001)$$
- 
+
 \subsubsection{树的删边游戏}
 
 规则如下:
@@ -555,7 +598,7 @@ int main()
 
 \paragraph{2. 获取到根节点的距离\\}
 首先需要保证每个根节点在成为子节点后不会再成为新的根节点\\
-(即： 每次merge时候，要保证新的根节点的权值为0） \\ ,merge过程只需要 fa[a] = b,并且使a的权值变成新的权值.\\ 
+(即： 每次merge时候，要保证新的根节点的权值为0） \\ ,merge过程只需要 fa[a] = b,并且使a的权值变成新的权值.\\
 findfa这个过程：\\
 \begin{lstlisting}
 	int findfa(int x)
@@ -578,7 +621,7 @@ HDU2473 \\
 对并查集的删除操作(从连通分量中去除该点），通过建立虚根的方式，使用replace 数组 \\ }
 
 \paragraph{5. 并查集解决最小费用\\}
-例如Kruskal	
+例如Kruskal
 
 \subsubsection{莫比乌斯反演}
 \paragraph{1. 常规的求$gcd(x,y) == a, 1 <= x <= n,1 <= y <= m $\\}
@@ -587,8 +630,8 @@ HDU2473 \\
 除一下，即求$gcd(x,y) == 1, 1<= x <= n/a, 1 <= y <= m/a$的个数\\
 那么就是:\\
 \begin{lstlisting}
-for(int i = 1;i < =  maxn;i++) 
-	res += mu[i]*n/i*m/i; 
+for(int i = 1;i < =  maxn;i++)
+	res += mu[i]*n/i*m/i;
 \end{lstlisting}
 
 
@@ -596,21 +639,21 @@ for(int i = 1;i < =  maxn;i++)
 	令f(i) 为　$gcd(Ax,Ay) == i$的个数 \\
 令g(i) 为　$gcd(Ax,Ay) \% i == 0$的个数，那么g(i) = n/i; \\
 首先先对数列中数进行处理，求出数列中能把A[i]整除的数的个数cnt[A[i]],这即为g(A[i]) \\
-然后类似的 \\ 
+然后类似的 \\
 \begin{lstlisting}
-	for(int i = a;i <= maxn;i += a) 
+	for(int i = a;i <= maxn;i += a)
 		res += mu[i/a] * cnt[i]*cnt[i]    //注意这里mu[i/a],类似前一中情况，而后面的cnt[i] 对应前面的n/i
-\end{lstlisting} 
+\end{lstlisting}
 要用Mobius反演求集合中$gcd(a[i],a[j]) == k$的个数： \\
 \begin{lstlisting}
     for(int j = k;j <= maxn;j += k) \\
         res += mu[j/k]*cnt[j]*(cnt[j]-1)/2; \\
-\end{lstlisting} 
+\end{lstlisting}
 类似求[1,m]中gcd(i,j) == k的个数 \\
 这里定义f(k)是gcd(a[i],a[j]) == k的个数 \\
 g(k) 是gcd(a[i],a[j])\%k == 0的个数 \\
 那么这里的cnt就是[j,maxn]中可以整除j的个数， \\
-处理a[i]时候，要将a[i]的每个因子的cnt都+1 
+处理a[i]时候，要将a[i]的每个因子的cnt都+1
 
 \subsubsection{字符串}
 \paragraph{1.连续子串中求第k大的串\\ 把所有后缀插入Trie中，然后在Trie上进行dfs}
@@ -619,20 +662,20 @@ g(k) 是gcd(a[i],a[j])\%k == 0的个数 \\
 \paragraph{最短路}
 
 \subparagraph{1.K短路问题\\}
-首先在终点做一次Dijkstra,然后从起点开始使用a\_star进行扩展\\　（这里g(n)即为走过的路程,f(n)为当前点到终点的最短距离....实际上，可以只使用g(n)进行扩展，即再次Dijkstra )    ---------------------例题 POJ2449  
+首先在终点做一次Dijkstra,然后从起点开始使用a\_star进行扩展\\　（这里g(n)即为走过的路程,f(n)为当前点到终点的最短距离....实际上，可以只使用g(n)进行扩展，即再次Dijkstra )    ---------------------例题 POJ2449
 \subparagraph{2.求最短路和次短路\\}
-在ｕｐｄａｔｅ时有４中状态,而且在HeapNdoe中要添加一个mode 记录当前是最短路还是次短路,同样done数组也许要添加１维 
+在ｕｐｄａｔｅ时有４中状态,而且在HeapNdoe中要添加一个mode 记录当前是最短路还是次短路,同样done数组也许要添加１维
 \begin{lstlisting}
-d[e.to][0] > d[u][mode] + e.w  //更新e.to的最短路						
-d[e,to][0] == d[u][mode] + e.w  //更新e.to最短路状态							
-d[e.to][1] > d[u][mode] + e.w //更新e.to的次短路							
+d[e.to][0] > d[u][mode] + e.w  //更新e.to的最短路
+d[e,to][0] == d[u][mode] + e.w  //更新e.to最短路状态
+d[e.to][1] > d[u][mode] + e.w //更新e.to的次短路
 d[e.to][1] == d[u][mode] + e.w //更新e.to的次短路状态
 \end{lstlisting}
 
 \subparagraph{3.最优比率正环(　正环一般都转化成负环)\\}
 使用0,1规划  设$$ans =  (F[1] + F[2] + F[3] + … F[n] ) / ( W[1] + W[2] + W[3] + … W[n] )$$
 转化一下$$( F[1] – ans*W[1]  ) + ( F[2] – ans*W[2]  ) …$$.不难发现，当这个个式子的值 > 0时，ans非最优答案，还有更好的　　我们再转化一下$$(  ans*W[1] – F[1] ) +  ( ans*W[2] - F[2] ) … $$
-那么当这个式子小于0,时还有更好的，　那么每次我们只需要找到使左边最小值，就可以知道ans是否是最优解（二分求最优解）　　所以只需要将边权值转化成 $ans*W[i] – F[i]$ 用bellman-ford判断是否存在负环即可  ---------- POJ3621 
+那么当这个式子小于0,时还有更好的，　那么每次我们只需要找到使左边最小值，就可以知道ans是否是最优解（二分求最优解）　　所以只需要将边权值转化成 $ans*W[i] – F[i]$ 用bellman-ford判断是否存在负环即可  ---------- POJ3621
 % % % % % % % % % % % % % % % % % % %
 \paragraph{生成树}
 \subparagraph{1.k度最小生成树(POJ1639)\\
@@ -652,7 +695,7 @@ d[e.to][1] == d[u][mode] + e.w //更新e.to的次短路状态
 最小边覆盖= n-最大匹配数 **注意，需要把所有能到达关系都加上---floyed** \\
 最小路径覆盖（无环) = 最小边覆盖  \\
 最小路径覆盖（有环): \\
-(1)i分为i1和i2然后如果i和j有边，那么就在i1和j2之间连一条边。由此构成二分图 然后最小路径覆盖是n-m，n为原图的点的个数，m为新造二分图的最大匹配 \\ 
+(1)i分为i1和i2然后如果i和j有边，那么就在i1和j2之间连一条边。由此构成二分图 然后最小路径覆盖是n-m，n为原图的点的个数，m为新造二分图的最大匹配 \\
 (2)强连通分量缩点，变成无环，然后再求
 }
 % % % % % % % % % % % % % % % % %
@@ -679,7 +722,7 @@ d[e.to][1] == d[u][mode] + e.w //更新e.to的次短路状态
 (2)要输出只改变一边容量使得流量变大的:从S开始dfs一遍，标记,再从T开始dfs一遍，再次标记，一条边的端点分别拥有2种标记的就是所求}
 \subparagraph{6.最大密度子图（POJ3155)　\\
 将图建为: S—>u 容量为U,u—->T 容量为U+2ans-d[u],u—v有边就互相添加容量为1的边,求最小割c[S,T] \\
-则E’-V’ans的最大值即为: (U∗n−c[S,T])/2 \\ 
+则E’-V’ans的最大值即为: (U∗n−c[S,T])/2 \\
 最后V’中的点，即为从S开始，沿着还有剩余容量的边dfs的点集}
 % % % % % % % % % % % % % % % % % % % % % % % %
 \paragraph{其他}

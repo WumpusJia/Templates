@@ -2,134 +2,151 @@
 \contentsline {subsection}{\numberline {1.1}基础}{4}
 \contentsline {subsection}{\numberline {1.2}组合数}{5}
 \contentsline {subsection}{\numberline {1.3}素数}{6}
-\contentsline {subsection}{\numberline {1.4}矩阵}{8}
-\contentsline {subsection}{\numberline {1.5}博弈}{11}
+\contentsline {subsection}{\numberline {1.4}矩阵}{9}
+\contentsline {subsection}{\numberline {1.5}博弈}{12}
 \contentsline {subsection}{\numberline {1.6}数值}{15}
-\contentsline {subsection}{\numberline {1.7}FFT}{16}
-\contentsline {subsection}{\numberline {1.8}方程组}{21}
-\contentsline {section}{\numberline {2}数据结构}{25}
-\contentsline {subsection}{\numberline {2.1}RMQ and 树状数组}{25}
-\contentsline {subsection}{\numberline {2.2}分块暴力}{27}
+\contentsline {subsection}{\numberline {1.7}FFT}{17}
+\contentsline {subsection}{\numberline {1.8}方程组}{22}
+\contentsline {section}{\numberline {2}数据结构}{26}
+\contentsline {subsection}{\numberline {2.1}RMQ and 树状数组}{26}
+\contentsline {subsection}{\numberline {2.2}分块暴力}{28}
 \contentsline {subsection}{\numberline {2.3}莫队}{28}
-\contentsline {subsection}{\numberline {2.4}CDQ}{31}
-\contentsline {subsection}{\numberline {2.5}树的重心}{35}
-\contentsline {subsection}{\numberline {2.6}树上最远路径}{36}
-\contentsline {subsection}{\numberline {2.7}树链剖分}{37}
-\contentsline {subsection}{\numberline {2.8}平衡树}{41}
-\contentsline {subsubsection}{\numberline {2.8.1}Treap}{41}
-\contentsline {subsubsection}{\numberline {2.8.2}SBT}{43}
-\contentsline {subsubsection}{\numberline {2.8.3}Splay}{48}
-\contentsline {subsection}{\numberline {2.9}LCT}{49}
-\contentsline {subsection}{\numberline {2.10}非常见线段树}{59}
-\contentsline {section}{\numberline {3}图论}{65}
-\contentsline {subsection}{\numberline {3.1}拓扑排序}{65}
-\contentsline {subsection}{\numberline {3.2}欧拉回路}{66}
-\contentsline {subsection}{\numberline {3.3}哈密顿}{68}
-\contentsline {subsection}{\numberline {3.4}Prim}{69}
-\contentsline {subsection}{\numberline {3.5}二分图}{71}
-\contentsline {subsection}{\numberline {3.6}2SAT}{76}
-\contentsline {subsection}{\numberline {3.7}LCA}{77}
-\contentsline {subsection}{\numberline {3.8}割点与桥}{79}
-\contentsline {subsection}{\numberline {3.9}有向图强连通分量}{80}
-\contentsline {subsection}{\numberline {3.10}无向图点双连通分量}{81}
-\contentsline {subsection}{\numberline {3.11}无向图边双连通分量}{83}
-\contentsline {subsection}{\numberline {3.12}网络流}{84}
-\contentsline {subsection}{\numberline {3.13}最小树形图}{90}
-\contentsline {section}{\numberline {4}计算几何}{94}
-\contentsline {subsection}{\numberline {4.1}二维}{94}
-\contentsline {subsection}{\numberline {4.2}三维}{102}
-\contentsline {section}{\numberline {5}字符串}{105}
-\contentsline {subsection}{\numberline {5.1}KMP}{105}
-\contentsline {subsection}{\numberline {5.2}manacher}{107}
-\contentsline {subsection}{\numberline {5.3}Trie}{107}
-\contentsline {subsection}{\numberline {5.4}Hash}{108}
-\contentsline {subsection}{\numberline {5.5}后缀数组}{110}
-\contentsline {subsection}{\numberline {5.6}AC自动机}{111}
-\contentsline {section}{\numberline {6}DP}{113}
-\contentsline {subsection}{\numberline {6.1}序列DP}{113}
-\contentsline {subsubsection}{\numberline {6.1.1}最长上升子序列}{113}
-\contentsline {subsubsection}{\numberline {6.1.2}最长公共子序列}{113}
-\contentsline {subsubsection}{\numberline {6.1.3}最长公共上升子序列}{114}
-\contentsline {subsubsection}{\numberline {6.1.4}最短公共子序列}{115}
-\contentsline {subsubsection}{\numberline {6.1.5}回文子序列}{118}
-\contentsline {subsection}{\numberline {6.2}背包DP}{118}
-\contentsline {subsubsection}{\numberline {6.2.1}01背包\&完全背包}{118}
-\contentsline {subsubsection}{\numberline {6.2.2}多重背包}{119}
-\contentsline {subsubsection}{\numberline {6.2.3}混合背包}{120}
-\contentsline {subsection}{\numberline {6.3}数位DP}{120}
-\contentsline {subsection}{\numberline {6.4}DP优化}{120}
-\contentsline {subsubsection}{\numberline {6.4.1}四边形不等式}{120}
-\contentsline {section}{\numberline {7}魔法}{121}
-\contentsline {subsection}{\numberline {7.1}位}{121}
-\contentsline {subsection}{\numberline {7.2}黑魔法}{123}
-\contentsline {section}{\numberline {8}被遗弃的角落}{126}
-\contentsline {subsection}{\numberline {8.1}Java}{126}
-\contentsline {subsection}{\numberline {8.2}分数类}{127}
-\contentsline {subsection}{\numberline {8.3}日期类}{127}
-\contentsline {subsection}{\numberline {8.4}DLX解数独}{130}
-\contentsline {subsection}{\numberline {8.5}大大大的数}{133}
-\contentsline {subsubsection}{\numberline {8.5.1}BigInteger}{133}
-\contentsline {subsubsection}{\numberline {8.5.2}BigDecimal}{141}
-\contentsline {subsubsection}{\numberline {8.5.3}简易大整数}{143}
-\contentsline {section}{\numberline {9}箴言}{146}
-\contentsline {subsection}{\numberline {9.1}定理}{146}
-\contentsline {subsubsection}{\numberline {9.1.1}一般}{146}
-\contentsline {subsection}{\numberline {9.2}数论}{147}
-\contentsline {subsection}{\numberline {9.3}排列组合}{148}
-\contentsline {subsection}{\numberline {9.4}博弈论}{149}
-\contentsline {subsubsection}{\numberline {9.4.1}Bash Game}{149}
-\contentsline {subsubsection}{\numberline {9.4.2}Wythoff Game}{149}
-\contentsline {subsubsection}{\numberline {9.4.3}SG函数/定理}{149}
-\contentsline {subsubsection}{\numberline {9.4.4}Nim Game}{150}
-\contentsline {subsubsection}{\numberline {9.4.5}Anti-nim}{150}
-\contentsline {subsubsection}{\numberline {9.4.6}Multi-SG}{150}
-\contentsline {subsubsection}{\numberline {9.4.7}Every-SG}{150}
-\contentsline {subsubsection}{\numberline {9.4.8}Staircase Nim}{151}
-\contentsline {subsubsection}{\numberline {9.4.9}翻硬币游戏}{151}
-\contentsline {subsubsection}{\numberline {9.4.10}树的删边游戏}{152}
-\contentsline {subsubsection}{\numberline {9.4.11}无向图删边游戏}{152}
-\contentsline {subsection}{\numberline {9.5}蒟蒻的小小备忘}{153}
-\contentsline {subsubsection}{\numberline {9.5.1}Tips}{153}
-\contentsline {subsubsection}{\numberline {9.5.2}DP}{153}
-\contentsline {paragraph}{1.求存在m个1连续的01串个数\\}{153}
-\contentsline {subsubsection}{\numberline {9.5.3}并查集}{153}
-\contentsline {paragraph}{1. 获取该连通分量的个数\\}{153}
-\contentsline {paragraph}{2. 获取到根节点的距离\\}{153}
-\contentsline {paragraph}{3. 如hdu2818\\}{153}
-\contentsline {paragraph}{4. 并查集建立虚根\\ HDU 3234\\ 将所有确定的点都连通到虚根n上， 点i的权值表示i到root的异或值. \\ merge的时候,//我们保证根节点在一般情况下为0, 当加入节点时 a--x 需要xor res[x] b -- y需要 xor[y] 并且x -- y需要xor v 那么 a -- b需要xor res[x] xor res[y] xor v ，之后b的后继就可以进行更新\\ HDU2473 \\ 对并查集的删除操作(从连通分量中去除该点），通过建立虚根的方式，使用replace 数组 \\ }{154}
-\contentsline {paragraph}{5. 并查集解决最小费用\\}{154}
-\contentsline {subsubsection}{\numberline {9.5.4}莫比乌斯反演}{154}
-\contentsline {paragraph}{1. 常规的求$gcd(x,y) == a, 1 <= x <= n,1 <= y <= m $\\}{154}
-\contentsline {paragraph}{2. 变种的求$gcd(Ax,Ay) == a$, 在数列中的个数\\}{154}
-\contentsline {subsubsection}{\numberline {9.5.5}字符串}{154}
-\contentsline {paragraph}{1.连续子串中求第k大的串\\ 把所有后缀插入Trie中，然后在Trie上进行dfs}{154}
-\contentsline {subsubsection}{\numberline {9.5.6}图论}{154}
-\contentsline {paragraph}{最短路}{154}
-\contentsline {subparagraph}{1.K短路问题\\}{155}
-\contentsline {subparagraph}{2.求最短路和次短路\\}{155}
-\contentsline {subparagraph}{3.最优比率正环(　正环一般都转化成负环)\\}{155}
-\contentsline {paragraph}{生成树}{155}
-\contentsline {subparagraph}{1.k度最小生成树(POJ1639)\\ 先求一个最小生成树(生成加边的过程中，用G添加边)\\ 如果满足k度限制，输出\\ 否则,fa重置，从root开始分别dfs其子树，对每一个子树中的点的fa,都合并到与root相连的这个儿子上，那么就分离出了和root相连的若干个连通分量.\\ 然后，0->m加边(如果可以连通2个连通分量并且端点不是root的话),一直使得为k度\\ 最后，0->m加边，构成生成树 \\ 自我意淫的做法，这样做的原因: \\ 由于第一次的最小生成树，那么连接这几个连通分量最少的代价就是和root直接相连的边.\\ 此时先合并成了k个，那么这些新添加的边必然没有和root直接相连的边优.所以最后和root相连添加的边必然是原来最小生成树中的}{155}
-\contentsline {paragraph}{二分图}{155}
-\contentsline {subparagraph}{1.判断二分匹配必须边(POJ1486)\\ 先进行二分匹配，然后枚举删除这些匹配边,如果再次dfs失败，那么就是必须边(match[i]需要还原），否则不是(此时match[i]无须还原), 每次枚举结束后还原删除的匹配边can[t][i] = 1;}{155}
-\contentsline {subparagraph}{2.各种关系\\ 最小点覆盖 = 最大匹配数\\ 最小边覆盖= n-最大匹配数 **注意，需要把所有能到达关系都加上---floyed** \\ 最小路径覆盖（无环) = 最小边覆盖 \\ 最小路径覆盖（有环): \\ (1)i分为i1和i2然后如果i和j有边，那么就在i1和j2之间连一条边。由此构成二分图 然后最小路径覆盖是n-m，n为原图的点的个数，m为新造二分图的最大匹配 \\ (2)强连通分量缩点，变成无环，然后再求 }{156}
-\contentsline {paragraph}{图中判环}{156}
-\contentsline {subparagraph}{1. 在无向图判环：并查集}{156}
-\contentsline {subparagraph}{2. 在有向图判环：拓扑排序（如果不能，就是有环）}{156}
-\contentsline {subparagraph}{3.　有向图＋无向图: 先并查集判断，如果此时不存咋，就将一个连通分量缩成１个点，再来拓扑排序}{156}
-\contentsline {subparagraph}{4. 无向图中是否有奇数环: 非二分图必有奇数环}{156}
-\contentsline {subparagraph}{5. 无向图中是否有偶数环: \\ 分离出所有的双连通分量,然后分别检测是否有偶环 \\ (1) 如果是单环，直接判断即可 \\ (2)如果是２个缠绕(贡献至少一条边）的环，如果这２个都是奇数环，那么可以通过去除中间的公共边，使得变成偶数环，所以这种情况必定存在偶数环}{156}
-\contentsline {paragraph}{点覆盖问题}{156}
-\contentsline {subparagraph}{1. 最小点覆盖: 转化为二分图匹配问题}{156}
-\contentsline {subparagraph}{2. 点带权求费用最少的覆盖： 定义s,t（超级源和超级汇) s->x的边权值为x的费用, y->t的边的的权值为y的费用，x->y的权值为INF,问题就转化成最小割(去掉费用和最少的边使得s-t不连通,由于将x->y的边权值定为INF,所以最小割一定不会选取x->y的边，也就是肯定选择s->x或者y->t的边，即选择点），再将最小割转化成求最大流，边权转为边的容量，最大流量即为最小割的结果... 注:POJ3308}{156}
-\contentsline {paragraph}{网络流}{156}
-\contentsline {subparagraph}{1.无源无汇可行流： u--->v 容量为c-b, ST--->v 容量为b, u--->TT 容量为b，求SS--->TT最大流(仅当 $\DOTSB \sum@ \slimits@ in[i] == D.getRes(SS,TT)$时有解) ，输出时e.cap + down[u][v]}{156}
-\contentsline {subparagraph}{2.有源有汇可行流： 在1的基础上增加T---->S 容量为INF}{156}
-\contentsline {subparagraph}{3.有源有汇最大流: 在2的基础上求可行流，然后把T---->S边去除（流量置满） 求S---->T最大流即为结果,输出为e.cap + down[u][v]}{156}
-\contentsline {subparagraph}{4.有源有汇最小流: 在2的基础上先不加上T---->S,另now1 = D.getRes(SS,TT),然后加上T---->S,另now2 = D.getRes(SS,TT),如果$now1 + now2 != \DOTSB \sum@ \slimits@ in[i]$,无解，否则结果为T---->S的流量，输出为e.cap + down[u][v]}{156}
-\contentsline {subparagraph}{5.最小割输出结果: \\ (1)要输出割集:从S开始dfs,走还剩余容量的边，走到的点vis = 1,最后如果一条边两个端点vis分别为1,0,那么这条边就是割集中的 \\ (2)要输出只改变一边容量使得流量变大的:从S开始dfs一遍，标记,再从T开始dfs一遍，再次标记，一条边的端点分别拥有2种标记的就是所求}{157}
-\contentsline {subparagraph}{6.最大密度子图（POJ3155)　\\ 将图建为: S—>u 容量为U,u—->T 容量为U+2ans-d[u],u—v有边就互相添加容量为1的边,求最小割c[S,T] \\ 则E’-V’ans的最大值即为: (U∗n−c[S,T])/2 \\ 最后V’中的点，即为从S开始，沿着还有剩余容量的边dfs的点集}{157}
-\contentsline {paragraph}{其他}{157}
-\contentsline {subparagraph}{1.混合图判断欧拉回路: \\ 判断是否连通,不连通直接输出 \\ 将所有的无向边随意定向，和有向边一起，统计下in,out度数，定义D[i] = out[i]-in[i],由欧拉回路定义可知，如果出现D[i]为奇数，必然不存在 \\ 下面目标就是将这些随意定向的边选择一些转向.使用网络流模型.\\先把这些随意定向的无向边加入新图中，容量为1,表示最多只能被改变1次.对于所有点来说假设D[a] > 0,那么添加一条S—>a，容量为D[i]/2的边，如果D[b] < 0,那么添加一条边b—>T,容量为-D[i]/2的边. 跑网络流，\\如果从S出发的边都满载，那么只需要把图中不和S,T连接，且流量为1的边转向，即可构成欧拉回路.否则不存在\\ 至于为何这样建图，观察到S—>i—>j—>k—>T，这条链上进行转向，那么只有和S,T连接的点i,k的D值会改变.所以，从S出发的边都满载时，所有D不等于0的点的D值才能被改变成0\\ 混合图判断欧拉道路\\ 必然只存在2点的D为奇数，这两点分别为入点和出点\\ 我们手动给这两点加上一条边，然后按照上面判断欧拉回路即可.\\ 最后把加的这条边去掉即可\\}{157}
-\contentsline {section}{\numberline {10}附录}{157}
-\contentsline {subsection}{\numberline {10.1}Q神尸兄的祖传公式}{157}
+\contentsline {subsection}{\numberline {2.4}CDQ}{32}
+\contentsline {subsection}{\numberline {2.5}树的重心}{36}
+\contentsline {subsection}{\numberline {2.6}树上最远路径}{37}
+\contentsline {subsection}{\numberline {2.7}树链剖分}{38}
+\contentsline {subsection}{\numberline {2.8}平衡树}{42}
+\contentsline {subsubsection}{\numberline {2.8.1}Treap}{42}
+\contentsline {subsubsection}{\numberline {2.8.2}SBT}{44}
+\contentsline {subsubsection}{\numberline {2.8.3}Splay}{49}
+\contentsline {subsubsection}{\numberline {2.8.4}主席树}{50}
+\contentsline {subsection}{\numberline {2.9}LCT}{52}
+\contentsline {subsection}{\numberline {2.10}线段树}{61}
+\contentsline {subsubsection}{\numberline {2.10.1}区间Add}{61}
+\contentsline {subsubsection}{\numberline {2.10.2}非常见线段树}{63}
+\contentsline {section}{\numberline {3}图论}{69}
+\contentsline {subsection}{\numberline {3.1}拓扑排序}{69}
+\contentsline {subsection}{\numberline {3.2}最短路}{70}
+\contentsline {subsection}{\numberline {3.3}欧拉回路}{73}
+\contentsline {subsection}{\numberline {3.4}哈密顿}{74}
+\contentsline {subsection}{\numberline {3.5}Prim}{76}
+\contentsline {subsection}{\numberline {3.6}二分图}{78}
+\contentsline {subsection}{\numberline {3.7}2SAT}{82}
+\contentsline {subsection}{\numberline {3.8}LCA}{83}
+\contentsline {subsection}{\numberline {3.9}割点与桥}{86}
+\contentsline {subsection}{\numberline {3.10}有向图强连通分量}{87}
+\contentsline {subsection}{\numberline {3.11}无向图点双连通分量}{88}
+\contentsline {subsection}{\numberline {3.12}无向图边双连通分量}{89}
+\contentsline {subsection}{\numberline {3.13}网络流}{90}
+\contentsline {subsection}{\numberline {3.14}最小树形图}{101}
+\contentsline {subsection}{\numberline {3.15}无向图全局最小割}{105}
+\contentsline {section}{\numberline {4}计算几何}{106}
+\contentsline {subsection}{\numberline {4.1}二维}{106}
+\contentsline {subsection}{\numberline {4.2}三维}{114}
+\contentsline {section}{\numberline {5}字符串}{117}
+\contentsline {subsection}{\numberline {5.1}KMP}{117}
+\contentsline {subsection}{\numberline {5.2}manacher}{119}
+\contentsline {subsection}{\numberline {5.3}Trie}{120}
+\contentsline {subsection}{\numberline {5.4}Hash}{120}
+\contentsline {subsection}{\numberline {5.5}后缀数组}{123}
+\contentsline {subsection}{\numberline {5.6}AC自动机}{124}
+\contentsline {subsection}{\numberline {5.7}SAM}{129}
+\contentsline {section}{\numberline {6}DP}{132}
+\contentsline {subsection}{\numberline {6.1}序列DP}{132}
+\contentsline {subsubsection}{\numberline {6.1.1}最长上升子序列}{132}
+\contentsline {subsubsection}{\numberline {6.1.2}最长公共子序列}{132}
+\contentsline {subsubsection}{\numberline {6.1.3}最长公共上升子序列}{132}
+\contentsline {subsubsection}{\numberline {6.1.4}最短公共子序列}{133}
+\contentsline {subsubsection}{\numberline {6.1.5}回文子序列}{137}
+\contentsline {subsection}{\numberline {6.2}背包DP}{137}
+\contentsline {subsubsection}{\numberline {6.2.1}多重背包}{137}
+\contentsline {subsubsection}{\numberline {6.2.2}混合背包}{138}
+\contentsline {subsection}{\numberline {6.3}数位DP}{138}
+\contentsline {subsection}{\numberline {6.4}集合DP}{138}
+\contentsline {subsection}{\numberline {6.5}DP优化}{142}
+\contentsline {subsubsection}{\numberline {6.5.1}四边形不等式}{142}
+\contentsline {subsubsection}{\numberline {6.5.2}决策单调性}{143}
+\contentsline {section}{\numberline {7}魔法}{144}
+\contentsline {subsection}{\numberline {7.1}位}{144}
+\contentsline {subsection}{\numberline {7.2}黑魔法}{147}
+\contentsline {section}{\numberline {8}被遗弃的角落}{149}
+\contentsline {subsection}{\numberline {8.1}Java}{149}
+\contentsline {subsection}{\numberline {8.2}Bitset}{150}
+\contentsline {subsection}{\numberline {8.3}分数类}{151}
+\contentsline {subsection}{\numberline {8.4}日期类}{152}
+\contentsline {subsection}{\numberline {8.5}DLX解数独}{154}
+\contentsline {subsection}{\numberline {8.6}大大大的数}{158}
+\contentsline {subsubsection}{\numberline {8.6.1}BigInteger}{158}
+\contentsline {subsubsection}{\numberline {8.6.2}BigDecimal}{166}
+\contentsline {subsubsection}{\numberline {8.6.3}简易大整数}{166}
+\contentsline {section}{\numberline {9}记不住的}{169}
+\contentsline {subsection}{\numberline {9.1}数学结论}{169}
+\contentsline {subsection}{\numberline {9.2}cout精度}{170}
+\contentsline {subsection}{\numberline {9.3}放颜色不同的球}{171}
+\contentsline {subsection}{\numberline {9.4}暴力枚举n节点树}{171}
+\contentsline {subsection}{\numberline {9.5}每个点最大/小值区间}{172}
+\contentsline {section}{\numberline {10}套路}{173}
+\contentsline {subsection}{\numberline {10.1}平面点哈曼顿距离}{173}
+\contentsline {subsection}{\numberline {10.2}求和的乘积最小}{178}
+\contentsline {section}{\numberline {11}箴言}{181}
+\contentsline {subsection}{\numberline {11.1}定理}{181}
+\contentsline {subsubsection}{\numberline {11.1.1}一般}{181}
+\contentsline {subsection}{\numberline {11.2}数论}{183}
+\contentsline {subsection}{\numberline {11.3}排列组合}{184}
+\contentsline {subsection}{\numberline {11.4}博弈论}{185}
+\contentsline {subsubsection}{\numberline {11.4.1}Bash Game}{185}
+\contentsline {subsubsection}{\numberline {11.4.2}Wythoff Game}{185}
+\contentsline {subsubsection}{\numberline {11.4.3}SG函数/定理}{185}
+\contentsline {subsubsection}{\numberline {11.4.4}Nim Game}{186}
+\contentsline {subsubsection}{\numberline {11.4.5}Anti-nim}{186}
+\contentsline {subsubsection}{\numberline {11.4.6}Multi-SG}{186}
+\contentsline {subsubsection}{\numberline {11.4.7}Every-SG}{186}
+\contentsline {subsubsection}{\numberline {11.4.8}Staircase Nim}{187}
+\contentsline {subsubsection}{\numberline {11.4.9}翻硬币游戏}{187}
+\contentsline {subsubsection}{\numberline {11.4.10}树的删边游戏}{188}
+\contentsline {subsubsection}{\numberline {11.4.11}无向图删边游戏}{188}
+\contentsline {subsection}{\numberline {11.5}蒟蒻的小小备忘}{189}
+\contentsline {subsubsection}{\numberline {11.5.1}Tips}{189}
+\contentsline {subsubsection}{\numberline {11.5.2}DP}{189}
+\contentsline {paragraph}{1.求存在m个1连续的01串个数\\}{189}
+\contentsline {subsubsection}{\numberline {11.5.3}并查集}{189}
+\contentsline {paragraph}{1. 获取该连通分量的个数\\}{189}
+\contentsline {paragraph}{2. 获取到根节点的距离\\}{189}
+\contentsline {paragraph}{3. 如hdu2818\\}{189}
+\contentsline {paragraph}{4. 并查集建立虚根\\ HDU 3234\\ 将所有确定的点都连通到虚根n上， 点i的权值表示i到root的异或值. \\ merge的时候,//我们保证根节点在一般情况下为0, 当加入节点时 a--x 需要xor res[x] b -- y需要 xor[y] 并且x -- y需要xor v 那么 a -- b需要xor res[x] xor res[y] xor v ，之后b的后继就可以进行更新\\ HDU2473 \\ 对并查集的删除操作(从连通分量中去除该点），通过建立虚根的方式，使用replace 数组 \\ }{190}
+\contentsline {paragraph}{5. 并查集解决最小费用\\}{190}
+\contentsline {subsubsection}{\numberline {11.5.4}莫比乌斯反演}{190}
+\contentsline {paragraph}{1. 常规的求$gcd(x,y) == a, 1 <= x <= n,1 <= y <= m $\\}{190}
+\contentsline {paragraph}{2. 变种的求$gcd(Ax,Ay) == a$, 在数列中的个数\\}{190}
+\contentsline {subsubsection}{\numberline {11.5.5}字符串}{190}
+\contentsline {paragraph}{1.连续子串中求第k大的串\\ 把所有后缀插入Trie中，然后在Trie上进行dfs}{190}
+\contentsline {subsubsection}{\numberline {11.5.6}图论}{190}
+\contentsline {paragraph}{最短路}{190}
+\contentsline {subparagraph}{1.K短路问题\\}{191}
+\contentsline {subparagraph}{2.求最短路和次短路\\}{191}
+\contentsline {subparagraph}{3.最优比率正环(　正环一般都转化成负环)\\}{191}
+\contentsline {paragraph}{生成树}{191}
+\contentsline {subparagraph}{1.k度最小生成树(POJ1639)\\ 先求一个最小生成树(生成加边的过程中，用G添加边)\\ 如果满足k度限制，输出\\ 否则,fa重置，从root开始分别dfs其子树，对每一个子树中的点的fa,都合并到与root相连的这个儿子上，那么就分离出了和root相连的若干个连通分量.\\ 然后，0->m加边(如果可以连通2个连通分量并且端点不是root的话),一直使得为k度\\ 最后，0->m加边，构成生成树 \\ 自我意淫的做法，这样做的原因: \\ 由于第一次的最小生成树，那么连接这几个连通分量最少的代价就是和root直接相连的边.\\ 此时先合并成了k个，那么这些新添加的边必然没有和root直接相连的边优.所以最后和root相连添加的边必然是原来最小生成树中的}{191}
+\contentsline {paragraph}{二分图}{191}
+\contentsline {subparagraph}{1.判断二分匹配必须边(POJ1486)\\ 先进行二分匹配，然后枚举删除这些匹配边,如果再次dfs失败，那么就是必须边(match[i]需要还原），否则不是(此时match[i]无须还原), 每次枚举结束后还原删除的匹配边can[t][i] = 1;}{191}
+\contentsline {subparagraph}{2.各种关系\\ 最小点覆盖 = 最大匹配数\\ 最小边覆盖= n-最大匹配数 **注意，需要把所有能到达关系都加上---floyed** \\ 最小路径覆盖（无环) = 最小边覆盖 \\ 最小路径覆盖（有环): \\ (1)i分为i1和i2然后如果i和j有边，那么就在i1和j2之间连一条边。由此构成二分图 然后最小路径覆盖是n-m，n为原图的点的个数，m为新造二分图的最大匹配 \\ (2)强连通分量缩点，变成无环，然后再求 }{192}
+\contentsline {paragraph}{图中判环}{192}
+\contentsline {subparagraph}{1. 在无向图判环：并查集}{192}
+\contentsline {subparagraph}{2. 在有向图判环：拓扑排序（如果不能，就是有环）}{192}
+\contentsline {subparagraph}{3.　有向图＋无向图: 先并查集判断，如果此时不存咋，就将一个连通分量缩成１个点，再来拓扑排序}{192}
+\contentsline {subparagraph}{4. 无向图中是否有奇数环: 非二分图必有奇数环}{192}
+\contentsline {subparagraph}{5. 无向图中是否有偶数环: \\ 分离出所有的双连通分量,然后分别检测是否有偶环 \\ (1) 如果是单环，直接判断即可 \\ (2)如果是２个缠绕(贡献至少一条边）的环，如果这２个都是奇数环，那么可以通过去除中间的公共边，使得变成偶数环，所以这种情况必定存在偶数环}{192}
+\contentsline {paragraph}{点覆盖问题}{192}
+\contentsline {subparagraph}{1. 最小点覆盖: 转化为二分图匹配问题}{192}
+\contentsline {subparagraph}{2. 点带权求费用最少的覆盖： 定义s,t（超级源和超级汇) s->x的边权值为x的费用, y->t的边的的权值为y的费用，x->y的权值为INF,问题就转化成最小割(去掉费用和最少的边使得s-t不连通,由于将x->y的边权值定为INF,所以最小割一定不会选取x->y的边，也就是肯定选择s->x或者y->t的边，即选择点），再将最小割转化成求最大流，边权转为边的容量，最大流量即为最小割的结果... 注:POJ3308}{192}
+\contentsline {paragraph}{网络流}{192}
+\contentsline {subparagraph}{1.无源无汇可行流： u--->v 容量为c-b, ST--->v 容量为b, u--->TT 容量为b，求SS--->TT最大流(仅当 $\DOTSB \sum@ \slimits@ in[i] == D.getRes(SS,TT)$时有解) ，输出时e.cap + down[u][v]}{192}
+\contentsline {subparagraph}{2.有源有汇可行流： 在1的基础上增加T---->S 容量为INF}{192}
+\contentsline {subparagraph}{3.有源有汇最大流: 在2的基础上求可行流，然后把T---->S边去除（流量置满） 求S---->T最大流即为结果,输出为e.cap + down[u][v]}{192}
+\contentsline {subparagraph}{4.有源有汇最小流: 在2的基础上先不加上T---->S,另now1 = D.getRes(SS,TT),然后加上T---->S,另now2 = D.getRes(SS,TT),如果$now1 + now2 != \DOTSB \sum@ \slimits@ in[i]$,无解，否则结果为T---->S的流量，输出为e.cap + down[u][v]}{192}
+\contentsline {subparagraph}{5.最小割输出结果: \\ (1)要输出割集:从S开始dfs,走还剩余容量的边，走到的点vis = 1,最后如果一条边两个端点vis分别为1,0,那么这条边就是割集中的 \\ (2)要输出只改变一边容量使得流量变大的:从S开始dfs一遍，标记,再从T开始dfs一遍，再次标记，一条边的端点分别拥有2种标记的就是所求}{193}
+\contentsline {subparagraph}{6.最大密度子图（POJ3155)　\\ 将图建为: S—>u 容量为U,u—->T 容量为U+2ans-d[u],u—v有边就互相添加容量为1的边,求最小割c[S,T] \\ 则E’-V’ans的最大值即为: (U∗n−c[S,T])/2 \\ 最后V’中的点，即为从S开始，沿着还有剩余容量的边dfs的点集}{193}
+\contentsline {paragraph}{其他}{193}
+\contentsline {subparagraph}{1.混合图判断欧拉回路: \\ 判断是否连通,不连通直接输出 \\ 将所有的无向边随意定向，和有向边一起，统计下in,out度数，定义D[i] = out[i]-in[i],由欧拉回路定义可知，如果出现D[i]为奇数，必然不存在 \\ 下面目标就是将这些随意定向的边选择一些转向.使用网络流模型.\\先把这些随意定向的无向边加入新图中，容量为1,表示最多只能被改变1次.对于所有点来说假设D[a] > 0,那么添加一条S—>a，容量为D[i]/2的边，如果D[b] < 0,那么添加一条边b—>T,容量为-D[i]/2的边. 跑网络流，\\如果从S出发的边都满载，那么只需要把图中不和S,T连接，且流量为1的边转向，即可构成欧拉回路.否则不存在\\ 至于为何这样建图，观察到S—>i—>j—>k—>T，这条链上进行转向，那么只有和S,T连接的点i,k的D值会改变.所以，从S出发的边都满载时，所有D不等于0的点的D值才能被改变成0\\ 混合图判断欧拉道路\\ 必然只存在2点的D为奇数，这两点分别为入点和出点\\ 我们手动给这两点加上一条边，然后按照上面判断欧拉回路即可.\\ 最后把加的这条边去掉即可\\}{193}
+\contentsline {section}{\numberline {12}附录}{193}
+\contentsline {subsection}{\numberline {12.1}Q神尸兄的祖传公式}{193}

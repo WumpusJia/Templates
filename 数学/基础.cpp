@@ -9,19 +9,19 @@ LL lcm(LL a,LL b)
 }
 
 
-LL mul_mod(LL a,LL b,LL m)
+LL mul_mod(LL a,LL b)
 {
-    return a*b%m;
+    return a*b%mod;
 }
 
 
-LL pow_mod(LL a,LL p,LL m)
+LL pow_mod(LL a,LL p)
 {
     LL res = 1;
     while(p)
     {
-        if(p&1) res = res*a%m;
-        a = a*a%m;
+        if(p&1) res = res*a%mod;
+        a = a*a%mod;
         p >>= 1;
     }
     return res;
@@ -36,11 +36,11 @@ void exgcd(LL a,LL b,LL& d,LL &x,LL &y)
 }
 
 
-LL inv(LL a,LL m)
+LL inv(LL a)
 {
     LL d,x,y;
-    exgcd(a,m,d,x,y);
-    return d==1 ? (x+m) % m : -1;
+    exgcd(a,mod,d,x,y);
+    return d==1 ? (x+mod) % mod : -1;
 }
 
 
