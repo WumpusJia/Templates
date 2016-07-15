@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1464622335 "Template.tex" "Template.pdf" "Template" 1464622351
+["pdflatex"] 1465052122 "Template.tex" "Template.pdf" "Template" 1465052137
   "../DP/LCIS.cpp" 1440726493 559 c86b1125441ea4f2738bdecee0249693 ""
   "../DP/LCS.cpp" 1440726257 302 022d716f0fd6e148544edbd3b25108ba ""
   "../DP/LIS.cpp" 1440758756 329 35e52f056e1747ef1bee66cbab67f622 ""
@@ -160,9 +160,9 @@
   "/usr/share/texmf/tex/latex/xcolor/xcolor.sty" 1339578534 55224 a43bab84e0ac5e6efcaf9a98bde73a94 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1462604998 3164292 1db85307e910c032fd320ca7f893abaf ""
-  "Template.aux" 1464622350 23464 9d07ebb740c95b883ade55f4a43ba1f4 ""
-  "Template.tex" 1464622173 31155 228af6e7a49e471b59e25174c9810d76 ""
-  "Template.toc" 1464622350 14941 0f9b0fe17b4ccfe779ef4c2a31928c37 ""
+  "Template.aux" 1465052136 23464 9d07ebb740c95b883ade55f4a43ba1f4 ""
+  "Template.tex" 1465052118 31138 5190ff1bc59d397b8e56017ba3a34f65 ""
+  "Template.toc" 1465052136 14941 0f9b0fe17b4ccfe779ef4c2a31928c37 ""
   "images/image-0001.jpg" 1440716060 728265 5a0510f11121e08b740fa658ae681b8d ""
   "images/image-0002.jpg" 1440716060 801464 5a76c10d1a72117b4049fb6605408975 ""
   "images/image-0003.jpg" 1440716062 756542 218ad66854d3a4a6cb820a765d2eb48a ""
@@ -174,7 +174,7 @@
   "images/image-0009.jpg" 1440716062 568711 c038d48208a66d60699c24f2fa6af83e ""
   "images/image-0010.jpg" 1440716062 785467 ee1ec7d18e5e8c904b17d20fef4c0c62 ""
   (generated)
-  "Template.aux"
-  "Template.toc"
   "Template.log"
   "Template.pdf"
+  "Template.aux"
+  "Template.toc"

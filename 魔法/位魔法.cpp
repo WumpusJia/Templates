@@ -119,7 +119,7 @@ uint continuous1(uint x) //统计x低位开始连续的１，例如7返回7
 
 
 
-uint nextComb(uint x)　//获得当前x(x中有k个１)的字典序下一位
+uint nextComb(uint x)//获得当前x(x中有k个１)的字典序下一位
 {
     uint l = x & -x, y = x + l;
     return y | (((x^y) / l) >> 2);

@@ -36,6 +36,35 @@ void GetPrm(int n)  //线性筛
     }
 }
 
+//n不大时候logn的唯一分解
+int pdiv[maxn+10]; //x的最大素因子
+void init(int n)
+{
+    GetPrm(n);
+    for(int i = 0;i < pn;++i)
+    {
+        for(LL j = prm[i];j <= n;j += prm[i])
+            pdiv[j] = prm[i];
+
+    }
+
+}
+int seq[maxn];
+int cur;
+void factorize(int num)
+{
+    cur = 0;
+    while(num > 1)
+    {
+        int now = pdiv[num];
+        seq[cur++] = now;
+
+        num /= now;
+    }
+}
+
+
+
 
 int fac_cnt[maxn];
 void factorize(int num) //唯一分解定理分解num,注意如果是素数处理到sqrt(n)的话，还得在最后加上num
