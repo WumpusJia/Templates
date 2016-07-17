@@ -43,6 +43,12 @@ LL inv(LL a)
     return d==1 ? (x+mod) % mod : -1;
 }
 
+//或者
+LL inv(LL a)
+{
+    return pow_mod(a,mod-2);
+}
+
 
 LL sum(LL p,LL n) //二分等比求和
 {

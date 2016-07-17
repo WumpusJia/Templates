@@ -36,64 +36,41 @@ int gauss_jordan(Matrix A,int n,int m)
     }
 }
 
-LL x[maxn]; //解的结果
-//尤其注意如果mod不是素数，可能会导致无解
-//解同余矩阵(这里模7)  返回值-1(无解),0(多解),1(仅有1解)
-//typedef LL
-int gauss_jordan(Matrix A,int n,int m)
+int gauss_jordan(Matrix A,int n)
 {
+
+
+
+
     for(int c = 0,k = 0;c < n;++c)
     {
         if(A[k][c] == 0)
-            for(int i = k+1;i < m;++i)
+            for(int i = k+1;i < n;++i)
                 if(A[i][c])
                     for(int j = c;j <= n;++j)
                         swap(A[i][j],A[k][j]);
-        for(int i = k+1;i < m;++i)
+        for(int i = 0;i < n;++i)
             if(i != k)
                 for(int j = n;j >= c;--j)
                 {
-                    A[i][j] = A[i][j]*A[k][c]-A[k][j]*A[i][c];
+                  //  A[i][j] = A[i][j]*A[k][c]-A[k][j]*A[i][c];
+                    A[i][j] -= (A[i][c]*inv(A[k][c])%mod)*A[k][j];
                     A[i][j] = (A[i][j]%mod+mod)%mod;
+
+
                 }
-                 //   A[i][j] -= A[i][c]/A[k][c]*A[k][j];
         k++;
+
     }
 
-    bool flag = false;
-    for(int i = 0;i < m;++i)
+
+    for(int i = 0;i < n;++i)
     {
-        int j;
-        for(j = 0;j < n;++j)  //attention!!
-            if(A[i][j] != 0) break;
-        if(j == n)
-        {
-            if(A[i][n] != 0) return -1;
-            else if(i < n) flag = true;
-        }
+        A[i][n] = A[i][n] * inv(A[i][i])%mod;
+        A[i][i] = 1;
     }
 
-    if(flag || m < n) return 0;
 
-   // memset(x,0,sizeof(x));
-    for(int i = n-1;i >= 0;--i)
-    {
-        LL t = 0;
-        for(int j = i+1;j < n;++j)
-            t = ( t+x[j]*A[i][j] )%mod;
-        int j;
-        for(j = 3;j <= 9;++j) //解的范围在[3,9]
-        {
-            if( (t + j*A[i][i])%7 == A[i][n])
-            {
-                x[i] = j;
-                break;
-            }
-        }
-        if(j > 9) return -1;
-    }
-
-    return 1;
 }
 
 
