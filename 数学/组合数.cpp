@@ -25,6 +25,18 @@ void GetStirling2(int n)
 
 }
 
+//分组数
+void getM(int n)
+{
+	memset(M,0,sizeof M);
+	M[1][1] = 1;
+	for(int i=2;i<=n;++i)
+	{
+		M[i][1] = 1;
+		for(int j=2;j<=i;++j)
+			M[i][j] = (M[i-j][j] + M[i-1][j-1])%mod;
+	}
+}
 
 LL C[maxn+10][maxn+10];
 
