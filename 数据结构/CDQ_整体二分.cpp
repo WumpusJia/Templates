@@ -1,3 +1,76 @@
+
+
+/*
+适用于对于每一个查询都可以二分且二分上届很小的时候
+假设每一次二分复杂度为 X*log(Maxres),X是判断的复杂度
+总体复杂度为Q*X*log(Maxres)
+用整体二分可以优化为 (Q+X)*log(Maxres)
+
+*/
+
+int L[maxq],R[maxq];
+int res[maxq];
+vector<int> V[maxq];
+
+int q;
+scanf("%d",&q);
+int Minres = 1,Maxres = m;
+
+for(int i = 1;i <= q;++i)
+{
+    //read ....
+
+
+    L[i] = Minres,R[i] = Maxres;
+}
+
+int bicnt = 20; //logq
+for(int z = 0;z < bicnt;++z)
+{
+    for(int i = Minres;i <= Maxres;++i)
+        V[i].clear();
+    for(int i = 1;i <= q;++i)
+        V[ (L[i]+R[i])/2 ].push_back(i);
+
+
+    //init....
+    {
+
+    }
+
+    for(int i = Minres;i <= Maxres;++i)
+    {
+        {
+            //进行增加操作
+
+        }
+
+
+        for(int j = 0;j < V[i].size();++j)
+        {
+            int id = V[i][j];
+
+            //计算....
+
+
+            if( ok ) //符合
+            {
+                R[id] = i-1;
+                res[id] = i;
+            }
+            else
+                L[id] = i+1;
+        }
+    }
+
+}
+
+for(int i = 1;i <= q;++i)
+    printf("%d\n",res[i]);
+
+
+
+////////////////////////////////////
 #include<cstdio>
 #include<cstring>
 #include<algorithm>

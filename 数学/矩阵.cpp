@@ -38,10 +38,6 @@ int gauss_jordan(Matrix A,int n,int m)
 
 int gauss_jordan(Matrix A,int n)
 {
-
-
-
-
     for(int c = 0,k = 0;c < n;++c)
     {
         if(A[k][c] == 0)
@@ -49,6 +45,8 @@ int gauss_jordan(Matrix A,int n)
                 if(A[i][c])
                     for(int j = c;j <= n;++j)
                         swap(A[i][j],A[k][j]);
+        if(A[k][c] == 0) continue;
+
         for(int i = 0;i < n;++i)
             if(i != k)
                 for(int j = n;j >= c;--j)

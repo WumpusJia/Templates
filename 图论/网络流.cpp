@@ -71,7 +71,7 @@ struct Edge
 
 struct Dinic
 {
-    int n,s,t;
+    int s,t;
     vector<int> G[maxn];
     vector<Edge> edges;
     bool vis[maxn];
@@ -79,10 +79,9 @@ struct Dinic
     int cur[maxn];
 
 
-    void init(int n)
+    void init()
     {
-        this->n = n;
-        for(int i = 0;i <= n;++i) G[i].clear();
+        for(int i = 0;i <= maxn;++i) G[i].clear();
         edges.clear();
     }
 

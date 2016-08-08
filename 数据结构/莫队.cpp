@@ -19,119 +19,6 @@ struct Node
     }
 };
 
-Node p[maxn];
-int A[maxn];
-int pn;
-int temp[maxn];
-int pos[maxn];
-LL res[maxn];
-
-int gcd(int a,int b)
-{
-    return !b?a : gcd(b,a%b);
-}
-
-
-void gao()
-{
-    int idx = 0,prv = -1;
-    for(int i = 0;i < pn;++i)
-        if(temp[i] != prv)
-        {
-            prv = temp[i];
-            temp[idx] = temp[i];
-            pos[idx] = pos[i];
-            idx++;
-        }
-    pn = idx;
-}
-
-
-int numr[maxn][105];
-int posr[maxn][105];
-int sizer[maxn];
-
-int numl[maxn][105];
-int posl[maxn][105];
-int sizel[maxn];
-
-void init()
-{
-    pn = 0;
-    for(int i = n;i >= 1;--i)
-    {
-        for(int j = 0;j < pn;++j) temp[j] = gcd(A[i],temp[j]);
-        temp[pn] = A[i];
-        pos[pn++] = i;
-        gao();
-        for(int j = pn-1;j >= 0;--j)
-        {
-            numr[i][pn-1-j] = temp[j];
-            posr[i][pn-1-j] = pos[j];
-        }
-        sizer[i] = pn;
-    }
-
-    pn = 0;
-    for(int i = 1;i <= n;++i)
-    {
-        for(int j = 0;j < pn;++j) temp[j] = gcd(A[i],temp[j]);
-        temp[pn] = A[i];
-        pos[pn++] = i;
-        gao();
-        for(int j = pn-1;j >= 0;--j)
-        {
-            numl[i][pn-1-j] = temp[j];
-            posl[i][pn-1-j] = pos[j];
-        }
-        sizel[i] = pn;
-    }
-}
-/////////////////////////////////
-
-LL sum;
-int L,R;
-
-
-void addl(int sign)
-{
-    LL now = 0;
-    int prv = L;
-    for(int i = 0;i < sizer[L];++i)
-    {
-        if(posr[L][i] < L) continue;
-
-        if(posr[L][i] > R)
-            now += (LL)(R-prv+1)*numr[L][i];
-        else
-        {
-            now += (LL)(posr[L][i]-prv+1)*numr[L][i];
-            prv = posr[L][i]+1;
-        }
-        if(posr[L][i] >= R) break;
-    }
-    sum += sign*now;
-}
-
-void addr(int sign)
-{
-    LL now = 0;
-    int prv = R;
-    for(int i = 0;i < sizel[R];++i)
-    {
-        if(posl[R][i] > R) continue;
-
-        if(posl[R][i] < L)
-            now += (LL)(prv-L+1)*numl[R][i];
-        else
-        {
-            now += (LL)(prv-posl[R][i]+1)*numl[R][i];
-            prv = posl[R][i]-1;
-        }
-        if(posl[R][i] <= L) break;
-    }
-    sum += sign*now;
-}
 
 
 int main()
@@ -146,9 +33,7 @@ int main()
         for(int i = 1;i <= n;++i)
         {
             ppos[i] = i/BLOCK;
-            scanf("%d",&A[i]);
         }
-        init();
 
         scanf("%d",&m);
         for(int i = 0;i < m;++i)
@@ -164,24 +49,24 @@ int main()
             if(R < p[i].R)
             {
                 for(R = R+1;R <= p[i].R;++R)
-                    addr(1);
+                    add(R,1);
                 R--;
             }
             if(R > p[i].R)
             {
                 for(;R > p[i].R;--R)
-                    addr(-1);
+                    add(R,-1);
             }
             if(L > p[i].L)
             {
                 for(L = L-1;L >= p[i].L;--L)
-                    addl(1);
+                    add(L,1);
                 L++;
             }
             if(L < p[i].L)
             {
                 for(;L < p[i].L;++L)
-                    addl(-1);
+                    add(L,-1);
             }
             res[p[i].id] = sum;
         }
@@ -191,4 +76,105 @@ int main()
     return 0;
 }
 
+
+//////////////////////////////////////////
+//如果是莫队查询子树，只需要dfs，转化成普通莫队
+//树上莫队(链的形式)
+
+int b_cnt;
+int BLOCK;
+
+int seqlink[maxn];
+int szlink;
+int fa[maxn];
+int dep[maxn];
+
+bool In[maxn];
+int cross;
+
+int dfs(int u,int f,int d)
+{
+    dep[u] = d;
+    fa[u] = f;
+    int sz = 0;
+    for(int i = 0;i < G[u].size();++i)
+    {
+        int v = G[u][i];
+        if(v != f)
+        {
+            sz += dfs(v,u,d+1);
+            if(sz > BLOCK)
+            {
+                while(sz--) ppos[seqlink[--szlink]] = b_cnt;
+                b_cnt++;
+            }
+        }
+    }
+    seqlink[szlink++] = u;
+    return sz+1;
+}
+
+
+
+inline void inv(int x)
+{
+    if(In[x])
+    {
+        In[x] = false;
+        add(x,-1);
+    }
+    else
+    {
+        In[x] = true;
+        add(x,1);
+    }
+}
+
+inline void move_up(int& x)
+{
+    if(!cross)
+    {
+        if(In[x] && !In[fa[x]]) cross = x;
+        else if(In[fa[x]] && !In[x]) cross = fa[x];
+    }
+    inv(x), x = fa[x];
+}
+
+void move(int a,int b)
+{
+    if(a == b) return;
+    cross = 0;
+    if(In[b]) cross = b;
+    while(dep[a] > dep[b]) move_up(a);
+    while(dep[b] > dep[a]) move_up(b);
+    while(a != b) move_up(a),move_up(b);
+    inv(a),inv(cross);
+}
+
+void solve() //注意树的下标是1开始
+{
+    memset(In,0,sizeof(In));
+
+    int BLOCK = (int)sqrt(m+0.5);
+    b_cnt = 0;
+    szlink = 0;
+    dfs(1,0,1);
+
+
+    sort(q,q+m);
+    int L = 1,R = 1;
+    add(1,1);
+    In[1] = true;
+    for(int i = 0;i < lsz;++i)
+    {
+        move(L,q[i].L);
+        move(R,q[i].R);
+
+        L = q[i].L;
+        R = q[i].R;
+
+        res[q[i].id] = cal()...;
+    }
+
+}
 

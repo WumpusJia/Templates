@@ -1,3 +1,5 @@
+//对子树的查询和修改 可以dfs中记录In和Out
+
 int fa[maxn],son[maxn],size[maxn],deep[maxn];
 int id[maxn],top[maxn];
 int idx;

@@ -1,3 +1,58 @@
+//极角排序
+typedef long long LL;
+
+struct Point
+{
+    LL x,y;
+    Point(LL x = 0,LL y = 0):x(x),y(y) {}
+};
+typedef Point Vector;
+Vector operator + (Vector A,Vector B)
+    { return Vector(A.x+B.x,A.y+B.y); }
+Vector operator - (Point A,Point B)
+    { return Vector(A.x-B.x,A.y-B.y); }
+Vector operator * (Vector A,LL p)
+    { return Vector(A.x*p,A.y*p); }
+Vector operator / (Vector A,LL p)
+    { return Vector(A.x/p,A.y/p); }
+bool operator < (const Point& A,const Point& B)
+    { return A.x < B.x || (A.x == B.x && A.y < B.y); }
+
+LL Dot(Vector A,Vector B) { return A.x*B.x + A.y*B.y; }
+LL Cross(Vector A,Vector B) { return A.x*B.y - A.y*B.x; }
+
+
+int getQuadrant(const Point& A) //从左下到左上
+{
+    if(A.x <= 0 && A.y < 0) return 1;
+    else if(A.x > 0 && A.y <= 0) return 2;
+    else if(A.x >= 0 && A.y > 0) return 3;
+    else if(A.x < 0 && A.y >= 0) return 4;
+}
+
+
+bool cmpang(const Point& A,const Point& B)
+{
+    int qA = getQuadrant(A);
+    int qB = getQuadrant(B);
+    if(qA == qB)
+    {
+            return Cross(A,B) > 0;
+    }
+    else
+        return qA < qB;
+}
+
+
+int pn = 0;
+for(int j = 0;j < n;++j)
+    if(x != j)
+        p[pn++] = save[j]-save[x];
+
+sort(p,p+pn,cmpang);
+
+
+//////////////////////
 #include<cstdio>
 #include<cstring>
 #include<vector>
@@ -262,7 +317,7 @@ int IsPointInPolygon(Point p,vector<Point>& poly)
 
 
 //最后res中的凸包点 按逆时针顺序(好像是的)
-vector<Point> ConvexHull(vector<Point>& p) ..
+vector<Point> ConvexHull(vector<Point>& p)
 {
   // 预处理，删除重复点
   sort(p.begin(), p.end());
@@ -287,6 +342,58 @@ vector<Point> ConvexHull(vector<Point>& p) ..
   if(n > 1) m--;
   ch.resize(m);
   return ch;
+}
+
+
+
+//分治求最近２点距离　nlognlogn
+Point p[maxn];
+
+bool cmpy(const Point& A,const Point& B)
+{
+    return A.y < B.y || (A.y == B.y && A.x < B.x);
+}
+
+ Point tmp[maxn];
+
+double dfs(int L,int R)
+{
+    if(L == R) return INF;
+    if(R-L == 1)
+        return Dist(p[L],p[R]);
+    int m = (L+R)/2;
+    double d1 = dfs(L,m);
+    double d2 = dfs(m+1,R);
+
+    double d = min(d1,d2);
+
+
+    int idx = 0;
+    for(int i = L;i <= R;++i)
+        if(Dist(p[m],p[i]) <= d)
+            tmp[idx++] = p[i];
+    sort(tmp,tmp+idx,cmpy);  //这里可以进行归并?　使得复杂度降为nlogn
+
+    double res = d;
+    for(int i = 0;i < idx;++i)
+    {
+        for(int j = i+1;j < idx;++j)
+        {
+            if( fabs(tmp[i].y-tmp[j].y) > d)
+                break;
+            res = min(res,Dist(tmp[j],tmp[i]));
+        }
+    }
+    return res;
+
+}
+
+double MinTwoPointDist(int n)
+{
+    //小心重复点
+    sort(p,p+n);
+    return dfs(0,n-1);
+
 }
 
 

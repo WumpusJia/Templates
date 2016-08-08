@@ -89,16 +89,32 @@ void build(char s[])
 int topocnt[maxn];
 int seq[maxn];
 
-void toposort()
+void toposort(int n)
 {
     memset(topocnt,0,sizeof(topocnt));
-    for(int i = cur-pool-1;i >= 1;--i)
+    for(int i = cur-pool-1;i >= 0;--i)
         topocnt[pool[i].Max]++;
     for(int i = 1;i <= n;++i)
         topocnt[i] += topocnt[i-1];
 
-    for(int i = cur-pool-1;i >= 1;--i)
+    for(int i = cur-pool-1;i >= 0;--i)
         seq[--topocnt[pool[i].Max]] = i;
+}
+
+//统计每个节点的right个数
+Node * t = root;
+for(int i = 0;i < len;++i)//！！对字符串上的节点先置1
+{
+    int w = idx(s[i]);
+    t = t->go[w];
+    t->cnt++;
+}
+
+for(int i = cur-pool-1;i >= 0;--i)
+{
+    Node* p = &pool[seq[i]];
+    if(p->fa != NULL)
+        p->fa->cnt += p->cnt;
 }
 
 

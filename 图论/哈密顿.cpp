@@ -7,6 +7,12 @@ int G[maxn][maxn];
 int Prev[maxn],Next[maxn];
 int n;
 
+
+/*
+1包含个顶点的图, 如果任意两个顶点的度数之和都不小于n-1（即大于等于n-1）, 则存在哈密尔顿通路。
+2包含个顶点的图, 如果任意两个顶点的度数之和都不小于n（即大于等于n）, 则存在哈密尔顿回路。
+*/
+
 int main()
 {
  //   freopen("./test.txt","r",stdin);
