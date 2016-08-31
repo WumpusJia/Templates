@@ -43,7 +43,7 @@ struct Dijkstra
     }
 
 
-    int getRes(int s)
+    void getRes(int s)
     {
         memset(d,INF,sizeof(d));
         memset(done,0,sizeof(done));

@@ -45,7 +45,7 @@ void GetAllC(int n) //计算所有C
     for(int i = 0;i <= n;++i)
     {
         C[i][0] = 1;
-        for(int j = 1;j <= i;++j) C[i][j] = C[i-1][j] + C[i-1][j-1];
+        for(int j = 1;j <= i;++j) C[i][j] = (C[i-1][j] + C[i-1][j-1])%mod;
     }
 }
 
@@ -62,6 +62,7 @@ LL GetC(LL n,LL m)
 
 LL fac[200000+100];
 
+//如果计算次数较多，还可以预处理出invfac[n-m]和invfac[m],来减小常数
 LL GetC(LL n,LL m) //预处理版本　fac[0] = 1;
 {
     if(n < m) return 0;

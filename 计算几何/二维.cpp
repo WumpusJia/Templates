@@ -99,7 +99,7 @@ double Angle(Vector A,Vector B)
 double Angle(Vector A)
     { return atan2(A.y,A.x); } //向量与x轴正方向所成角
 double Area2(Point A,Point B,Point C)
-    { return Cross(B-A,C-A); } //求AB,AC向量所成平行四边形面积
+    { return fabs(Cross(B-A,C-A)); } //求AB,AC向量所成平行四边形面积
 Vector Normal(Vector A) //求A向量单位法相量　向左侧
 {
     double L = Length(A);

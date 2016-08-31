@@ -42,6 +42,26 @@ void find(char* T,char *P,int f[])
 
     }
 
+//判断每个前缀是否有循环节(求后缀只要reverse原串)
+void check(bool good[],int f[],int n)
+{
+    good[1] = 1;
+    for(int i = 2;i <= n;++i)
+    {
+        if(f[i] > 0 && i % (i-f[i]) == 0)
+        {
+            int t = i/(i-f[i]);
+            if(t >= 2)
+                good[i] = 0;
+            else
+                good[i] = 1;
+        }
+        else
+            good[i] = 1;
+    }
+
+}
+
 
 //EKMP
 int Next[maxn];

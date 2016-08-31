@@ -49,6 +49,16 @@ LL inv(LL a)
     return pow_mod(a,mod-2);
 }
 
+LL INV[maxn];
+
+//预处理每个数的逆元
+void initINV()
+{
+    INV[1] = 1;
+    for(int i = 2;i < maxn;++i)
+        INV[i] = (mod-mod/i)*INV[mod%i]%mod;
+}
+
 
 LL sum(LL p,LL n) //二分等比求和
 {

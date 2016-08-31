@@ -4,6 +4,12 @@
 #include<cmath>
 using namespace std;
 
+
+/*
+如果想要指数a-b减,那么把x2 reverse
+
+*/
+
 const double pi = acos(-1.0);
 const int maxn = 500000+10;
 
@@ -136,7 +142,7 @@ using namespace std;
 
 const int maxn = 500000+10;
 typedef long long LL;
-const int MOD = (479 << 21)+1;
+const LL MOD = (479 << 21)+1;
 const int G = 3;
 
 
@@ -228,11 +234,13 @@ int main()
         while(len < lena*2 || len < lenb*2) len <<= 1;
 
         for(int i = 0;i < lena;++i)
-            x1[lena-i-1] = a[i]-'0';
+          x1[i] = a[i]-'0';
+          //  x1[lena-i-1] = a[i]-'0'; //?
         for(int i = lena;i < len;++i) x1[i] = 0;
 
         for(int i = 0;i < lenb;++i)
-            x2[lenb-i-1] = b[i]-'0';
+            x2[i] = b[i]-'0';
+            //x2[lenb-i-1] = b[i]-'0';
         for(int i = lenb;i < len;++i) x2[i] = 0;
 
         NTT(x1,len,1);

@@ -1,21 +1,21 @@
 typedef LL Matrix[maxn][maxn];
 
-//void gauss_jordan(Matrix A,int n) //
-//{
-//    for(int i = 0;i < n;++i)
-//    {
-//        int r = i;
-//        for(int j = i+1;j < n;++j)
-//            if(fabs(A[j][i]) > fabs(A[r][i])) r = j;
-//        if(fabs(A[r][i]) < eps) continue;
-//        if(r != i) for(int j = 0;j <= n;++j) swap(A[r][j],A[i][j]);
-//
-//        for(int k = 0;k < n;++k)
-//            if(k != i)
-//                for(int j = n;j >= i;--j)
-//                    A[k][j] -= A[k][i]/A[i][i] * A[i][j];
-//    }
-//}
+void gauss_jordan(Matrix A,int n)
+{
+    for(int i = 0;i < n;++i)
+    {
+        int r = i;
+        for(int j = i+1;j < n;++j)
+            if(fabs(A[j][i]) > fabs(A[r][i])) r = j;
+        if(fabs(A[r][i]) < eps) continue;
+        if(r != i) for(int j = 0;j <= n;++j) swap(A[r][j],A[i][j]);
+
+        for(int k = 0;k < n;++k)
+            if(k != i)
+                for(int j = n;j >= i;--j)
+                    A[k][j] -= A[k][i]/A[i][i] * A[i][j];
+    }
+}
 
 //m行n列矩阵  typedef double Matrix
 int gauss_jordan(Matrix A,int n,int m)
@@ -36,7 +36,7 @@ int gauss_jordan(Matrix A,int n,int m)
     }
 }
 
-int gauss_jordan(Matrix A,int n)
+void gauss_jordan(Matrix A,int n)
 {
     for(int c = 0,k = 0;c < n;++c)
     {
