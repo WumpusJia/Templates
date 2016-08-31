@@ -38,7 +38,6 @@ bool line_mod(LL a,LL b,LL m,LL& x,LL& m0)
        x = ((x%m0)+m0)%m0;//x 为最小正数解
         return true;
     }
-} }
 }
 
 //中国剩余定理解线性模方程组x = a[i](mod m[i])
@@ -83,7 +82,7 @@ LL china(LL n,LL A[],LL M[]) //m不互质的情况，求最小x
     {
         c1 = 1;
         for(int i = 0;i < n;++i)
-            c1 = c1*M[i]/gcd(c1,M[i]);
+            c1 = M[i]/gcd(c1,M[i])*c1;
     }
     return c1;
 }
