@@ -36,7 +36,7 @@ void GetPrm(int n)  //线性筛
     }
 }
 
-//n不大时候logn的唯一分解
+//n不大时候 logn的唯一分解
 int pdiv[maxn+10]; //x的最大素因子
 void init(int n)
 {
@@ -82,6 +82,19 @@ void factorize(int num) //唯一分解定理分解num,注意如果是素数处�
     }
 }
 
+
+//预处理素因子,和素因子个数
+faccnt[1] = 0;
+
+for(int i = 0;i < pn;++i)
+{
+    for(int j = prm[i];j < maxn;j += prm[i])
+    {
+        faccnt[j] = faccnt[j/prm[i]]+1;
+        G[j].push_back(prm[i]);
+    }
+}
+
 int cal(int pr,int n) //计算N!中分解到pr的幂
 {
     int res = 0;
@@ -105,6 +118,7 @@ void GetAllPhi(int n)
         }
 }
 
+//[1-n]中与n互质的数的个数　　如果要求与gcd(i,n) = g的个数,即是phi(n/g)
 LL GetPhi(int n)
 {
     int m = (int) sqrt(n+0.5);
