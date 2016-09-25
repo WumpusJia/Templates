@@ -170,7 +170,116 @@ void add(int u,int v,int val)
    // if(u == v) return;   //注意如果是求链上的点，不能加这句话
     if(deep[u] > deep[v]) swap(u,v);
     update(id[u],id[v],val,1,n,1);
+
+    /*
+    如果是将边权变成点权
+    if(id[u]+1 <= id[v])
+    {
+        update(id[u]+1,id[v],val,1,n,1);
+    }
+
+    */
 }
+
+//如果区间查询(边权)　需要根据链的顺序进行计算
+
+int solve(int u,int v)
+{
+
+    if(dfsid[u] > dfsid[v]) swap(u,v);　//dfsid为dfs的顺序
+
+    Node ru,rv;
+    bool hasu = false;
+    bool hasv = false;
+
+    int fu = top[u],fv = top[v];
+
+    while(fu != fv)
+    {
+        if(deep[fu] >= deep[fv])
+        {
+                Node t = query(id[fu],id[u],1,n,1);
+                swap(t.lft,t.right);
+                if(!hasu)
+                {
+                    hasu = true;
+                    ru = t;
+                }
+                else
+                    ru = cal(ru,t);
+            u = fa[fu],fu = top[u];
+        }
+        else
+        {
+                Node t = query(id[fv],id[v],1,n,1);
+                if(!hasv)
+                {
+                    hasv = true;
+                    rv = t;
+                }
+                else
+                    rv = cal(t,rv);
+
+            v = fa[fv],fv = top[v];
+        }
+
+    }
+
+    if(u == v)
+    {
+        if(hasu && hasv)
+            return cal(ru,rv).sum;
+        else if(hasu)
+            return ru.sum;
+        else if(hasv)
+            return rv.sum;
+        else
+            return 0;
+
+    }   //注意如果是求链上的点，不能加这句话
+
+
+    if(deep[u] >= deep[v])
+    {
+        if(id[v]+1 <= id[u])
+        {
+            Node t = query(id[v]+1,id[u],1,n,1);
+            swap(t.lft,t.right);
+            if(hasu)
+                ru = cal(ru,t);
+            else
+            {
+                hasu = 1;
+                ru = t;
+            }
+        }
+    }
+    else
+    {
+        if(id[u]+1 <= id[v])
+        {
+            Node t = query(id[u]+1,id[v],1,n,1);
+            if(hasu)
+                ru = cal(ru,t);
+            else
+            {
+                hasu = 1;
+                ru = t;
+            }
+        }
+    }
+
+    if(hasu && hasv)
+        return cal(ru,rv).sum;
+    else if(hasu)
+        return ru.sum;
+    else if(hasv)
+        return rv.sum;
+    else
+        return 0;
+}
+
+
 
 int get(int u)
 {

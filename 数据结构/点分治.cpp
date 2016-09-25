@@ -75,6 +75,14 @@ void dfs(int u)
 
     ////////////////////////////////////////////////
     //cal
+    /*
+    满足 Dept h ( i )  Dept h ( j )  K 且 Belong ( i )  Belong ( j ) 的 ( i , j ) 个
+数
+= 满足 Depth ( i )  Depth ( j )  K 的 ( i , j ) 个数
+–
+满足 Depth ( i )  Depth ( j )  K 且 Belong ( i )  Belong ( j ) 的 ( i , j ) 个数
+
+    */
 
     for(int i = 0;i < G[nowroot].size();++i)
     {

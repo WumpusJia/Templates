@@ -54,6 +54,10 @@ int query(int L,int R)
 //二维 1---n
 void RMQ_init()
 {
+    power[1] = 0;
+    for(int i = 2;i < maxn;++i)
+        power[i] = power[i/2] + 1;
+
     for(int r = 1;r <= R;++r)
         for(int c = 1;c <= C;++c)
             d[r][c][0][0] = A[r][c];

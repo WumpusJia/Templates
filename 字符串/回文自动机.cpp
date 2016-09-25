@@ -5,7 +5,7 @@ const int SIGMA_SIZE = 26;
 const int maxn = 1000+100;
 
 
-char s[maxn];
+
 
 struct Node
 {
@@ -40,7 +40,7 @@ int idx(char c)
     return c-'a';
 }
 
-void extend(int i)
+void extend(char s[],int i)
 {
 
     int w = idx(s[i]);
@@ -77,7 +77,17 @@ void build(char s[])//注意字符串从1开始
     for(int i = 1;i <= len;++i)
     {
 
-        extend(i);
+        extend(s,i);
     }
 
+}
+
+void count() //统计当前节点有多少回文字串
+{
+    for(int i = cur-pool-1;i >= 0;--i)
+    {
+        Node* p = &pool[i];
+        if(p->fail != NULL)
+            p->fail->cnt += p->cnt;
+    }
 }
