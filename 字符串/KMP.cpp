@@ -16,6 +16,8 @@ void find(char* T,char *P,int f[])
 {
     int n = strlen(T),m = strlen(P);
     getFail(P,f);
+
+    //千万注意!!  如果P是整数串，P[m]要为一个不可能出现的数
     int j = 0;
     for(int i = 0;i < n;++i)
     {

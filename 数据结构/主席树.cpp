@@ -53,7 +53,8 @@ int query(int a,int b,int L,int R,int val)
     if(R <= val) return tree[b].sum - tree[a].sum;
     if(L > val) return 0;
     int m = (L+R)/2;
-    return query(tree[a].ch[0],tree[b].ch[0],L,m,val) + query(tree[a].ch[1],tree[b].ch[1],m+1,R,val);
+    return query(tree[a].ch[0],tree[b].ch[0],L,m,val)
+        + query(tree[a].ch[1],tree[b].ch[1],m+1,R,val);
 }
 
 

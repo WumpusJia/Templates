@@ -352,7 +352,8 @@ struct MCMF
 struct Edge
 {
     int from,to,cap,flow,cost;
-    Edge(int u,int v,int c,int f,int w):from(u),to(v),cap(c),flow(f),cost(w) {}
+    Edge(int u,int v,int c,int f,int w):from(u),to(v),
+        cap(c),flow(f),cost(w) {}
 };
 
 

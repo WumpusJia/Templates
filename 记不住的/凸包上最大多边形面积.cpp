@@ -16,11 +16,14 @@ while (true)
     {
         while (true)
         {
-            while (area(hull[a], hull[b], hull[c], hull[d]) <= area(hull[a], hull[b], hull[c], hull[(d+1) % nn])) {
+            while (area(hull[a], hull[b], hull[c], hull[d])
+                <= area(hull[a], hull[b], hull[c], hull[(d+1) % nn]))
+            {
                 d = (d + 1) % nn;
             }
 
-            if (area(hull[a], hull[b], hull[c], hull[d]) <= area(hull[a], hull[b], hull[(c+1) % nn], hull[d]))
+            if (area(hull[a], hull[b], hull[c], hull[d])
+                <= area(hull[a], hull[b], hull[(c+1) % nn], hull[d]))
             {
                 c = (c + 1) % nn;
                 continue;
@@ -31,7 +34,8 @@ while (true)
             }
         }
 
-        if (area(hull[a], hull[b], hull[c], hull[d]) <= area(hull[a], hull[(b+1) % nn], hull[c], hull[d]))
+        if (area(hull[a], hull[b], hull[c], hull[d])
+            <= area(hull[a], hull[(b+1) % nn], hull[c], hull[d]))
         {
             b = (b + 1) % nn;
             continue;
@@ -41,7 +45,8 @@ while (true)
             break;
         }
     }
-    if (area(hull[a], hull[b], hull[c], hull[d]) > area(hull[aa], hull[bb], hull[cc], hull[dd]))
+    if (area(hull[a], hull[b], hull[c], hull[d])
+        > area(hull[aa], hull[bb], hull[cc], hull[dd]))
     {
         aa = a;
         bb = b;
@@ -56,5 +61,6 @@ while (true)
     if (a == 0) break;
 }
 
-System.out.printf("%.1f\n", area(hull[aa], hull[bb], hull[cc], hull[dd]));
+System.out.printf("%.1f\n", area(hull[aa], hull[bb],
+    hull[cc], hull[dd]));
 }

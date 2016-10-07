@@ -35,7 +35,8 @@ struct Node
     int sum;
     bool l,r;
     int line;
-    Node(int cnt = 0,int sum = 0,bool l = 0,bool r = 0,int line = 0):cnt(cnt),sum(sum),l(l),r(r),line(line) {}
+    Node(int cnt = 0,int sum = 0,bool l = 0,bool r = 0,int line = 0):
+        cnt(cnt),sum(sum),l(l),r(r),line(line) {}
 };
 
 Node p[maxn<<2];
@@ -62,7 +63,8 @@ void maintain(int u,int L,int R)
         p[u].sum += p[u<<1].sum + p[u<<1|1].sum;
         p[u].l = p[u<<1].l;
         p[u].r = p[u<<1|1].r;
-        p[u].line += p[u<<1].line + p[u<<1|1].line - (p[u<<1].r && p[u<<1|1].l);
+        p[u].line += p[u<<1].line + p[u<<1|1].line -
+            (p[u<<1].r && p[u<<1|1].l);
     }
     if(p[u].cnt)
     {

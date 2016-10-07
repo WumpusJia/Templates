@@ -14,9 +14,9 @@
 \XeTeXinputencoding "UTF-8"
 
 
-\title{$\text{\Huge{{\setmainfont{UnPilgi} Elders}}}_{\text{\setmainfont{UnPilgi} V0.2}}$}
-\author{$\text{\setmainfont{UnPilgi} Wumpus GYH}$}
-\date{2016.6}
+\title{$\text{\Huge{{\setmainfont{UnPilgi} Elders}}}_{\text{\setmainfont{UnPilgi} V3.0}}$}
+\author{$\text{\setmainfont{UnPilgi} Wumpus}$}
+\date{2016.10}
 
 \begin{document}
 %Settings
@@ -103,14 +103,20 @@ aboveskip=1em
 \lstinputlisting{../数学/素数.cpp}
 \subsection{矩阵}
 \lstinputlisting{../数学/矩阵.cpp}
+\subsection{二元一次方程解个数}
+\lstinputlisting{../数学/二元一次方程解个数.cpp}
+\subsection{FFT}
+\lstinputlisting{../数学/FFT.cpp}
 \subsection{博弈}
 \lstinputlisting{../数学/博弈.cpp}
 \subsection{数值}
 \lstinputlisting{../数学/数值.cpp}
-\subsection{FFT}
-\lstinputlisting{../数学/FFT.cpp}
 \subsection{方程组}
 \lstinputlisting{../数学/方程组.cpp}
+\subsection{Catalan}
+\lstinputlisting{../数学/Catalan.cpp}
+\subsection{线性规划}
+\lstinputlisting{../数学/线性规划_uncheck.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
 \section{数据结构}
 \subsection{RMQ and 树状数组}
@@ -119,14 +125,18 @@ aboveskip=1em
 \lstinputlisting{../数据结构/分块暴力.cpp}
 \subsection{莫队}
 \lstinputlisting{../数据结构/莫队.cpp}
-\subsection{CDQ}
-\lstinputlisting{../数据结构/CDQ.cpp}
+\subsection{CDQ and 整体二分}
+\lstinputlisting{../数据结构/CDQ_整体二分.cpp}
 \subsection{树的重心}
 \lstinputlisting{../数据结构/树的重心.cpp}
 \subsection{树上最远路径}
 \lstinputlisting{../数据结构/树上最远路径.cpp}
 \subsection{树链剖分}
 \lstinputlisting{../数据结构/树链剖分.cpp}
+\subsection{点分治}
+\lstinputlisting{../数据结构/点分治.cpp}
+\subsection{主席树}
+\lstinputlisting{../数据结构/主席树.cpp}
 \subsection{平衡树}
 \subsubsection{Treap}
 \lstinputlisting{../数据结构/treap.cpp}
@@ -134,8 +144,6 @@ aboveskip=1em
 \lstinputlisting{../数据结构/sbt.cpp}
 \subsubsection{Splay}
 \lstinputlisting{../数据结构/splay.cpp}
-\subsubsection{主席树}
-\lstinputlisting{../数据结构/主席树.cpp}
 \subsection{LCT}
 \lstinputlisting{../数据结构/LCT.cpp}
 \subsection{线段树}
@@ -198,6 +206,8 @@ aboveskip=1em
 \lstinputlisting{../字符串/AC自动机.cpp}
 \subsection{SAM}
 \lstinputlisting{../字符串/后缀自动机.cpp}
+\subsection{回文自动机}
+\lstinputlisting{../字符串/回文自动机.cpp}
 
 
 % % % % % % % % % % % % % % % % % % % % % %
@@ -256,6 +266,8 @@ $$
 \lstinputlisting{../DP/SCS.cpp}
 
 \subsection{DP优化}
+\subsubsection{斜率优化}
+\lstinputlisting{../DP/斜率优化.cpp}
 \subsubsection{四边形不等式}
 \lstinputlisting{../DP/四边形不等式.cpp}
 \subsubsection{决策单调性}
@@ -283,8 +295,6 @@ $$
 \subsection{大大大的数}
 \subsubsection{BigInteger}
 \lstinputlisting{../被遗弃的角落/BigInteger.cpp}
-\subsubsection{BigDecimal}
-\lstinputlisting{../被遗弃的角落/BigDecimal.cpp}
 \subsubsection{简易大整数}
 \lstinputlisting{../被遗弃的角落/简易大整数.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
@@ -301,15 +311,33 @@ $$
 \lstinputlisting{../记不住的/枚举树.cpp}
 \subsection{每个点最大/小值区间}
 \lstinputlisting{../记不住的/求每个数为最大值的范围.cpp}
-
+\subsection{树的计数}
+\lstinputlisting{../记不住的/树的计数.cpp}
+\subsection{压位求含有i位的和}
+\lstinputlisting{../记不住的/压位求含有i位的和.cpp}
+\subsection{凸包上最大多边形面积}
+\lstinputlisting{../记不住的/凸包上最大多边形面积.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
 
 \section{套路}
+\subsection{倍增树的直径}
+\lstinputlisting{../套路/倍增维护树的直径.cpp}
 \subsection{平面点哈曼顿距离}
 \lstinputlisting{../套路/一群点的哈曼顿距离.cpp}
 \subsection{求和的乘积最小}
 \lstinputlisting{../套路/和的乘积最小.cpp}
-
+\subsection{区间数的种类数(强制在线)}
+\lstinputlisting{../套路/统计区间种类数(强制在线).cpp}
+\subsection{矩形面积并}
+\lstinputlisting{../套路/矩形面积并.cpp}
+\subsection{骨牌覆盖方案数}
+\lstinputlisting{../套路/多米诺骨牌覆盖方案数.cpp}
+\subsection{补图上的bfs}
+\lstinputlisting{../套路/补图上的bfs.cpp}
+\subsection{点有限制，取区间}
+\lstinputlisting{../套路/m个带权值区间n个点有限制,求最大权值.cpp}
+\subsection{1e11的phi}
+\lstinputlisting{../套路/1e11的phi.cpp}
 % % % % % % % % % % % % % % % % % % % % % %
 
 
@@ -342,22 +370,7 @@ $$lcm(1..n) = 2^{e_1} * 3^{e_2} * 5^{e_3} … \;\; e_i \text{为最大的满足}
 于是我们从小到大枚举k，然后二分求出前i个素数满足pei≤n，可以提前处理出前i个数的前缀积，然后答案乘上这个前缀积。
 
 $$LCM(C_k^0,C_k^1,…,C_k^k) = \frac{LCM(1,2,…,k,k+1)}{k+1}$$
-\newpage
-\subsection{排列组合}
-1. 隔板法	\\
-n个元素(每个可选多次)取出k个。	\\
-第i个元素选xi个,转化为 x1+x2+…+xn=k的非负整数解,		\\
-令xi+1=yi,则转化为y1+y2+…+yn=k+n的正整数解个数。		\\
-即在n+k-1个分割线中中取n-1个,答案:
-$$C_{n+k-1}^{k-1}$$
-2. 卡特兰数	\\
-1(C0) 1 2 5 14 42 132 429 1430 4862 16796 …	\\
-$$\begin{aligned}
-&C_{n+1}=C_0C_n+C_1C_{n-1}+…+C_nC_0 \,\, \Rightarrow  \,\, C_{n+1}= \sum_{i=0}^n C_iC_{n-i} \,\, (n \ge 0 \, , \,C_0=1)	\\
-&C_{n}=\frac{4n-2}{n+1}C_{n-1}	\\
-&C_n=\frac{(2n)!}{(n+1)!n!}
-\end{aligned}
-$$
+
 \newpage
 \subsection{博弈论}
 
@@ -380,33 +393,6 @@ $$
 根据(x,y),y-x=k,判断。	\\
 
 \subsubsection{SG函数/定理}
-
-我们这样定义SG游戏:
-\begin{itemize}
-\item 游戏两人参与，轮流做出决策。且默认为对自己最有利的决策。
-\item 当有一人无法做出决策时游戏结束，无法做出决策的人输。
-\item 游戏可以在有限步内结束，同一状态不可能多次抵达。
-\item 游戏不会出现平局。
-\item 任意一个游戏者在某一状态做出的决策集合只与当前状态有关，与游戏者无关。
-\end{itemize}
-
-\textbf{SG函数}
-
-对于任意状态x,SG(x)=mex(S)	\\
-S是x后继状态的集合，mex(S)表示不在S内的最小非负整数(自然数)	\\
-SG(x)=0表示当前局面必败，否则必胜。
-
-SG函数满足如下性质:
-\begin{itemize}
-\item 对于任意局面x，若SG(x)=0，那么它的任何一个后继局面的SG都不为0
-\item 对于任意局面x，若SG(x)≠0，那么它一定有一个一个后继局面的SG为0
-\end{itemize}
-
-或者我们换种理解
-\begin{itemize}
-\item 对于必败状态，所有后继状态都是必胜的
-\item 对于必胜状态，至少有一个后继状态是必败的
-\end{itemize}
 
 
 \textbf{SG定理}
@@ -655,8 +641,6 @@ g(k) 是gcd(a[i],a[j])\%k == 0的个数 \\
 那么这里的cnt就是[j,maxn]中可以整除j的个数， \\
 处理a[i]时候，要将a[i]的每个因子的cnt都+1
 
-\subsubsection{字符串}
-\paragraph{1.连续子串中求第k大的串\\ 把所有后缀插入Trie中，然后在Trie上进行dfs}
 
 \subsubsection{图论}
 \paragraph{最短路}

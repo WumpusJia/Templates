@@ -34,7 +34,8 @@ void init()
     for(int i = 1; i <= M; ++i)
     {
         sz[i] = prime[i] * sz[i - 1];
-        for(int j = 1; j <= PM; ++j) phi[j][i] = phi[j][i - 1] - phi[j / prime[i]][i - 1];
+        for(int j = 1; j <= PM; ++j) phi[j][i] = phi[j][i - 1] -
+            phi[j / prime[i]][i - 1];
     }
 }
 int sqrt2(LL x)
@@ -67,7 +68,8 @@ LL getpi(LL x)
 {
     if(x < N)   return pi[x];
     LL ans = getphi(x, pi[sqrt3(x)]) + pi[sqrt3(x)] - 1;
-    for(int i = pi[sqrt3(x)] + 1, ed = pi[sqrt2(x)]; i <= ed; ++i) ans -= getpi(x / prime[i]) - i + 1;
+    for(int i = pi[sqrt3(x)] + 1, ed = pi[sqrt2(x)]; i <= ed; ++i)
+        ans -= getpi(x / prime[i]) - i + 1;
     return ans;
 }
 LL lehmer_pi(LL x)
@@ -83,11 +85,12 @@ LL lehmer_pi(LL x)
         sum -= lehmer_pi(w);
         if (i > c) continue;
         LL lim = lehmer_pi(sqrt2(w));
-        for (int j = i; j <= lim; j++) sum -= lehmer_pi(w / prime[j]) - (j - 1);
+        for (int j = i; j <= lim; j++)
+            sum -= lehmer_pi(w / prime[j]) - (j - 1);
     }
     return sum;
 }
-int main() 
+int main()
 {
     init();
     LL n;

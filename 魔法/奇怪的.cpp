@@ -49,6 +49,23 @@ void RI (int& x){
 
 
 ////////////////读入挂///////////////////////
+
+
+inline bool read(int &x) 	//看情况可去掉负数部分
+{
+	int t = 1;
+	int ch = getchar();
+	if(ch == -1) return false;
+	while(ch < '0' || ch > '9') { if(ch == '-') t = -1; ch = getchar();}
+	x = 0;
+	while(ch >= '0' && ch <= '9'){ x=x*10+ch-'0'; ch = getchar(); }
+	x*=t;
+	return true;
+}
+
+
+
+////////////////
 #include<cstdio>
 #include<cstring>
 #include<algorithm>

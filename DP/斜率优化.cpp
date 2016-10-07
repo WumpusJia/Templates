@@ -1,6 +1,64 @@
+/*
+类似:    k[i]*X[j] + Y[i] = Y[j],求Y[i]最小值
+斜率为k[i],横坐标为X[i] ,k[i] > 0递增，且X[i] > 0递增
+
+则可以维护下凸包,用单调队列优化
+
+*/
+
+
+struct Node
+{
+    LL x,y;
+    Node(LL x = 0,LL y = 0):x(x),y(y) {}
+};
+
+Node operator - (const Node& A,const Node& B)
+{
+    return Node(A.x-B.x,A.y-B.y);
+}
+
+
+LL Cross(const Node& A,const Node& B)
+{
+    return A.x*B.y-A.y*B.x;
+
+}
+
+Node Q[maxn];
+
+int main()
+{
+
+    int head = 0,tail = 0;
+    for(int i = LEN;i <= n;++i)  //len为最小间距
+    {
+        int prv = i-LEN;
+        Node now(X[prv],Y[prv]);
+
+        while(head+1 < tail &&
+        Cross(Q[tail-1]-Q[tail-2],now-Q[tail-2]) <= 0)
+        //必须严格递增 等于号不能少
+            tail--;
+        Q[tail++] = now;
+
+
+        while(head+1 < tail && (Q[head+1].y-Q[head].y)
+         < (Q[head+1].x-Q[head].x)*k[i])
+            head++;
+
+        Y[i] = Q[head].y-Q[head].x*k[i];
+    }
+
+
+}
 
 
 
+
+
+
+//////////////////////////////////
 //横坐标不递增的情况
 
 #include<bits/stdc++.h>
@@ -128,7 +186,8 @@ void CDQ(int L,int R)
         }
         else
         {
-            while(tail-head >= 2 && Cross(Stack[tail-1]-Stack[tail-2],now-Stack[tail-2]) >= 0)
+            while(tail-head >= 2 &&
+            Cross(Stack[tail-1]-Stack[tail-2],now-Stack[tail-2]) >= 0)
                 tail--;
             Stack[tail++] = now;
         }
@@ -156,11 +215,15 @@ void CDQ(int L,int R)
     变换一下
         i*d[j] + (f[i]-a[i]) = j*d[j] + f[j]
     变成了 ax + b = y 的形式， a = i, b = f[i]-a[i]
-    这样需要维护一个上凸壳,  对于i来说，只需要二分找到凸包上与斜率为i的直线的切点即可
-    不过这里凸包上的点为(d[j]，j*d[j] + f[j]） ，横坐标不递增，所以需要splay维护凸壳或者这里的cdq分治
+    这样需要维护一个上凸壳,  对于i来说，
+    只需要二分找到凸包上与斜率为i的直线的切点即可
+    不过这里凸包上的点为(d[j]，j*d[j] + f[j]） ，
+    横坐标不递增，所以需要splay维护凸壳或者这里的cdq分治
 
     复杂度为n*log^2(n)
-    可以优化成nlogn(此代码未优化), 把cdq中的sort归并了,由于斜率i是递增的，不用二分，而是每次加入点后，把head前移)
+    可以优化成nlogn(此代码未优化),
+    把cdq中的sort归并了,由于斜率i是递增的，
+    不用二分，而是每次加入点后，把head前移)
 
 */
 

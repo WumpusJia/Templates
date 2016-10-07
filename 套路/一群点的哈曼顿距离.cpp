@@ -1,5 +1,6 @@
 /*
-如果求一群点中2个点距离最大值 那就2^k枚举每个x,y,z...前面的符号，然后最大的减最小的 ，这些里面取最大值
+如果求一群点中2个点距离最大值 那就2^k枚举每个x,y,z...前面的符号，
+然后最大的减最小的 ，这些里面取最大值
 
 如果求一个点和其他点最小  那就2^k次 线段树:
 把y作为key, 然后点按x排序。
@@ -211,7 +212,6 @@ int main()
 
                 int id = Q[i].id;
                 res[id] = min(res[id],(LL)Q[i].x + Q[i].savey - t.Max);
-            //    printf("**** (%d,%d)    %d   ---- %d\n",Q[i].x,Q[i].savey,t.Min,res[id]);
             }
 
         }
@@ -235,7 +235,8 @@ int main()
 
 
                     int id = Q[i].id;
-                    res[id] = min(res[id],(LL)Q[i].x - Q[i].savey - t.Max);
+                    res[id] = min(res[id],
+                        (LL)Q[i].x - Q[i].savey - t.Max);
                 }
             }
 

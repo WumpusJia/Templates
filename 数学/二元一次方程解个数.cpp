@@ -58,8 +58,10 @@ LL solve(LL a,LL b,LL c,LL x1,LL x2,LL y1,LL y2)
         {
 
             x0 = c/d*x0,y0 = c/d*y0;
-            Double tx2 = x2,tx1 = x1,ty1 = y1,ty2 = y2,tx0 = x0,ty0 = y0,ta = a/d,tb = b/d,tc = c/d;
-            LL down1 = floor((tx2 - tx0)/tb),down2 = floor((ty0 - ty1)/ta);
+            Double tx2 = x2,tx1 = x1,ty1 = y1,
+            ty2 = y2,tx0 = x0,ty0 = y0,ta = a/d,tb = b/d,tc = c/d;
+            LL down1 = floor((tx2 - tx0)/tb);
+            LL down2 = floor((ty0 - ty1)/ta);
             LL r = min(down1,down2);
             LL up1 = ceil((tx1 - tx0)/tb),up2 = ceil((ty0 - ty2)/ta);
             LL l = max(up1,up2);

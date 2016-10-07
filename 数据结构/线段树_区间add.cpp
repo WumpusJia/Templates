@@ -10,7 +10,8 @@ void pushdown(int u)
 void pushup(int u,int L,int R)
 {
     int m = (L+R)/2;
-    p[u].sum = p[u<<1].cnt*(m-L+1)+p[u<<1].sum + p[u<<1|1].cnt*(R-m)+p[u<<1|1].sum;
+    p[u].sum = p[u<<1].cnt*(m-L+1)+p[u<<1].sum +
+    p[u<<1|1].cnt*(R-m)+p[u<<1|1].sum;
 }
 
 void update(int cL,int cR,int val,int L,int R,int u)
