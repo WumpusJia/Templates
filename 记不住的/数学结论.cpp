@@ -80,5 +80,10 @@ A^B % C
 则等价于 A^(B%phi(C) + phi(C)) % C
 对任何C都成立
 
+
+
+Fib(i) % mod的循环节为:
+对mod唯一分解后每个 Fib(i)%项　的lcm
+
 */
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.8.4)  7 OCT 2016 10:42
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.8.4)  9 OCT 2016 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1457,8 +1457,8 @@ Overfull \hbox (9.52219pt too wide) in paragraph at lines 35--36
  []
 
 
-Overfull \hbox (21.52231pt too wide) in paragraph at lines 46--47
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (51.52261pt too wide) in paragraph at lines 46--47
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
@@ -1668,7 +1668,7 @@ Overfull \hbox (45.52255pt too wide) in paragraph at lines 15--17
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[198]) (/media/msi/win7杂项/repository/Templates/PDF/../记不住的/压位求含有i位的和.cpp) [199] (/media/msi/win7杂项/repository/Templates/PDF/../记不住的/凸包上最大多边形面积.cpp
+[198]) (/media/msi/win7杂项/repository/Templates/PDF/../记不住的/压位求含有i位的和.cpp [199]) (/media/msi/win7杂项/repository/Templates/PDF/../记不住的/凸包上最大多边形面积.cpp
 Overfull \hbox (21.52231pt too wide) in paragraph at lines 20--21
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1792,24 +1792,24 @@ Overfull \hbox (33.52243pt too wide) in paragraph at lines 260--261
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[206]
 Overfull \hbox (3.52213pt too wide) in paragraph at lines 271--272
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[206]
+
 Overfull \hbox (45.52255pt too wide) in paragraph at lines 282--283
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 ) (/media/msi/win7杂项/repository/Templates/PDF/../套路/和的乘积最小.cpp [207]
 Missing character: There is no △ in font [lmmono10-regular]!
- [208] [209]) (/media/msi/win7杂项/repository/Templates/PDF/../套路/统计区间种类数(强制在线).cpp) (/media/msi/win7杂项/repository/Templates/PDF/../套路/矩形面积并.cpp
+ [208] [209]) (/media/msi/win7杂项/repository/Templates/PDF/../套路/统计区间种类数(强制在线).cpp) (/media/msi/win7杂项/repository/Templates/PDF/../套路/矩形面积并.cpp [210]
 Overfull \hbox (33.52243pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[210]
+
 Overfull \hbox (21.52231pt too wide) in paragraph at lines 38--39
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1819,7 +1819,7 @@ Overfull \hbox (21.52231pt too wide) in paragraph at lines 25--26
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+[214]
 Overfull \hbox (99.5231pt too wide) in paragraph at lines 32--33
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1829,7 +1829,7 @@ Overfull \hbox (21.52231pt too wide) in paragraph at lines 34--35
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[214]) (/media/msi/win7杂项/repository/Templates/PDF/../套路/补图上的bfs.cpp
+) (/media/msi/win7杂项/repository/Templates/PDF/../套路/补图上的bfs.cpp
 Overfull \hbox (15.52225pt too wide) in paragraph at lines 2--4
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1839,12 +1839,12 @@ Overfull \hbox (51.52261pt too wide) in paragraph at lines 11--12
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) (/media/msi/win7杂项/repository/Templates/PDF/../套路/m个带权值区间n个点有限制,求最大权值.cpp) (/media/msi/win7杂项/repository/Templates/PDF/../套路/1e11的phi.cpp [215]
+) (/media/msi/win7杂项/repository/Templates/PDF/../套路/m个带权值区间n个点有限制,求最大权值.cpp) (/media/msi/win7杂项/repository/Templates/PDF/../套路/1e11的phi.cpp [215] [216]
 Overfull \hbox (33.52243pt too wide) in paragraph at lines 56--57
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[216]
+
 Overfull \hbox (3.52213pt too wide) in paragraph at lines 62--63
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []

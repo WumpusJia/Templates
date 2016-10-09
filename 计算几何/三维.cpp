@@ -43,7 +43,7 @@ double dcmp(double x)
 }
 bool operator == (const Point3& a,const Point3& b)
 {
-    return dcmp(a.x-b.x) == 0 && dcmp(a.y-b.y) == 0 && dcmp(a.z-b.z);
+    return dcmp(a.x-b.x) == 0 && dcmp(a.y-b.y) == 0 && dcmp(a.z-b.z) == 0;
 }
  //p到面(p0,n)的距离,n需为单位向量
 double PointToPlane(Point3 p,Point3 p0,Vector3 n)

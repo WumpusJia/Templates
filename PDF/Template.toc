@@ -103,9 +103,9 @@
 \contentsline {subsection}{\numberline {10.7}补图上的bfs}{215}
 \contentsline {subsection}{\numberline {10.8}点有限制，取区间}{215}
 \contentsline {subsection}{\numberline {10.9}1e11的phi}{215}
-\contentsline {section}{\numberline {11}箴言}{217}
-\contentsline {subsection}{\numberline {11.1}定理}{217}
-\contentsline {subsubsection}{\numberline {11.1.1}一般}{217}
+\contentsline {section}{\numberline {11}箴言}{218}
+\contentsline {subsection}{\numberline {11.1}定理}{218}
+\contentsline {subsubsection}{\numberline {11.1.1}一般}{218}
 \contentsline {subsection}{\numberline {11.2}数论}{219}
 \contentsline {subsection}{\numberline {11.3}博弈论}{220}
 \contentsline {subsubsection}{\numberline {11.3.1}Bash Game}{220}
