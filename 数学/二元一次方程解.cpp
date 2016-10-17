@@ -75,6 +75,10 @@ LL solve(LL a,LL b,LL c,LL x1,LL x2,LL y1,LL y2)
 
 
 
+//　ax + by = c 有解　　==>  c % g = 0
+// (x*c/g,y*c/g) ==> (x0,y0)
+// a'= a/g   b'= b/g
+// 解 (x0+kb',y0-ka') k为任意整数
 //求解ax+by+c = 0 x,y在[x1,x2],[y1,y2]之间的最小整数解(uncheck)
 bool solve(LL a,LL b,LL c,LL x1,LL x2,LL y1,LL y2,LL& resx,LL& resy)
 {

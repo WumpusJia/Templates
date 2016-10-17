@@ -5,25 +5,7 @@ void exgcd(LL a,LL b,LL& d,LL &x,LL &y)
 }
 
 
-//　ax + by = c 有解　　==>  c % g = 0
-// (x*c/g,y*c/g) ==> (x0,y0)
-// a'= a/g   b'= b/g
-// 解 (x0+kb',y0-ka') k为任意整数
-bool exgcd_res(LL& a,LL& b,LL c,LL& x0,LL& y0)  //有问题!!
-{
-    LL d;
-    exgcd(a,b,d,x0,y0);
-    if(c % d) return false;
-    else
-    {
-        a=a%d;　　//a/d
-        b=b%d;  // b/d
-        x0=x0/d*c;
-        y0=y0/d*c;
-        x0 = (x0%b+b)%b;
-         return true;
-    }
-}
+
 
 //求解线性模方程ax = b(mod n),解为x,x+m0,x+2*m0......
 bool line_mod(LL a,LL b,LL m,LL& x,LL& m0)
